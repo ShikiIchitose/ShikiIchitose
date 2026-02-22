@@ -12,8 +12,8 @@ I’m currently looking for Python engineering opportunities, with a near-term f
   Highlights: reproducible runs, clear outputs, CI quality gates (ruff/pytest), responsible network use guidance.\
   It also serves as a portfolio artifact to **demonstrate and validate my Python fundamentals**.
 
-- **Exoplanet catalog analysis (planned)** — An end-to-end, reproducible data analysis pipeline using **public exoplanet catalog data** (fetch → validate → preprocess → analyze → report).  
-  Transferability: the same workflow applies to business datasets (schema drift, missing values, outliers, automated reporting).
+- **Exoplanet catalog analysis** — An end-to-end, reproducible data analysis pipeline using **public exoplanet catalog data** (fetch → validate → preprocess → analyze → report).  
+  (Planned)Transferability: the same workflow applies to business datasets (schema drift, missing values, outliers, automated reporting).
 
 ## Longer-term goals
 - Machine learning / AI is a longer-term goal and not the main focus of my current portfolio.
