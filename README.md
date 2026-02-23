@@ -37,7 +37,7 @@ This profile highlights engineering practices and reproducible deliverables rath
 「取得→検証→前処理→分析→レポート生成」までを再現可能に実装できることをこのポートフォリオで示します。
 
 - **[url-monitor](https://github.com/ShikiIchitose/url-monitor)**：Python基本スキル確認用途｡URLの疎通/遅延を計測し、MarkdownレポートとJSON結果を生成するPython CLI（テスト/CI/再現性を重視）
-- e**[Exoplanet catalog analysis](https://github.com/ShikiIchitose/exoplanet-analysis-report)**：NASA公開系外惑星カタログを用いた end-to-end 分析パイプライン（成果物は artifacts/ に固定出力）- (fetch → validate → preprocess → analyze → report+graph).
+- **[Exoplanet catalog analysis](https://github.com/ShikiIchitose/exoplanet-analysis-report)**：NASA公開系外惑星カタログを用いた end-to-end 分析パイプライン（成果物は artifacts/ に固定出力）- (fetch → validate → preprocess → analyze → report+graph).
   ※天文題材ですが、欠損・外れ値・スキーマ変更・自動レポーティング等は企業データ分析にも同型で応用可能を想定しています。
 
 背景：航空宇宙工学修士／スーパーコンピュータを用いたFORTRANによる数値計算研究経験。  
