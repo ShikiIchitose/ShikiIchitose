@@ -4,7 +4,7 @@ I’m currently looking for Python engineering opportunities, with a near-term f
 
 ## What I’m focusing on (near-term)
 - Python fundamentals and engineering hygiene: **CLI design, testing, CI, reproducibility**
-- Building end-to-end analytics workflows: **fetch → validate → preprocess → analyze → report**
+- Building end-to-end analytics workflows: **fetch → validate → preprocess → analyze → report+graph**
 
 ## Featured projects
 - **[url-monitor](https://github.com/ShikiIchitose/url-monitor)** — A Python CLI tool that checks URL availability/latency and generates a Markdown report + JSON results. \
