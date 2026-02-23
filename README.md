@@ -1,6 +1,6 @@
 # Python | Data & Analytics Portfolio
 
-I’m looking for Python roles, currently prioritizing **data analytics / data engineering**.
+I’m primarily seeking **data engineering / analytics engineering** roles, with a longer-term interest in **data science and AI/ML**.
 
 **Proof points:** Tested • CI-gated • Reproducible outputs
 
@@ -42,8 +42,7 @@ This profile emphasizes engineering practices and reproducible deliverables over
 <details>
 <summary><strong>日本語（概要）</strong></summary>
 
-現在、Pythonエンジニア職を中心に仕事を探しています。直近は **データ分析／データエンジニアリング** を主軸に、
-**再現性（reproducibility）** と **データ品質（data quality）** を重視したパイプラインを実装し、成果物として提示しています。
+現在、直近は **データエンジニア／アナリティクスエンジニア（分析基盤寄り）** を主軸に仕事を探しています。あわせて、長期的には **データサイエンス／AI・ML** にも段階的に取り組む方針です。再現性（reproducibility）とデータ品質（data quality）を重視したパイプライン実装を、成果物として提示しています。
 
 （要点）テスト済み／CI（continuous integration: 継続的インテグレーション）で品質ゲート／再現可能な成果物
 
@@ -61,7 +60,7 @@ This profile emphasizes engineering practices and reproducible deliverables over
   - **再利用性（reusability）**：ドメイン非依存のパイプライン骨格＋監査可能な実行メタデータ＋DuckDBローカル集計という構成
 
 ## 背景
-航空宇宙工学修士。FORTRAN中心の数値計算（C/Python併用）と、HPC（high-performance computing: 高性能計算）環境での計算実行経験があります。  
+航空宇宙工学修士。FORTRAN中心の数値計算（C/Python併用）と、HPC（high-performance computing: 高性能計算）､スーパーコンピュータ環境での計算実行経験があります。  
 機械学習／AIは将来の方向性として関心がありますが、現時点では **分析・データ基盤の基礎**（品質、再現性、パイプライン化）を優先しています。
 
 </details>
