@@ -16,13 +16,22 @@ I’m primarily seeking **data engineering / analytics engineering** roles, with
     - CI quality gates (**ruff / pytest**)
     - Responsible network-use guidance (portfolio-friendly defaults)
 
-- **[Exoplanet catalog analysis](https://github.com/ShikiIchitose/exoplanet-analysis-report)** — Reproducible analytics pipeline using **NASA Exoplanet Archive (TAP)** data  
+- **[Exoplanet catalog analysis](https://github.com/ShikiIchitose/exoplanet-analysis-report)** — Reproducible analytics pipeline using **NASA Exoplanet Archive (TAP)** data
   *(fetch → validate → preprocess → analyze → report & plots)* with **DuckDB** as the local warehouse
-    - Highlights:
+  - Links: [README](https://github.com/ShikiIchitose/exoplanet-analysis-report#readme) · [CI](https://github.com/ShikiIchitose/exoplanet-analysis-report/actions) · [Releases](https://github.com/ShikiIchitose/exoplanet-analysis-report/releases)
+  - Highlights:
     - Reproducibility & auditability: seeded bootstrap + snapshot/schema hashes + locked deps captured per run in [`run.json`](https://github.com/ShikiIchitose/exoplanet-analysis-report/blob/main/sample-artifacts/run.json)
     - Output artifacts are generated deterministically (reports/plots under a fixed directory)
     - Designed for real-world data issues: schema drift, missing values, outliers, automated reporting
     - Reusability: domain-agnostic pipeline scaffolding (fetch→validate→preprocess→analyze→report & plots) with DuckDB as the local warehouse
+
+- **[analytics-metrics-api](https://github.com/ShikiIchitose/analytics-metrics-api)** — Read-only analytics / metrics API built with **FastAPI + DuckDB + Parquet** for synthetic SaaS event data
+  - Links: [README](https://github.com/ShikiIchitose/analytics-metrics-api#readme) · [CI](https://github.com/ShikiIchitose/analytics-metrics-api/actions) · [Releases](https://github.com/ShikiIchitose/analytics-metrics-api/releases)
+  - Highlights:
+    - RESTful, resource-oriented API design with explicit HTTP semantics (**200 / 404 / 422**)
+    - Stable metric contracts and reproducible local testing with committed golden outputs
+    - Offline-first backend / analytics engineering setup using DuckDB queries over Parquet-backed local data
+    - Deterministic synthetic data generation to demonstrate backend fundamentals and data/analytics engineering fundamentals in a small, reviewable project
 
 ## Longer-term direction
 - I’m interested in **ML / AI** in the longer term, but I’m currently prioritizing analytics and data engineering fundamentals.
@@ -54,10 +63,17 @@ This profile emphasizes engineering practices and reproducible deliverables over
 ## 代表プロジェクト
 - **[url-monitor](https://github.com/ShikiIchitose/url-monitor)**  
   URLの疎通／遅延を計測し、MarkdownレポートとJSON結果を生成するPython CLI。テスト／CI／再現可能な実行を重視し、ネットワーク利用に配慮したデフォルト動作を明記しています。
+  
 - **[Exoplanet catalog analysis](https://github.com/ShikiIchitose/exoplanet-analysis-report)**  
   NASA公開の系外惑星カタログ（TAP: Table Access Protocol）を用いた end-to-end 分析パイプライン。DuckDBをローカルのデータウェアハウスとして利用しています。  
   - **再現性（reproducibility）**：ブートストラップ（bootstrap）のseed、スナップショット／スキーマのハッシュ、依存関係ロック等を `run.json` に記録（例：[`sample-artifacts/run.json`](https://github.com/ShikiIchitose/exoplanet-analysis-report/blob/main/sample-artifacts/run.json)）
   - **再利用性（reusability）**：ドメイン非依存のパイプライン骨格＋監査可能な実行メタデータ＋DuckDBローカル集計という構成
+
+- **[analytics-metrics-api](https://github.com/ShikiIchitose/analytics-metrics-api)**  
+  synthetic SaaS event data を対象に、FastAPI + DuckDB + Parquet で実装した read-only の分析 / メトリクス API。RESTful を意識したリソース指向の設計、安定したメトリクス定義、golden output を用いた再現可能なテストを通じて、バックエンド基礎力とデータ / 分析基盤の基礎力を示す小規模ポートフォリオです。  
+  - **RESTful 設計**：`/metrics`、`/metrics/{name}`、`/users/{user_id}` などのリソース指向 path と、`200 / 404 / 422` の明示的な HTTP ステータス運用
+  - **再現性（reproducibility）**：deterministic な synthetic data 生成、committed golden JSON、offline-first テストによる安定した検証
+  - **実装の狙い**：FastAPI による API 実装、DuckDB によるローカル集計、Parquet ベースのデータ管理を小さくレビューしやすい形でまとめ、バックエンドとデータ処理基盤の基礎力を示す構成
 
 ## 背景
 航空宇宙工学修士。FORTRAN中心の数値計算（C/Python併用）と、HPC（high-performance computing: 高性能計算）､スーパーコンピュータ環境での計算実行経験があります。  
