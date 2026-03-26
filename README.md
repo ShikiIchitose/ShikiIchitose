@@ -74,6 +74,8 @@ This profile emphasizes engineering practices and reproducible deliverables over
   - **RESTful 設計**：`/metrics`、`/metrics/{name}`、`/users/{user_id}` などのリソース指向 path と、`200 / 404 / 422` の明示的な HTTP ステータス運用
   - **再現性（reproducibility）**：deterministic な synthetic data 生成、committed golden JSON、offline-first テストによる安定した検証
   - **実装の狙い**：FastAPI による API 実装、DuckDB によるローカル集計、Parquet ベースのデータ管理を小さくレビューしやすい形でまとめ、バックエンドとデータ処理基盤の基礎力を示す構成
+  - [Analytics Metrics API Demo](https://analytics-metrics-api.onrender.com/) : 分析用データストアを想定し、KPI 集計と Job 実行結果の検索・閲覧を read-only で行える、社内向け分析閲覧ツールを意識した公開デモです。GitHub をクローンしなくてもその場で試すことができ、API 設計だけでなく、実際の利用イメージを持っていただけるよう最小 UI まで含めて確認いただけます。  
+(*初回アクセス時は起動に約1分かかる場合があります)
 
 ## 背景
 航空宇宙工学修士。FORTRAN中心の数値計算（C/Python併用）と、HPC（high-performance computing: 高性能計算）､スーパーコンピュータ環境での計算実行経験があります。  
