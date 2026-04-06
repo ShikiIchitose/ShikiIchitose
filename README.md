@@ -32,6 +32,7 @@ I’m primarily seeking **data engineering / analytics engineering** roles, with
     - Stable metric contracts and reproducible local testing with committed golden outputs
     - Offline-first backend / analytics engineering setup using DuckDB queries over Parquet-backed local data
     - Deterministic synthetic data generation to demonstrate backend fundamentals and data / analytics engineering fundamentals in a small, reviewable project
+  - [Demo](https://analytics-metrics-api.onrender.com/)
 
 - **[ai-tool-access-requests](https://github.com/ShikiIchitose/ai-tool-access-requests)** — Internal workflow app built with **Django + PostgreSQL** for enterprise AI tool access requests and approvals
   - Links: [README](https://github.com/ShikiIchitose/ai-tool-access-requests#readme) · [CI](https://github.com/ShikiIchitose/ai-tool-access-requests/actions) · [Releases](https://github.com/ShikiIchitose/ai-tool-access-requests/releases)
@@ -39,6 +40,7 @@ I’m primarily seeking **data engineering / analytics engineering** roles, with
     - Authentication / authorization with clear requester / reviewer / admin boundaries
     - Form validation and role-based workflow design for a minimal but realistic business application
     - Inspection-only admin and CI-gated tests covering approval flow and core business rules
+  - [Demo](https://ai-tool-access-requests.onrender.com/)
 
 ## Longer-term direction
 - I’m interested in **ML / AI** in the longer term, but I’m currently prioritizing analytics and data engineering fundamentals.
@@ -81,12 +83,17 @@ This profile emphasizes engineering practices and reproducible deliverables over
   - **RESTful 設計**：`/metrics`、`/metrics/{name}`、`/users/{user_id}` などのリソース指向 path と、`200 / 404 / 422` の明示的な HTTP ステータス運用
   - **再現性（reproducibility）**：deterministic な synthetic data 生成、committed golden JSON、offline-first テストによる安定した検証
   - **実装の狙い**：FastAPI による API 実装、DuckDB によるローカル集計、Parquet ベースのデータ管理を小さくレビューしやすい形でまとめ、バックエンドとデータ処理基盤の基礎力を示す構成
+  - [**metrics の定義や KPI の扱い**](https://github.com/ShikiIchitose/analytics-metrics-api/blob/main/METRICS.ja.md)
+  - [**開発サマリ**](https://github.com/ShikiIchitose/analytics-metrics-api/blob/main/docs/development-highlights.ja.md)  
+  - [**公開Demo**](https://analytics-metrics-api.onrender.com/)
 
 - **[ai-tool-access-requests](https://github.com/ShikiIchitose/ai-tool-access-requests)**  
   Django + PostgreSQL で実装した、AIツール利用申請・承認のための内部業務アプリです。認証・認可、申請者／レビュワー／admin の権限分離、フォームバリデーション、業務ルールを踏まえたレビュー導線、自動テストを通じて、実務寄りのバックエンド基礎力を示す小規模ポートフォリオです。  
   - **権限設計**：requester / reviewer / admin の責務を分離し、review workflow を通常UI側で実行する構成
   - **業務ルール**：self-review prohibition、pending-only review、inactive tool handling などを明示的に扱う設計
   - **運用と品質**：inspection-only admin と CI により、最小構成でも保守しやすい内部業務アプリとして整理
+  - [**開発サマリ**](https://github.com/ShikiIchitose/ai-tool-access-requests/blob/main/docs/development-highlights.ja.md)
+  - [**公開Demo**](https://ai-tool-access-requests.onrender.com/)
 
 ## 背景
 航空宇宙工学修士。FORTRAN中心の数値計算（C / Python併用）と、HPC（high-performance computing: 高性能計算）環境での計算実行経験があります。  
