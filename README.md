@@ -7,7 +7,7 @@ I’m primarily seeking **data engineering / analytics engineering** roles, with
 ## Current focus (near-term)
 - Production-minded Python: **command-line interface (CLI) design, backend APIs, Django applications, testing, CI, reproducible runs**
 - Data and analytics engineering workflows: **fetch → validate → preprocess → model → analyze → report**
-- Local analytical systems: **DuckDB, Parquet, dbt, SQL, reproducible data artifacts**
+- Analytical systems: **DuckDB, BigQuery, Parquet, dbt, SQL, reproducible data artifacts**
 
 ## Featured projects
 
@@ -45,13 +45,16 @@ I’m primarily seeking **data engineering / analytics engineering** roles, with
     - CI-gated tests covering approval flow, permissions, and core business rules
   - [Demo](https://ai-tool-access-requests.onrender.com/)
 
-- **[access-governance-warehouse](https://github.com/ShikiIchitose/access-governance-warehouse)** — Local analytics engineering warehouse built with **dbt + DuckDB + Python** for enterprise AI tool access governance
+- **[access-governance-warehouse](https://github.com/ShikiIchitose/access-governance-warehouse)** — Analytics engineering warehouse built with **dbt + DuckDB + BigQuery + Python** for enterprise AI tool access governance
   - Links: [README](https://github.com/ShikiIchitose/access-governance-warehouse#readme) · [CI](https://github.com/ShikiIchitose/access-governance-warehouse/actions) · [Releases](https://github.com/ShikiIchitose/access-governance-warehouse/releases)
   - Highlights:
     - Deterministic synthetic raw Parquet data generation for reproducible source fixtures
     - Layered dbt modeling: **sources → staging → core → intermediate → marts**
+    - Local DuckDB path preserved as the primary clone-and-run review workflow
+    - Optional BigQuery execution path using the same dbt source contract, model tree, marts, and data tests
     - Business-facing marts for access requests, tool adoption, spend alignment, review candidates, and governance exceptions
     - 315 dbt data tests covering source contracts, model grain, reconciliation, and mart logic
+    - BigQuery build/test evidence artifacts and raw Parquet loading helper
     - dbt documentation, lineage graph, domain assumptions, testing strategy, and generated static governance report
     - Clear separation between transformation failures and business review signals
 
@@ -130,11 +133,13 @@ This profile emphasizes engineering practices and reproducible deliverables over
   - [公開デモ](https://ai-tool-access-requests.onrender.com/)
 
 - **[access-governance-warehouse](https://github.com/ShikiIchitose/access-governance-warehouse)**  
-  dbt + DuckDB + Python を用いた、エンタープライズ向け AI ツール利用ガバナンスを題材にした分析基盤ポートフォリオです。決定論的な synthetic raw data generator により Parquet files を生成し、raw sources / staging / core / intermediate / marts の dbt layer に分けて、アクセス申請、承認状況、利用実績、コスト、ガバナンス例外を分析できる warehouse を構築しています。  
+  dbt + DuckDB + BigQuery + Python を用いた、エンタープライズ向け AI ツール利用ガバナンスを題材にした分析基盤ポートフォリオです。決定論的な synthetic raw data generator により Parquet files を生成し、raw sources / staging / core / intermediate / marts の dbt layer に分けて、アクセス申請、承認状況、利用実績、コスト、ガバナンス例外を分析できる warehouse を構築しています。v0.2.0 では、ローカル DuckDB path を clone-and-run 可能な primary review path として維持しつつ、同じ dbt source contract、model tree、marts、data tests を BigQuery 上でも実行できる cloud warehouse execution path を追加しました。  
   - **Analytics Engineering**：sources → staging → core → intermediate → marts の layered dbt modeling
+  - **Cloud Data Warehouse**：同じ dbt project を DuckDB と BigQuery の両方で実行できる構成を整備
   - **検証設計**：315 件の dbt data tests により、source contracts、model grain、reconciliation、mart logic を検証
   - **分析出力**：access requests、tool adoption、spend alignment、review candidates、governance exceptions を business-facing marts として整理
-  - **ドキュメント**：dbt docs、lineage graph、domain assumptions、testing strategy、static governance report を整備
+  - **実行証跡**：BigQuery build/test evidence artifacts、relation inventory、raw Parquet loading helper を整備
+  - **ドキュメント**：dbt docs、lineage graph、domain assumptions、testing strategy、static governance report、BigQuery execution guide を整備
   - **設計方針**：変換処理の不整合（transformation failure）と業務レビューシグナル（business review signal）を分離
 
 ## Growth direction / 今後伸ばしたい領域
