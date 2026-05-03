@@ -7,7 +7,7 @@ I’m primarily seeking **data engineering / analytics engineering** roles, with
 ## Current focus (near-term)
 - Production-minded Python: **command-line interface (CLI) design, backend APIs, Django applications, testing, CI, reproducible runs**
 - Data and analytics engineering workflows: **fetch → validate → preprocess → model → analyze → report**
-- Analytical systems: **DuckDB, BigQuery, Parquet, dbt, SQL, reproducible data artifacts**
+- Analytical systems: **DuckDB, BigQuery, Parquet, dbt, SQL, reproducible data artifacts, Looker Studio dashboard artifacts**
 
 ## Featured projects
 
@@ -45,18 +45,20 @@ I’m primarily seeking **data engineering / analytics engineering** roles, with
     - CI-gated tests covering approval flow, permissions, and core business rules
   - [Demo](https://ai-tool-access-requests.onrender.com/)
 
-- **[access-governance-warehouse](https://github.com/ShikiIchitose/access-governance-warehouse)** — Analytics engineering warehouse built with **dbt + DuckDB + BigQuery + Python** for enterprise AI tool access governance
-  - Links: [README](https://github.com/ShikiIchitose/access-governance-warehouse#readme) · [CI](https://github.com/ShikiIchitose/access-governance-warehouse/actions) · [Releases](https://github.com/ShikiIchitose/access-governance-warehouse/releases)
+- **[access-governance-warehouse](https://github.com/ShikiIchitose/access-governance-warehouse)** — Analytics engineering warehouse built with **dbt + DuckDB + BigQuery + Looker Studio + Python** for enterprise AI tool access governance
+  - Links: [README](https://github.com/ShikiIchitose/access-governance-warehouse#readme) · [Dashboard docs](https://github.com/ShikiIchitose/access-governance-warehouse/blob/main/docs/looker-studio-dashboard.md) · [CI](https://github.com/ShikiIchitose/access-governance-warehouse/actions) · [Releases](https://github.com/ShikiIchitose/access-governance-warehouse/releases)
   - Highlights:
     - Deterministic synthetic raw Parquet data generation for reproducible source fixtures
     - Layered dbt modeling: **sources → staging → core → intermediate → marts**
     - Local DuckDB path preserved as the primary clone-and-run review workflow
     - Optional BigQuery execution path using the same dbt source contract, model tree, marts, and data tests
+    - Lightweight Looker Studio dashboard artifacts connected to BigQuery marts
+    - Stakeholder-facing dashboard pages for executive overview, tool adoption and usage, and governance review signals
     - Business-facing marts for access requests, tool adoption, spend alignment, review candidates, and governance exceptions
     - 315 dbt data tests covering source contracts, model grain, reconciliation, and mart logic
     - BigQuery build/test evidence artifacts and raw Parquet loading helper
-    - dbt documentation, lineage graph, domain assumptions, testing strategy, and generated static governance report
-    - Clear separation between transformation failures and business review signals
+    - dbt documentation, lineage graph, domain assumptions, testing strategy, static governance report, and BI dashboard documentation
+    - Clear separation between transformation failures, business review signals, and BI presentation logic
 
 ## Growth direction
 
@@ -64,7 +66,7 @@ In the near term, I’m focusing on **data engineering**, **analytics engineerin
 
 My current priority is to strengthen practical fundamentals in data modeling, schema design, data quality management, batch processing, reproducible data pipelines, dbt-based analytics engineering, tested data transformations, and read-only application programming interface (API) design for analytical data access.
 
-Technologies I’m currently focusing on include **Python, structured query language (SQL), dbt, DuckDB, FastAPI, Parquet, and PostgreSQL**.
+Technologies I’m currently focusing on include **Python, structured query language (SQL), dbt, DuckDB, FastAPI, Parquet, and PostgreSQL, Looker Studio dashboard artifacts**.
 
 In the medium term, I want to broaden toward **applied data science** and decision-oriented analytics, including metric design, business logic documentation, automated reporting, statistical estimation, uncertainty evaluation, experiment design, and connecting analytical results to business decisions.
 
@@ -133,14 +135,16 @@ This profile emphasizes engineering practices and reproducible deliverables over
   - [公開デモ](https://ai-tool-access-requests.onrender.com/)
 
 - **[access-governance-warehouse](https://github.com/ShikiIchitose/access-governance-warehouse)**  
-  dbt + DuckDB + BigQuery + Python を用いた、エンタープライズ向け AI ツール利用ガバナンスを題材にした分析基盤ポートフォリオです。決定論的な synthetic raw data generator により Parquet files を生成し、raw sources / staging / core / intermediate / marts の dbt layer に分けて、アクセス申請、承認状況、利用実績、コスト、ガバナンス例外を分析できる warehouse を構築しています。v0.2.0 では、ローカル DuckDB path を clone-and-run 可能な primary review path として維持しつつ、同じ dbt source contract、model tree、marts、data tests を BigQuery 上でも実行できる cloud warehouse execution path を追加しました。  
+  dbt + DuckDB + BigQuery + Looker Studio + Python を用いた、エンタープライズ向け AI ツール利用ガバナンスを題材にした分析基盤ポートフォリオです。決定論的な synthetic raw data generator により Parquet files を生成し、raw sources / staging / core / intermediate / marts の dbt layer に分けて、アクセス申請、承認状況、利用実績、コスト、ガバナンス例外を分析できる warehouse を構築しています。v0.2.0 では、ローカル DuckDB path を clone-and-run 可能な primary review path として維持しつつ、同じ dbt source contract、model tree、marts、data tests を BigQuery 上でも実行できる cloud warehouse execution path を追加しました。v0.2.1 では、BigQuery marts に接続した Looker Studio dashboard artifacts を追加し、mart layer を stakeholder-facing BI artifact として提示できる構成にしています。  
   - **Analytics Engineering**：sources → staging → core → intermediate → marts の layered dbt modeling
   - **Cloud Data Warehouse**：同じ dbt project を DuckDB と BigQuery の両方で実行できる構成を整備
+  - **BI Dashboard**：Looker Studio により、Executive Overview、Tool Adoption and Usage、Governance Exceptions and Review Signals の 3 ページを作成
   - **検証設計**：315 件の dbt data tests により、source contracts、model grain、reconciliation、mart logic を検証
   - **分析出力**：access requests、tool adoption、spend alignment、review candidates、governance exceptions を business-facing marts として整理
+  - **Stakeholder-facing reporting**：役員・事業部門・非エンジニア向けに、申請状況、承認率、利用状況、コスト、ガバナンス例外を dashboard screenshots と documentation で提示
   - **実行証跡**：BigQuery build/test evidence artifacts、relation inventory、raw Parquet loading helper を整備
-  - **ドキュメント**：dbt docs、lineage graph、domain assumptions、testing strategy、static governance report、BigQuery execution guide を整備
-  - **設計方針**：変換処理の不整合（transformation failure）と業務レビューシグナル（business review signal）を分離
+  - **ドキュメント**：dbt docs、lineage graph、domain assumptions、testing strategy、static governance report、BigQuery execution guide、Looker Studio dashboard documentation を整備
+  - **設計方針**：変換処理の不整合（transformation failure）、業務レビューシグナル（business review signal）、BI presentation logic を分離
 
 ## Growth direction / 今後伸ばしたい領域
 
