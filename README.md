@@ -1,40 +1,28 @@
-# Python | Data & Analytics Engineering Portfolio
+# Analytics Engineering Portfolio | Data Engineering / Python / Go
 
-I’m primarily seeking **data engineering / analytics engineering** roles, with strong interest in backend-oriented data applications and a longer-term interest in **data science and artificial intelligence / machine learning (AI / ML)**.
+I’m primarily seeking **analytics engineering** roles, with strong interest in **data engineering** and supporting backend-oriented data applications. My portfolio focuses on turning raw operational data into tested, documented, and decision-ready analytical outputs, with longer-term interest in **artificial intelligence / machine learning (AI / ML)**.
 
-**Proof points:** Tested • continuous integration (CI)-gated • Reproducible outputs • Reviewable documentation
+**Proof points:** Tested • continuous integration (CI)-gated • Reproducible outputs • Reviewable documentation • Released portfolio projects
 
-## Current focus (near-term)
-- Production-minded Python: **command-line interface (CLI) design, backend APIs, Django applications, testing, CI, reproducible runs**
-- Data and analytics engineering workflows: **fetch → validate → preprocess → model → analyze → report**
-- Analytical systems: **DuckDB, BigQuery, Parquet, dbt, SQL, reproducible data artifacts, Looker Studio dashboard artifacts**
+## Current focus
+
+- Data and analytics engineering workflows: **generate → validate → model → test → report → visualize**
+- Backend-oriented data applications: **application programming interface (API) design, ingestion boundaries, Django applications, FastAPI services, Go HTTP services**
+- Analytical systems: **dbt, DuckDB, BigQuery, Parquet, Structured Query Language (SQL), Looker Studio dashboard artifacts**
+- Production-minded implementation: **testing, CI, Docker, documentation, reproducible runs, reviewable artifacts**
 
 ## Featured projects
 
-- **[url-monitor](https://github.com/ShikiIchitose/url-monitor)** — Python CLI to check URL availability / latency and generate a **Markdown report + JSON results**
-  - Links: [README](https://github.com/ShikiIchitose/url-monitor#readme) · [CI](https://github.com/ShikiIchitose/url-monitor/actions) · [Releases](https://github.com/ShikiIchitose/url-monitor/releases)
+- **[access-governance-warehouse](https://github.com/ShikiIchitose/access-governance-warehouse)** — Analytics engineering warehouse built with **dbt + DuckDB + BigQuery + Looker Studio + Python** for enterprise AI tool access governance
+  - Links: [README](https://github.com/ShikiIchitose/access-governance-warehouse#readme) · [Dashboard docs](https://github.com/ShikiIchitose/access-governance-warehouse/blob/main/docs/looker-studio-dashboard.md) · [CI](https://github.com/ShikiIchitose/access-governance-warehouse/actions) · [Releases](https://github.com/ShikiIchitose/access-governance-warehouse/releases)
   - Highlights:
-    - Reproducible runs and clear, reviewable outputs
-    - CI quality gates (**ruff / pytest**)
-    - Responsible network-use guidance with portfolio-friendly defaults
-
-- **[Exoplanet catalog analysis](https://github.com/ShikiIchitose/exoplanet-analysis-report)** — Reproducible analytics pipeline using **NASA Exoplanet Archive TAP (Table Access Protocol)** data  
-  *(fetch → validate → preprocess → analyze → report & plots)* with **DuckDB** as the local warehouse
-  - Links: [README](https://github.com/ShikiIchitose/exoplanet-analysis-report#readme) · [CI](https://github.com/ShikiIchitose/exoplanet-analysis-report/actions) · [Releases](https://github.com/ShikiIchitose/exoplanet-analysis-report/releases)
-  - Highlights:
-    - Reproducibility and auditability: seeded bootstrap, snapshot / schema hashes, and locked dependencies captured per run in [`run.json`](https://github.com/ShikiIchitose/exoplanet-analysis-report/blob/main/sample-artifacts/run.json)
-    - Output artifacts are generated deterministically under a fixed directory structure
-    - Designed for real-world data issues: schema drift, missing values, outliers, and automated reporting
-    - Reusable domain-agnostic pipeline scaffolding with DuckDB as a local analytical store
-
-- **[analytics-metrics-api](https://github.com/ShikiIchitose/analytics-metrics-api)** — Read-only analytics / metrics API built with **FastAPI + DuckDB + Parquet** for synthetic SaaS-like event and job-run data
-  - Links: [README](https://github.com/ShikiIchitose/analytics-metrics-api#readme) · [CI](https://github.com/ShikiIchitose/analytics-metrics-api/actions) · [Releases](https://github.com/ShikiIchitose/analytics-metrics-api/releases)
-  - Highlights:
-    - RESTful, resource-oriented API design with explicit HTTP semantics (**200 / 404 / 422**)
-    - Stable metric contracts and reproducible local testing with committed golden outputs
-    - Offline-first backend / analytics engineering setup using DuckDB queries over Parquet-backed local data
-    - Deterministic synthetic data generation to demonstrate backend and analytics engineering fundamentals in a small, reviewable project
-  - [Demo](https://analytics-metrics-api.onrender.com/)
+    - Deterministic synthetic raw Parquet data generation for reproducible source fixtures
+    - Layered dbt modeling: **sources → staging → core → intermediate → marts**
+    - Local DuckDB path preserved as the primary clone-and-run review workflow
+    - Optional BigQuery execution path using the same dbt source contract, model tree, marts, and data tests
+    - Looker Studio dashboard artifacts connected to BigQuery marts
+    - 315 dbt data tests covering source contracts, model grain, reconciliation, and mart logic
+    - Clear separation between transformation failures, business review signals, and business intelligence (BI) presentation logic
 
 - **[ai-tool-access-requests](https://github.com/ShikiIchitose/ai-tool-access-requests)** — Internal workflow app built with **Django + PostgreSQL** for enterprise AI tool access requests and approvals
   - Links: [README](https://github.com/ShikiIchitose/ai-tool-access-requests#readme) · [CI](https://github.com/ShikiIchitose/ai-tool-access-requests/actions) · [Releases](https://github.com/ShikiIchitose/ai-tool-access-requests/releases)
@@ -45,32 +33,55 @@ I’m primarily seeking **data engineering / analytics engineering** roles, with
     - CI-gated tests covering approval flow, permissions, and core business rules
   - [Demo](https://ai-tool-access-requests.onrender.com/)
 
-- **[access-governance-warehouse](https://github.com/ShikiIchitose/access-governance-warehouse)** — Analytics engineering warehouse built with **dbt + DuckDB + BigQuery + Looker Studio + Python** for enterprise AI tool access governance
-  - Links: [README](https://github.com/ShikiIchitose/access-governance-warehouse#readme) · [Dashboard docs](https://github.com/ShikiIchitose/access-governance-warehouse/blob/main/docs/looker-studio-dashboard.md) · [CI](https://github.com/ShikiIchitose/access-governance-warehouse/actions) · [Releases](https://github.com/ShikiIchitose/access-governance-warehouse/releases)
+- **[go-ingestion-api](https://github.com/ShikiIchitose/go-ingestion-api)** — Minimal Go HTTP ingestion API for strict AI tool usage event ingestion
+  - Links: [README](https://github.com/ShikiIchitose/go-ingestion-api#readme) · [CI](https://github.com/ShikiIchitose/go-ingestion-api/actions) · [Releases](https://github.com/ShikiIchitose/go-ingestion-api/releases)
   - Highlights:
-    - Deterministic synthetic raw Parquet data generation for reproducible source fixtures
-    - Layered dbt modeling: **sources → staging → core → intermediate → marts**
-    - Local DuckDB path preserved as the primary clone-and-run review workflow
-    - Optional BigQuery execution path using the same dbt source contract, model tree, marts, and data tests
-    - Lightweight Looker Studio dashboard artifacts connected to BigQuery marts
-    - Stakeholder-facing dashboard pages for executive overview, tool adoption and usage, and governance review signals
-    - Business-facing marts for access requests, tool adoption, spend alignment, review candidates, and governance exceptions
-    - 315 dbt data tests covering source contracts, model grain, reconciliation, and mart logic
-    - BigQuery build/test evidence artifacts and raw Parquet loading helper
-    - dbt documentation, lineage graph, domain assumptions, testing strategy, static governance report, and BI dashboard documentation
-    - Clear separation between transformation failures, business review signals, and BI presentation logic
+    - One JSON event per HTTP request with a strict request contract
+    - Content-Type enforcement, request body size limit, strict JSON decoding, and unknown field rejection
+    - Event model validation and compact user / tool reference validation
+    - Accepted events persisted as append-only JSONL raw storage
+    - Docker multi-stage build and GitHub Actions CI
+    - Positioned as an upstream ingestion boundary for downstream warehouse and BI workflows
+
+- **[analytics-metrics-api](https://github.com/ShikiIchitose/analytics-metrics-api)** — Read-only analytics API built with **FastAPI + DuckDB + Parquet** for synthetic SaaS-like event and job-run data
+  - Links: [README](https://github.com/ShikiIchitose/analytics-metrics-api#readme) · [CI](https://github.com/ShikiIchitose/analytics-metrics-api/actions) · [Releases](https://github.com/ShikiIchitose/analytics-metrics-api/releases)
+  - Highlights:
+    - Resource-oriented API design with explicit HTTP semantics
+    - Stable metric contracts and reproducible local testing with committed golden outputs
+    - Offline-first backend / analytics engineering setup using DuckDB queries over Parquet-backed local data
+    - Deterministic synthetic data generation for a small, reviewable analytics API project
+  - [Demo](https://analytics-metrics-api.onrender.com/)
+
+- **[Exoplanet catalog analysis](https://github.com/ShikiIchitose/exoplanet-analysis-report)** — Reproducible analytics pipeline using **NASA Exoplanet Archive TAP (Table Access Protocol)** data with DuckDB as the local analytical store
+  - Links: [README](https://github.com/ShikiIchitose/exoplanet-analysis-report#readme) · [CI](https://github.com/ShikiIchitose/exoplanet-analysis-report/actions) · [Releases](https://github.com/ShikiIchitose/exoplanet-analysis-report/releases)
+  - Highlights:
+    - Fetch → validate → preprocess → analyze → report workflow
+    - Reproducibility and auditability through seeded bootstrap, schema snapshots, and locked dependencies
+    - Designed for real-world data issues such as schema drift, missing values, outliers, and automated reporting
+    - Domain-agnostic pipeline scaffolding with DuckDB as a local analytical store
+
+- **[url-monitor](https://github.com/ShikiIchitose/url-monitor)** — Python command-line interface (CLI) to check URL availability and latency, then generate a Markdown report and JSON results
+  - Links: [README](https://github.com/ShikiIchitose/url-monitor#readme) · [CI](https://github.com/ShikiIchitose/url-monitor/actions) · [Releases](https://github.com/ShikiIchitose/url-monitor/releases)
+  - Highlights:
+    - Reproducible runs and clear, reviewable outputs
+    - CI quality gates with Ruff and pytest
+    - Compact project covering CLI design, HTTP request handling, validation, test isolation, and report output
 
 ## Growth direction
 
-In the near term, I’m focusing on **data engineering**, **analytics engineering**, and backend-oriented data applications.
+In the near term, I’m focusing primarily on **analytics engineering**, with strong interest in **data engineering** and supporting backend-oriented data applications.
 
-My current priority is to strengthen practical fundamentals in data modeling, schema design, data quality management, batch processing, reproducible data pipelines, dbt-based analytics engineering, tested data transformations, and read-only application programming interface (API) design for analytical data access.
+My current priority is to strengthen practical fundamentals in data modeling, schema design, data quality management, dbt-based analytics engineering, tested data transformations, reproducible data pipelines, batch processing, and decision-ready reporting.
 
-Technologies I’m currently focusing on include **Python, structured query language (SQL), dbt, DuckDB, FastAPI, Parquet, and PostgreSQL, Looker Studio dashboard artifacts**.
+Technologies I’m currently focusing on include **Python, Structured Query Language (SQL), dbt, DuckDB, BigQuery, Parquet, PostgreSQL, Looker Studio dashboard artifacts, Go, FastAPI, and Django**.
+
+I’m especially interested in building analytical systems that turn raw operational data into trusted marts, documented metrics, automated quality checks, static reports, and business intelligence (BI)-facing artifacts.
+
+Backend-oriented work is currently positioned as a supporting skill for data products, including read-only application programming interface (API) design, ingestion boundaries, validation, and internal workflow applications that produce or expose analytical data.
 
 In the medium term, I want to broaden toward **applied data science** and decision-oriented analytics, including metric design, business logic documentation, automated reporting, statistical estimation, uncertainty evaluation, experiment design, and connecting analytical results to business decisions.
 
-In the long term, I’m interested in connecting this foundation to **machine learning (ML)** and **artificial intelligence (AI)** systems, including feature engineering, machine learning pipelines, model evaluation, monitoring, deployment, retraining workflows, Docker, and machine learning operations (MLOps).
+In the long term, I’m interested in connecting this foundation to **machine learning (ML)** and **artificial intelligence (AI)** systems, including feature engineering, machine learning pipelines, model evaluation, monitoring, deployment, retraining workflows, and machine learning operations (MLOps).
 
 ## Background
 M.E. in Aerospace Engineering
@@ -90,91 +101,35 @@ Please use the links on my GitHub profile.
 This profile emphasizes engineering practices and reproducible deliverables over domain-specific research claims.
 
 <details>
-<summary>日本語版 / Japanese</summary>
+<summary>日本語要約版 / Japanese</summary>
 
-現在、直近では **データエンジニアリング / Analytics Engineering(AE:分析エンジニアリング) / バックエンド寄りのデータアプリケーション実装** を主軸に仕事を探しています。  
-長期的には **Data Science / Artificial Intelligence(AI:人工知能) / Machine Learning(ML:機械学習)** にも段階的に接続していきたいと考えています。
+## 概要
 
-再現性（reproducibility）、検証可能性（verifiability）、保守しやすさ（maintainability）を重視し、CLI(command-line interface:コマンドラインインターフェース)、分析パイプライン、read-only API(application programming interface:アプリケーションプログラミングインターフェース)、Django 業務アプリ、dbt + DuckDB による分析基盤を GitHub ポートフォリオとして継続開発しています。
+Analytics Engineering を主軸に、Data Engineering とデータプロダクトを支えるバックエンド実装にも関心があります。
 
-**要点:** テスト済み / CI(continuous integration:継続的インテグレーション) による品質ゲート / 再現可能な成果物 / レビューしやすいドキュメント
+現在は、AIツール利用ガバナンスを題材にしたポートフォリオを中心に、申請・承認アプリ、利用イベント取り込みAPI、dbtによる分析基盤、BigQuery実行、Looker Studio dashboard artifacts までを小規模に実装しています。
 
-## 現時点の注力
+重視している点は、再現性、検証可能性、テスト、CI、ドキュメント、レビューしやすい成果物です。
 
-- **実装衛生（engineering hygiene）**：CLI 設計、API 設計、Django アプリケーション、テスト、静的解析、CI による品質管理
-- **データ処理 / 分析ワークフロー**：取得（fetch）→ 検証（validate）→ 前処理（preprocess）→ モデリング（model）→ 分析（analyze）→ レポート生成（report）
-- **Analytics Engineering**：dbt による source / staging / core / intermediate / marts の設計、data tests、dbt docs、lineage、model grain（モデル粒度）の明示
-- **実行の監査可能性（auditability）**：実行条件・入力・依存関係・出力をメタデータや成果物として残し、後から再現 / 検証できる設計
+## 主なポートフォリオ
 
-## 代表プロジェクト
+- access-governance-warehouse  
+  dbt、DuckDB、BigQuery、Looker Studio、Pythonを用いたAnalytics Engineeringポートフォリオです。AIツール利用の申請・承認・利用・コスト・例外を分析できるwarehouseとBI artifactsを構築しています。
 
-- **[url-monitor](https://github.com/ShikiIchitose/url-monitor)**  
-  URL の疎通 / 遅延を計測し、Markdown レポートと JSON 結果を生成する Python CLI です。テスト、CI、再現可能な実行結果を重視し、ネットワーク利用に配慮したデフォルト動作を明記しています。
+- ai-tool-access-requests  
+  Django + PostgreSQLで実装したAIツール利用申請・承認アプリです。requester / reviewer / admin の権限分離、RBAC、フォームバリデーション、業務ルールのテストを扱っています。
 
-- **[Exoplanet catalog analysis](https://github.com/ShikiIchitose/exoplanet-analysis-report)**  
-  NASA 公開の系外惑星カタログ TAP(Table Access Protocol) データを用いた end-to-end 分析パイプラインです。DuckDB をローカルの分析用データストアとして利用し、取得、検証、前処理、分析、レポート / 図表生成までを一貫して実装しています。  
-  - **再現性（reproducibility）**：ブートストラップ（bootstrap）の seed、スナップショット / スキーマのハッシュ、依存関係ロック等を `run.json` に記録
-  - **実データ対応**：スキーマ変化、欠損値、外れ値を前提にした検証と分析
-  - **再利用性（reusability）**：ドメイン非依存のパイプライン骨格、監査可能な実行メタデータ、DuckDB ローカル集計という構成
+- go-ingestion-api  
+  Goで実装したAIツール利用イベント向けのHTTP ingestion APIです。strict JSON validation、reference validation、append-only JSONL storage、Docker、CIを扱っています。
 
-- **[analytics-metrics-api](https://github.com/ShikiIchitose/analytics-metrics-api)**  
-  synthetic SaaS-like event data と job-run data を対象に、FastAPI + DuckDB + Parquet で実装した read-only の分析 / メトリクス API です。RESTful を意識したリソース指向の設計、安定した KPI(key performance indicator:重要業績評価指標) 定義、golden output を用いた再現可能なテストを通じて、バックエンドとデータ処理基盤の基礎力を示す小規模ポートフォリオです。  
-  - **API 設計**：`/metrics`、`/metrics/{name}`、`/users/{user_id}` などのリソース指向 path と、`200 / 404 / 422` の明示的な HTTP ステータス運用
-  - **再現性（reproducibility）**：deterministic な synthetic data 生成、committed golden JSON、offline-first テストによる安定した検証
-  - **実装の狙い**：FastAPI による API 実装、DuckDB によるローカル集計、Parquet ベースのデータ管理を小さくレビューしやすい形で整理
-  - [metrics の定義や KPI の扱い](https://github.com/ShikiIchitose/analytics-metrics-api/blob/main/METRICS.ja.md)
-  - [開発サマリ](https://github.com/ShikiIchitose/analytics-metrics-api/blob/main/docs/development-highlights.ja.md)
-  - [公開デモ](https://analytics-metrics-api.onrender.com/)
+- analytics-metrics-api  
+  FastAPI + DuckDB + Parquetで実装したread-only analytics APIです。KPI定義、resource-oriented API design、golden-output testingを扱っています。
 
-- **[ai-tool-access-requests](https://github.com/ShikiIchitose/ai-tool-access-requests)**  
-  Django + PostgreSQL で実装した、エンタープライズ向け AI ツール利用申請・承認のための内部業務アプリです。認証・認可、requester / reviewer / admin の権限分離、フォームバリデーション、業務ルールを踏まえたレビュー導線、自動テストを通じて、実務寄りのバックエンド基礎力を示す小規模ポートフォリオです。  
-  - **権限設計**：requester / reviewer / admin の責務を分離し、review workflow を通常 UI 側で実行する構成
-  - **業務ルール**：self-review prohibition、pending-only review、inactive tool handling などを明示的に扱う設計
-  - **運用と品質**：inspection-only admin、management commands、CI により、最小構成でも保守しやすい内部業務アプリとして整理
-  - [開発サマリ](https://github.com/ShikiIchitose/ai-tool-access-requests/blob/main/docs/development-highlights.ja.md)
-  - [公開デモ](https://ai-tool-access-requests.onrender.com/)
+## 今後の方向性
 
-- **[access-governance-warehouse](https://github.com/ShikiIchitose/access-governance-warehouse)**  
-  dbt + DuckDB + BigQuery + Looker Studio + Python を用いた、エンタープライズ向け AI ツール利用ガバナンスを題材にした分析基盤ポートフォリオです。決定論的な synthetic raw data generator により Parquet files を生成し、raw sources / staging / core / intermediate / marts の dbt layer に分けて、アクセス申請、承認状況、利用実績、コスト、ガバナンス例外を分析できる warehouse を構築しています。v0.2.0 では、ローカル DuckDB path を clone-and-run 可能な primary review path として維持しつつ、同じ dbt source contract、model tree、marts、data tests を BigQuery 上でも実行できる cloud warehouse execution path を追加しました。v0.2.1 では、BigQuery marts に接続した Looker Studio dashboard artifacts を追加し、mart layer を stakeholder-facing BI artifact として提示できる構成にしています。  
-  - **Analytics Engineering**：sources → staging → core → intermediate → marts の layered dbt modeling
-  - **Cloud Data Warehouse**：同じ dbt project を DuckDB と BigQuery の両方で実行できる構成を整備
-  - **BI Dashboard**：Looker Studio により、Executive Overview、Tool Adoption and Usage、Governance Exceptions and Review Signals の 3 ページを作成
-  - **検証設計**：315 件の dbt data tests により、source contracts、model grain、reconciliation、mart logic を検証
-  - **分析出力**：access requests、tool adoption、spend alignment、review candidates、governance exceptions を business-facing marts として整理
-  - **Stakeholder-facing reporting**：役員・事業部門・非エンジニア向けに、申請状況、承認率、利用状況、コスト、ガバナンス例外を dashboard screenshots と documentation で提示
-  - **実行証跡**：BigQuery build/test evidence artifacts、relation inventory、raw Parquet loading helper を整備
-  - **ドキュメント**：dbt docs、lineage graph、domain assumptions、testing strategy、static governance report、BigQuery execution guide、Looker Studio dashboard documentation を整備
-  - **設計方針**：変換処理の不整合（transformation failure）、業務レビューシグナル（business review signal）、BI presentation logic を分離
+直近ではAnalytics Engineeringを主軸に、dbt、SQL、DuckDB、BigQuery、Pythonを用いたデータモデリング、data quality、mart設計、BI-facing reportingを強化したいと考えています。
 
-## Growth direction / 今後伸ばしたい領域
-
-直近では、**データエンジニアリング、Analytics Engineering、バックエンド寄りのデータアプリケーション** を中心に、実務に近い形で設計・実装・検証の経験を積みたいと考えています。
-
-特に強化したい領域は以下です。
-
-- データモデリング、スキーマ設計、データ品質管理
-- バッチ処理・再現可能なデータパイプライン
-- dbt を用いた source definitions、staging models、marts、data tests、documentation
-- model grain、source contracts、reconciliation checks を意識したデータ変換処理
-- テスト可能で監査しやすいデータ処理基盤
-- 分析データを提供する read-only API の設計
-- Python、SQL(structured query language:構造化問い合わせ言語)、dbt、DuckDB、FastAPI、Parquet、PostgreSQL
-
-中期的には、**Applied Data Science** と意思決定につながる分析にも広げていきたいです。
-
-- 分析しやすいデータモデルの設計
-- 指標定義やビジネスロジックの明文化
-- 分析 / レポーティングの自動化
-- 統計的推定、不確実性評価、実験設計
-- 仮説検証、分析結果の解釈、意思決定への接続
-
-長期的には、これらの基礎を **Machine Learning / AI システム** に接続していきたいと考えています。
-
-- 特徴量設計、継続的な分析高度化
-- 機械学習パイプラインの設計
-- モデル評価、検証、監視のための基盤
-- デプロイ、運用、再学習を含む ML システム
-- Docker、MLOps、モデル運用基盤
+中期的には、指標設計、ビジネスロジックの明文化、統計的推定、意思決定につながる分析へ広げ、長期的にはMachine Learning / AI systemsにも接続していきたいです。
 
 ## 学位
 工学修士(航空宇宙工学)
