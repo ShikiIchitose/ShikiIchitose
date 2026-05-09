@@ -4,6 +4,9 @@ I’m primarily seeking **analytics engineering** roles, with strong interest in
 
 **Proof points:** Tested • continuous integration (CI)-gated • Reproducible outputs • Reviewable documentation • Released portfolio projects
 
+**Portfolio rationale:** [Why this portfolio: from motivation to design rationale](docs/ae-de-portfolio-design-summary.md)  
+A short rationale document explaining how the projects connect as a simulated AE/DE workflow from operational data to decision-ready analytics.  
+
 ## Current focus
 
 - Data and analytics engineering workflows: **generate → validate → model → test → report → visualize**
@@ -112,6 +115,9 @@ Analytics Engineering を主軸に、Data Engineering とデータプロダク�
 重視している点は、再現性、検証可能性、テスト、CI、ドキュメント、レビューしやすい成果物です。
 
 ## 主なポートフォリオ
+
+主要ポートフォリオ群をまとめたドキュメントを用意しています。
+[AE/DEポートフォリオ構成意図](docs/ae-de-portfolio-design-summary.ja.md)
 
 - access-governance-warehouse  
   dbt、DuckDB、BigQuery、Looker Studio、Pythonを用いたAnalytics Engineeringポートフォリオです。AIツール利用の申請・承認・利用・コスト・例外を分析できるwarehouseとBI artifactsを構築しています。
