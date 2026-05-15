@@ -14,6 +14,11 @@ A short rationale document explaining how the projects connect as a simulated AE
 - Analytical systems: **dbt, DuckDB, BigQuery, Parquet, Structured Query Language (SQL), Looker Studio dashboard artifacts**
 - Production-minded implementation: **testing, CI, Docker, documentation, reproducible runs, reviewable artifacts**
 
+## Analytics engineering modeling materials
+
+- **[Analytics Engineering Modeling Perspectives](docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)**  
+  A portfolio-based material set on dbt modeling, model grain, tests, documentation, BI / semantic layer consumption, stakeholder alignment, decision-support outputs, and an initial 90-day ramp-up and contribution approach.
+
 ## Featured projects
 
 - **[access-governance-warehouse](https://github.com/ShikiIchitose/access-governance-warehouse)** — Analytics engineering warehouse built with **dbt + DuckDB + BigQuery + Looker Studio + Python** for enterprise AI tool access governance
