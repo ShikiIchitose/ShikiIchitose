@@ -356,4 +356,5 @@ business question
   → business decision support
 ```
 
-The portfolio demonstrates foundational modeling principles in a deliberately scoped environment. In company-specific materials, I would use the portfolio as evidence of that modeling discipline, not as a structure to copy as-is, and build on it to develop production-oriented modeling hypotheses for real domains, source systems, and business questions.
+The portfolio demonstrates foundational modeling principles in a deliberately scoped environment. The accompanying case study builds on that evidence, not as a structure to copy as-is, but as a foundation for developing production-oriented modeling hypotheses around a reusable business domain, source-system considerations, and stakeholder questions.
+
