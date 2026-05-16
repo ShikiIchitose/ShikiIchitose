@@ -106,6 +106,8 @@ staging models は、raw grain を保ちながら、名前、型、タイムス�
 
 ### 3.5 再利用可能なファクトとディメンションをモデル化する
 
+Dimensional modeling、特に Kimball 型のファクトとディメンションの分離は、分析用データモデリングにおける最も確立された基礎の一つです。現代のデータチームでは、Data Vault、Third Normal Form（第3正規形）、One Big Table、wide denormalized marts、semantic layer を中心にした設計など、別の手法や補完的な設計も利用・議論されています。それでも、測定可能な業務プロセスをファクトとして表し、それを説明する業務上の文脈をディメンションとして整理する考え方は、再利用可能で BI に公開しやすい分析モデルを作るうえで、現在でも有用です。したがって、本資料では、ファクトとディメンションの区別をモデリング上の基礎原理として採用します。
+
 本番運用を意識したモデリングでは、一般に次のような再利用可能な dimensional models を公開します。
 
 ```text
@@ -113,7 +115,7 @@ dim_*
 fct_*
 ```
 
-これらのモデルは、安定した業務エンティティや業務プロセスを表すべきです。
+ディメンションモデルは、比較的安定した業務エンティティや、それを説明する業務上の文脈を表すべきです。一方、ファクトモデルは、測定可能な業務プロセス、イベント、トランザクション、またはスナップショットを表すべきです。
 
 領域に応じて、例えば次のような再利用可能な dimensional models を検討します。
 
@@ -361,3 +363,23 @@ dbtモデリングは、単にテーブルを変換する作業ではなく、�
 ```
 
 ポートフォリオは、意図的にスコープを絞った環境で、基礎となるモデリング原則を示すものです。次のケーススタディでは、その構造をそのまま移植するのではなく、ポートフォリオで示したモデリング規律を出発点として、再利用可能な業務領域における本番運用を意識したモデリング仮説へ展開します。
+
+## 参考文献と公開情報
+
+この資料は、ポートフォリオ実装での経験と公開情報に基づいています。以下の情報源は、dbtモデリング原則、dimensional modeling、アナリティクスエンジニアリングの実践、ドキュメンテーション、semantic layer に関する考え方の参考として使用しました。
+
+- dbt Labs. “What is dbt?” dbt Developer Hub, version 1.11.  
+  https://docs.getdbt.com/docs/introduction?version=1.11  
+  アナリティクスエンジニアリングにおける dbt の役割、変換 workflow、テスト、ドキュメンテーション、分析コードに対するソフトウェアエンジニアリングの実践に関する一次情報として参照しました。
+
+- dbt Labs. “Best Practice Guides.” dbt Developer Hub, version 1.11.  
+  https://docs.getdbt.com/best-practices?version=1.11  
+  dbt project structure、モデリングパターン、テスト実践、保守しやすいアナリティクスエンジニアリング workflow に関する推奨事項の一次情報として参照しました。
+
+- dbt Labs. “Building a Kimball dimensional model with dbt.” dbt Developer Blog, April 20, 2023.  
+  https://docs.getdbt.com/blog/kimball-dimensional-model  
+  dimensional modeling を現代のデータモデリング手法の一つとして位置づけつつ、分析用途では現在でも広く採用されている考え方として扱うための参考情報として参照しました。また、Kimball 型のファクト、ディメンション、業務プロセス、grain、ドキュメンテーション、下流での利用を dbt でどのように実装できるかを整理する参考として使用しました。
+
+- Kimball Group. “Dimensional Modeling Techniques.” Kimball Group.  
+  https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/  
+  Kimball 型 dimensional modeling の基礎概念、特に業務プロセス、grain、ディメンション、ファクト、star schema、conformed dimensions、slowly changing dimensions に関する基礎情報として参照しました。
