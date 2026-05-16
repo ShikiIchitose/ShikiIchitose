@@ -104,6 +104,8 @@ The exact layer names can vary by project. In my portfolio, I used a separate `c
 
 ### 3.5 Model reusable facts and dimensions
 
+Dimensional modeling, especially the Kimball-style separation of facts and dimensions, remains one of the most established foundations for analytical data modeling. Modern data teams may also use or discuss other approaches such as Data Vault, Third Normal Form, One Big Table, wide denormalized marts, or semantic-layer-first designs. However, the core idea of representing measurable business processes as facts and descriptive business context as dimensions remains highly useful for building reusable, BI-ready analytical models. Accordingly, this material adopts the fact-and-dimension distinction as a foundational modeling principle.
+
 For production-oriented modeling, I would generally expose reusable dimensional models such as:
 
 ```text
@@ -111,7 +113,7 @@ dim_*
 fct_*
 ```
 
-These models should represent stable business entities and processes.
+Dimension models should represent relatively stable business entities and descriptive context, while fact models should represent measurable business processes, events, transactions, or snapshots.
 
 Examples of reusable dimensional models I would consider, depending on the domain:
 
@@ -358,3 +360,22 @@ business question
 
 The portfolio demonstrates foundational modeling principles in a deliberately scoped environment. The accompanying case study builds on that evidence, not as a structure to copy as-is, but as a foundation for developing production-oriented modeling hypotheses around a reusable business domain, source-system considerations, and stakeholder questions.
 
+## References and Public Sources
+
+This document is based on portfolio implementation experience and public information. The following sources were used as references for dbt modeling principles, dimensional modeling, analytics engineering practices, documentation, and semantic-layer thinking.
+
+- dbt Labs. “What is dbt?” dbt Developer Hub, version 1.11.  
+  https://docs.getdbt.com/docs/introduction?version=1.11  
+  Used as a primary reference for dbt's role in analytics engineering, transformation workflows, testing, documentation, and software engineering practices for analytics code.
+
+- dbt Labs. “Best Practice Guides.” dbt Developer Hub, version 1.11.  
+  https://docs.getdbt.com/best-practices?version=1.11  
+  Used as a primary reference for recommended dbt project structure, modeling patterns, testing practices, and maintainable analytics engineering workflows.
+
+- dbt Labs. “Building a Kimball dimensional model with dbt.” dbt Developer Blog, April 20, 2023.  
+  https://docs.getdbt.com/blog/kimball-dimensional-model  
+  Used as a reference for positioning dimensional modeling as one of several modern data modeling techniques, while still widely adopted for analytics, and for explaining how Kimball-style facts, dimensions, business processes, grain, documentation, and consumption can be implemented in dbt.
+
+- Kimball Group. “Dimensional Modeling Techniques.” Kimball Group.  
+  https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/  
+  Used as a foundational reference for Kimball-style dimensional modeling concepts, including business processes, grain, dimensions, facts, star schemas, conformed dimensions, and slowly changing dimensions.
