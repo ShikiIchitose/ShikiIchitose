@@ -125,7 +125,7 @@ Analytics Engineering を主軸に、Data Engineering とデータプロダク�
 ## 関連資料
 
 **[ポートフォリオ設計の考え方](docs/ae-de-portfolio-design-summary.md)**  
-各プロジェクトを、operational data から decision-ready analytics までの小さな AE / DE workflow としてどのように接続しているかを説明した資料です。
+主要プロジェクトを、operational data から decision-ready analytics までの小さな AE / DE workflow としてどのように接続しているかを説明した資料です。
 
 ### Analytics engineering modeling materials
 
@@ -135,10 +135,7 @@ Analytics Engineering を主軸に、Data Engineering とデータプロダク�
 - **[詳細版: Analytics Engineering Modeling Perspectives](docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)**  
   共通の dbt modeling principles と、customer lifecycle / monetization analytics のケーススタディを含む詳細版です。
 
-## 主なポートフォリオ
-
-主要ポートフォリオ群をまとめたドキュメントを用意しています。
-[AE/DEポートフォリオ構成意図](docs/ae-de-portfolio-design-summary.ja.md)
+## 主要ポートフォリオ
 
 - access-governance-warehouse  
   dbt、DuckDB、BigQuery、Looker Studio、Pythonを用いたAnalytics Engineeringポートフォリオです。AIツール利用の申請・承認・利用・コスト・例外を分析できるwarehouseとBI artifactsを構築しています。
