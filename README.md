@@ -16,8 +16,11 @@ A short rationale document explaining how the projects connect as a simulated AE
 
 ## Analytics engineering modeling materials
 
-- **[Analytics Engineering Modeling Perspectives](docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)**  
-  A portfolio-based material set on dbt modeling, model grain, tests, documentation, BI / semantic layer consumption, stakeholder alignment, decision-support outputs, and an initial 90-day ramp-up and contribution approach.
+- **[Analytics Engineering Modeling and Operating Approach](docs/analytics-engineering-modeling/analytics_engineering_modeling_operating_approach_overview.md)**  
+  A concise overview of my analytics engineering modeling and operating approach, including dbt modeling, model grain, data tests, BI / semantic layer consumption, stakeholder alignment, business review signals, portfolio evidence, and an initial 30 / 60 / 90-day contribution approach.  
+
+- **[Full material set: Analytics Engineering Modeling Perspectives](docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)**  
+  A detailed material set covering common dbt modeling principles and a reusable customer lifecycle / monetization analytics case study.
 
 ## Featured projects
 
@@ -118,6 +121,19 @@ Analytics Engineering を主軸に、Data Engineering とデータプロダク�
 現在は、AIツール利用ガバナンスを題材にしたポートフォリオを中心に、申請・承認アプリ、利用イベント取り込みAPI、dbtによる分析基盤、BigQuery実行、Looker Studio dashboard artifacts までを小規模に実装しています。
 
 重視している点は、再現性、検証可能性、テスト、CI、ドキュメント、レビューしやすい成果物です。
+
+## 関連資料
+
+**[ポートフォリオ設計の考え方](docs/ae-de-portfolio-design-summary.md)**  
+各プロジェクトを、operational data から decision-ready analytics までの小さな AE / DE workflow としてどのように接続しているかを説明した資料です。
+
+### Analytics engineering modeling materials
+
+- **[Analytics Engineering におけるモデリングと運用方針](docs/analytics-engineering-modeling/analytics_engineering_modeling_operating_approach_overview.ja.md)**  
+  dbt modeling、model grain、data tests、BI / semantic layer、stakeholder alignment、business review signals、ポートフォリオによる実装証拠、入社後30 / 60 / 90日の初期貢献方針を整理した概要版です。
+
+- **[詳細版: Analytics Engineering Modeling Perspectives](docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)**  
+  共通の dbt modeling principles と、customer lifecycle / monetization analytics のケーススタディを含む詳細版です。
 
 ## 主なポートフォリオ
 
