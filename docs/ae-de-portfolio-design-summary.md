@@ -219,6 +219,18 @@ This portfolio set is not a production system. It is a small reviewable project 
 
 At the same time, it is designed so that important practical concerns can be reviewed at a small scale: responsibility boundaries, verifiability, data quality, business logic, and separation of BI presentation responsibilities.
 
+### ETL / ELT Scope Boundary
+
+This portfolio set is closer to an ELT-oriented analytics engineering workflow than to a full production ETL ingestion platform.
+
+In an ETL (Extract, Transform, Load) workflow, data is transformed before it is loaded into the target warehouse or analytical storage. This can be important when sensitive data must be filtered, masked, standardized, or validated before storage, or when large-scale batch or streaming processing is required before loading.
+
+In an ELT (Extract, Load, Transform) workflow, raw or lightly processed data is loaded into the warehouse first, and transformation happens afterward inside the warehouse. My current portfolio mainly demonstrates this side: controlled raw data, dbt source contracts, staging models, reusable facts and dimensions, intermediate re-graining logic, business-facing marts, tests, documentation, and BI-ready outputs.
+
+The portfolio does not claim to implement a complete production ETL workflow. For example, it does not cover large-scale Dataflow / Apache Beam-style processing, production streaming ingestion, enterprise-scale pre-load masking, or source-specific extraction pipelines in full.
+
+I recognize those upstream ETL and data processing workflows as important adjacent areas of data engineering. Where actual production systems require them, I would treat them as areas to learn deliberately and contribute to based on the team's architecture, governance requirements, and operational practices.
+
 The following are operational areas that are not fully implemented in this individual portfolio, but that I recognize as necessary in actual enterprise environments.
 
 | Operational area expected in practice | Description |
