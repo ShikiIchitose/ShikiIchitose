@@ -102,6 +102,20 @@ Business rules, joins, re-graining, and metric logic should be introduced in lat
 
 The exact layer names can vary by project. In my portfolio, I used a separate `core` layer for reusable facts and dimensions; in a production-oriented structure, those models may instead live directly under `marts` as dimensional models.
 
+#### 3.4.1 ETL / ELT workflow boundary
+
+I also distinguish between ETL and ELT workflow patterns when thinking about data platform responsibilities.
+
+In an ETL (Extract, Transform, Load) workflow, data is transformed before it is loaded into the target warehouse or analytical storage. This can be useful when data needs to be filtered, masked, standardized, or validated before it reaches the warehouse.
+
+In an ELT (Extract, Load, Transform) workflow, raw or lightly processed data is loaded into the warehouse first, and transformation happens afterward inside the warehouse. This pattern is common in modern cloud data warehouse environments because tools such as BigQuery, Snowflake, Redshift, and Databricks can provide scalable compute for iterative transformation.
+
+My current dbt portfolio is closer to the ELT side. It focuses on the warehouse-side modeling layer: source contracts, staging, reusable facts and dimensions, intermediate re-graining logic, business-facing marts, tests, documentation, lineage, and BI-ready outputs.
+
+This does not mean that upstream ETL or ingestion engineering is unimportant. In production environments, some data may need to be transformed before loading because of security, compliance, data volume, streaming requirements, schema normalization, or operational constraints. Tools such as Dataflow, Apache Beam, Spark, or managed data integration services may be more appropriate for those upstream pipeline responsibilities.
+
+The portfolio therefore demonstrates the ELT-oriented dbt modeling and analytics engineering layer, not a complete production ETL ingestion platform. Where production work requires pre-load transformation, large-scale batch or streaming processing, or stricter data handling before warehouse ingestion, I would treat that as an adjacent data engineering area to learn and contribute to under the actual team architecture and governance requirements.
+
 ### 3.5 Model reusable facts and dimensions
 
 Dimensional modeling, especially the Kimball-style separation of facts and dimensions, remains one of the most established foundations for analytical data modeling. Modern data teams may also use or discuss other approaches such as Data Vault, Third Normal Form, One Big Table, wide denormalized marts, or semantic-layer-first designs. However, the core idea of representing measurable business processes as facts and descriptive business context as dimensions remains highly useful for building reusable, BI-ready analytical models. Accordingly, this material adopts the fact-and-dimension distinction as a foundational modeling principle.
