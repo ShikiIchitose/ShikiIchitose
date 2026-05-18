@@ -380,7 +380,7 @@ dbtモデリングは、単にテーブルを変換する作業ではなく、�
 
 ## 参考文献と公開情報
 
-この資料は、ポートフォリオ実装での経験と公開情報に基づいています。以下の情報源は、dbtモデリング原則、dimensional modeling、アナリティクスエンジニアリングの実践、ドキュメンテーション、semantic layer に関する考え方の参考として使用しました。
+この資料は、ポートフォリオ実装での経験と公開情報に基づいています。以下の情報源は、dbtモデリング原則、dimensional modeling、アナリティクスエンジニアリングの実践、ドキュメンテーション、semantic layer、ETL / ELT ワークフロー境界, データパイプライン設計に関する考え方の参考として使用しました。
 
 - dbt Labs. “What is dbt?” dbt Developer Hub, version 1.11.  
   https://docs.getdbt.com/docs/introduction?version=1.11  
