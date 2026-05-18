@@ -218,6 +218,18 @@ v0.2.1では、BigQuery martsに接続したLooker Studio dashboard artifactsを
 
 一方で、実務で重要になる責務分離、検証可能性、データ品質、business logic、BI presentationの分離を、小さな構成で確認できるように設計しています。
 
+### ETL / ELT のスコープ境界
+
+このポートフォリオ群は、完全な本番ETL取り込み基盤というよりも、ELT寄りの analytics engineering workflow に近いものです。
+
+ETL（Extract, Transform, Load）workflow では、データは対象となる warehouse や分析用ストレージにロードされる前に変換されます。これは、機密データを保存前に除外、マスキング、標準化、検証する必要がある場合や、ロード前に大規模な batch processing や streaming processing が必要な場合に重要になります。
+
+ELT（Extract, Load, Transform）workflow では、raw data または軽く処理されたデータをまず warehouse にロードし、その後 warehouse 内で変換します。現在の私のポートフォリオは、主にこの側面を示しています。具体的には、管理された raw data、dbt source contracts、staging models、再利用可能な facts and dimensions、intermediate re-graining logic、business-facing marts、tests、documentation、BI-ready outputs です。
+
+このポートフォリオは、完全な本番ETL workflow を実装していると主張するものではありません。たとえば、大規模な Dataflow / Apache Beam 型の処理、本番 streaming ingestion、enterprise-scale の pre-load masking、source-specific extraction pipelines を十分に扱っているわけではありません。
+
+私は、これらの上流ETLおよび data processing workflows を、data engineering における重要な隣接領域として認識しています。実際の本番システムでそれらが必要になる場合には、チームの architecture、governance requirements、operational practices に基づいて、意識的に学びながら貢献していく領域として捉えています。
+
 個人ポートフォリオでは扱いきれていないものの、実際の企業環境では以下のような運用領域が必要になると認識しています。
 
 | 実務で想定される領域 | 内容 |
