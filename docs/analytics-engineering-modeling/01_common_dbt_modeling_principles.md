@@ -376,7 +376,7 @@ The portfolio demonstrates foundational modeling principles in a deliberately sc
 
 ## References and Public Sources
 
-This document is based on portfolio implementation experience and public information. The following sources were used as references for dbt modeling principles, dimensional modeling, analytics engineering practices, documentation, and semantic-layer thinking.
+This document is based on portfolio implementation experience and public information. The following sources were used as references for dbt modeling principles, dimensional modeling, analytics engineering practices, ETL / ELT workflow boundaries, data pipeline design, documentation, and semantic-layer thinking.
 
 - dbt Labs. “What is dbt?” dbt Developer Hub, version 1.11.  
   https://docs.getdbt.com/docs/introduction?version=1.11  
@@ -393,3 +393,11 @@ This document is based on portfolio implementation experience and public informa
 - Kimball Group. “Dimensional Modeling Techniques.” Kimball Group.  
   https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/  
   Used as a foundational reference for Kimball-style dimensional modeling concepts, including business processes, grain, dimensions, facts, star schemas, conformed dimensions, and slowly changing dimensions.
+
+- dbt Labs. “ETL vs ELT: What's the difference?” dbt Blog, last updated April 16, 2026.  
+  https://www.getdbt.com/blog/etl-vs-elt  
+  Used as a reference for explaining the difference between ETL and ELT workflows, especially the timing and location of transformation, the relationship between ELT and modern cloud data warehouses, and dbt's role as the transformation layer within an ELT workflow.
+
+- dbt Labs. “Data pipelines: Critical components and best practices.” dbt Blog, last updated October 9, 2025.  
+  https://www.getdbt.com/blog/data-pipelines  
+  Used as a reference for positioning ETL and ELT within broader data pipeline design, including ingestion, loading, transformation, orchestration, observability, testing, semantic-layer alignment, and the role of dbt in warehouse-side transformation workflows.
