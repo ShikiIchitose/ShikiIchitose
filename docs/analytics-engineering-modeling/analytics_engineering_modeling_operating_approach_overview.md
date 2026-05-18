@@ -1,7 +1,7 @@
 # Analytics Engineering Modeling and Operating Approach
 
 > This document is an overview version of my analytics engineering modeling materials.  
-> A more detailed version is also available for readers who would like to review the full material set:  
+> A more detailed version is also available for readers who would like to review the full material set:
 > [Analytics Engineering Modeling Perspectives](https://github.com/ShikiIchitose/ShikiIchitose/blob/main/docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)
 
 ## 1. Positioning and Core Approach
@@ -171,6 +171,8 @@ marts
 Looker Studio / static report artifacts
 ```
 
+This structure is closer to an ELT-oriented analytics engineering workflow than to a full production ETL ingestion platform. It focuses on warehouse-side dbt modeling, testing, documentation, lineage, and BI-ready outputs after raw data has been loaded into an analytical environment. Production-scale pre-load transformation, streaming ingestion, and Dataflow / Apache Beam-style ETL processing are outside the current portfolio scope, but I recognize them as important adjacent data engineering areas to learn and contribute to where required.
+
 This differs from some production-oriented structures where reusable `dim_*` and `fct_*` models may live directly under `marts` and be consumed through Looker, Tableau, or a semantic layer. In the portfolio, `core` is used for reusable facts and dimensions while `marts` are reserved for reporting-oriented, stakeholder-facing outputs. This fits the portfolio scope because Looker Studio is used as a lightweight visualization layer and reusable business logic is kept in dbt rather than in BI-layer custom logic.
 
 The transferable point is not the exact folder structure. The transferable point is the modeling discipline: define explicit grain, preserve source contracts, separate cleanup from business logic, build reusable facts and dimensions, isolate re-graining logic, expose business-facing analytical outputs, test structural assumptions, and document limitations and interpretation rules.
@@ -189,7 +191,7 @@ The goal is not to redesign an existing data platform immediately. The goal is t
 
 ## References and Public Sources
 
-This document is based on portfolio implementation experience and public information. The following sources were used as references for dbt modeling principles, dimensional modeling, analytics engineering practices, documentation, semantic-layer thinking, and public examples of data team workflows.
+This document is based on portfolio implementation experience and public information. The following sources were used as references for dbt modeling principles, dimensional modeling, analytics engineering practices, documentation, semantic-layer thinking, and public examples of data team workflows, ETL / ELT workflow boundaries, data pipeline design.
 
 - dbt Labs. “What is dbt?” dbt Developer Hub, version 1.11.  
   https://docs.getdbt.com/docs/introduction?version=1.11
@@ -206,3 +208,9 @@ This document is based on portfolio implementation experience and public informa
 - GitLab. “Data Team - How We Work” and “dbt Change Workflow.” The GitLab Handbook.  
   https://handbook.gitlab.com/handbook/enterprise-data/how-we-work/  
   https://handbook.gitlab.com/handbook/enterprise-data/how-we-work/dbt-change-workflow/
+
+- dbt Labs. “ETL vs ELT: What's the difference?” dbt Blog.  
+  https://www.getdbt.com/blog/etl-vs-elt
+
+- dbt Labs. “Data pipelines: Critical components and best practices.” dbt Blog.  
+  https://www.getdbt.com/blog/data-pipelines
