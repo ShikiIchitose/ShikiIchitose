@@ -173,6 +173,10 @@ marts
 Looker Studio / static report artifacts
 ```
 
+この構成は、完全な本番ETL取り込み基盤というよりも、ELT寄りの analytics engineering workflow に近いものです。raw data が分析環境にロードされた後の、データウェアハウス側での dbt modeling、testing、documentation、lineage、BI で利用しやすい出力の作成に焦点を当てています。
+
+本番規模でのロード前変換、streaming ingestion、Dataflow / Apache Beam 型の ETL 処理は、現在のポートフォリオの範囲外です。ただし、それらは data engineering における重要な隣接領域であり、必要に応じて学び、貢献していく対象として認識しています。
+
 これは、再利用可能な `dim_*` や `fct_*` モデルを `marts` 配下に直接配置し、Looker、Tableau、または semantic layer から利用するような、本番運用を意識した構造とは異なる場合があります。このポートフォリオでは、再利用可能なファクトとディメンションのために `core` を使い、`marts` はレポーティング用途で、ステークホルダー向けの出力に限定しています。この構成は、Looker Studio を軽量な可視化レイヤーとして使い、再利用可能な業務ロジックを BI層のカスタムロジックではなく dbt側に置くというポートフォリオのスコープに合っています。
 
 応用可能な点は、正確なフォルダ構造ではありません。応用可能なのは、次のようなモデリング原則です。明示的な grain を定義すること、source contracts を保つこと、ソースデータの整形と業務ロジックを分離すること、再利用可能なファクトとディメンションを作ること、re-graining ロジックを分離すること、事業側に向けた分析出力を公開すること、構造上の前提をテストすること、制約と解釈ルールをドキュメント化することです。
@@ -191,7 +195,7 @@ Looker Studio / static report artifacts
 
 ## 参考文献と公開情報
 
-この資料は、ポートフォリオ実装での経験と公開情報に基づいています。以下の情報源は、dbtモデリング原則、dimensional modeling、アナリティクスエンジニアリングの実践、ドキュメンテーション、semantic layer に関する考え方、データチームの workflow に関する公開事例の参考として使用しました。
+この資料は、ポートフォリオ実装での経験と公開情報に基づいています。以下の情報源は、dbtモデリング原則、dimensional modeling、アナリティクスエンジニアリングの実践、ドキュメンテーション、semantic layer に関する考え方、データチームのワークフロー、ETL / ELT ワークフロー境界, データパイプライン設計に関する公開事例の参考として使用しました。
 
 - dbt Labs. “What is dbt?” dbt Developer Hub, version 1.11.  
   https://docs.getdbt.com/docs/introduction?version=1.11
@@ -208,3 +212,9 @@ Looker Studio / static report artifacts
 - GitLab. “Data Team - How We Work” and “dbt Change Workflow.” The GitLab Handbook.  
   https://handbook.gitlab.com/handbook/enterprise-data/how-we-work/  
   https://handbook.gitlab.com/handbook/enterprise-data/how-we-work/dbt-change-workflow/
+
+- dbt Labs. “ETL vs ELT: What's the difference?” dbt Blog.  
+  https://www.getdbt.com/blog/etl-vs-elt
+
+- dbt Labs. “Data pipelines: Critical components and best practices.” dbt Blog.  
+  https://www.getdbt.com/blog/data-pipelines
