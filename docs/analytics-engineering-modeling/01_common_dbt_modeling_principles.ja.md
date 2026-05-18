@@ -397,3 +397,11 @@ dbtモデリングは、単にテーブルを変換する作業ではなく、�
 - Kimball Group. “Dimensional Modeling Techniques.” Kimball Group.  
   https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/  
   Kimball 型 dimensional modeling の基礎概念、特に業務プロセス、grain、ディメンション、ファクト、star schema、conformed dimensions、slowly changing dimensions に関する基礎情報として参照しました。
+
+- dbt Labs. “ETL vs ELT: What's the difference?” dbt Blog, last updated April 16, 2026.  
+  https://www.getdbt.com/blog/etl-vs-elt  
+  ETL と ELT のワークフローの違い、特に変換処理のタイミングと実行場所、ELT と現代的なクラウドデータウェアハウスの関係、そして ELT workflow における transformation layer としての dbt の役割を説明するための参考資料として使用しました。
+
+- dbt Labs. “Data pipelines: Critical components and best practices.” dbt Blog, last updated October 9, 2025.  
+  https://www.getdbt.com/blog/data-pipelines  
+  ETL と ELT をより広い data pipeline design の中で位置づけるための参考資料として使用しました。具体的には、ingestion、loading、transformation、orchestration、observability、testing、semantic-layer alignment、そして warehouse-side transformation workflow における dbt の役割を整理する際に参照しました。
