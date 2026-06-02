@@ -95,6 +95,7 @@ In the medium term, I want to broaden toward **applied data science** and decisi
 In the long term, I’m interested in connecting this foundation to **machine learning (ML)** and **artificial intelligence (AI)** systems, including feature engineering, machine learning pipelines, model evaluation, monitoring, deployment, retraining workflows, and machine learning operations (MLOps).
 
 ## Background
+
 M.E. in Aerospace Engineering
 
 In graduate school, I specialized in computational fluid dynamics (CFD), working on numerical simulations of scramjet engines, supersonic combustion flows, and black hole accretion disks.
@@ -104,11 +105,13 @@ Using FORTRAN as my primary language, I was responsible for simulation condition
 In my master’s program, I collaborated with a JAXA research laboratory on the optimization of scramjet engine inlet geometry and earned a master’s degree.
 
 ## Contact
+
 Please use the links on my GitHub profile.
 
 ---
 
 ### Notes
+
 This profile emphasizes engineering practices and reproducible deliverables over domain-specific research claims.
 
 <details>
@@ -156,6 +159,7 @@ Analytics Engineering を主軸に、Data Engineering とデータプロダク�
 中期的には、指標設計、ビジネスロジックの明文化、統計的推定、意思決定につながる分析へ広げ、長期的にはMachine Learning / AI systemsにも接続していきたいです。
 
 ## 学位
+
 工学修士(航空宇宙工学)
 
 大学院では数値流体力学（CFD）を専門とし、スクラムジェットエンジン、超音速燃焼流、ブラックホール降着円盤の数値シミュレーションに取り組みました。  

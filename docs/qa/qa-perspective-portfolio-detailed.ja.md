@@ -39,7 +39,6 @@
     - [6.4 今後経験したい領域](#64-今後経験したい領域)
   - [おわりに](#おわりに)
 
-
 ## 概要
 
 この資料は、AE(Analytics Engineering:分析エンジニアリング) / DE(Data Engineering:データエンジニアリング)を主軸として作成したポートフォリオ群を、QA(Quality Assurance:品質保証)、DQA(Data Quality Assurance:データ品質保証。ここでは必要に応じてData Quality Assessment:データ品質評価の観点も含める)、QE(Quality Engineering:品質エンジニアリング)の観点から再解釈するための補助資料である。
