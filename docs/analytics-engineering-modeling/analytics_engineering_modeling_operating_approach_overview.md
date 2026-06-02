@@ -2,7 +2,7 @@
 
 > This document is an overview version of my analytics engineering modeling materials.  
 > A more detailed version is also available for readers who would like to review the full material set:
-> [Analytics Engineering Modeling Perspectives](https://github.com/ShikiIchitose/ShikiIchitose/blob/main/docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)
+> [Analytics Engineering Modeling Perspectives](00_analytics_engineering_modeling_index.md)
 
 ## 1. Positioning and Core Approach
 
