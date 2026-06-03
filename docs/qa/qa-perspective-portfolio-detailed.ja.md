@@ -629,7 +629,11 @@ AE / DEでは、mart、レポート、BI出力、分析APIを通じて、関係�
 
 このポートフォリオ群では、品質確認を人間の一回限りの確認だけに依存させないことも重視している。
 
-`ai-tool-access-requests` では、業務ルールや権限境界をテストで保護している。`go-ingestion-api` では、HTTPリクエストの契約、JSON構造、必須項目、参照データとの照合を取り込み境界で検証している。`access-governance-warehouse` では、dbt build、dbt data tests、ドキュメント、lineage、BigQuery実行証跡、レポート、BI出力を用意している。`analytics-metrics-api` では、期待出力と外部依存を避けたテストにより、重要なAPI出力の回帰確認を行っている。`url-monitor` では、ツール自体をネットワーク非依存でテストできるようにしている。
+`ai-tool-access-requests` では、業務ルールや権限境界をテストで保護している。`go-ingestion-api` では、HTTPリクエストの契約、JSON構造、必須項目、参照データとの照合を取り込み境界で検証している。`access-governance-warehouse` では、dbt build、dbt data tests、ドキュメント、lineage、BigQuery実行証跡、レポート、BI出力を用意している。
+
+また、外部ネットワークや外部サービスの状態に依存するテストは、実装ロジックとは無関係な要因で失敗する可能性がある。そのため、`analytics-metrics-api` ではFastAPIのTestClientを用いて、実サーバーや外部ネットワークに依存せずにAPIのリクエスト・レスポンス契約を検証している。`url-monitor` ではHTTP通信をmockし、固定された応答を使ってロジックを確認することで、ネットワーク遅延や外部サイトの一時的な失敗に左右されないテストにしている。
+
+これは、非決定的なテスト(non-deterministic test)や不安定なテスト(flaky test)を避けるために、外部依存を制御し、再現可能なテスト条件を作る取り組みとして説明できる。特にHTTP通信をmockする設計は、外部サービスをテストダブル(test double)で置き換える手法の一部として見ることができる。
 
 これらは、すべて本番水準の品質基盤を意味するものではない。しかし、品質確認を「手元で一度確認したから終わり」にせず、再実行可能なテスト、検証条件、ドキュメント、成果物として残そうとしている点に意味がある。
 
