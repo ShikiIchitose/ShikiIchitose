@@ -1,8 +1,14 @@
-# QA職能入門：品質を作り、判断し、改善へ戻す仕組み
+# QA職能入門：Outline
 
-## — 要求・テスト設計・自動化・品質メトリクス・DQA・AI時代のQA —
+このページは、QA職能理解資料の全体構成を示す章案内です。  
+各章の概要を確認し、関心のある章へ移動するためのナビゲーションとして用意しています。
 
-この資料は、QA(Quality Assurance:品質保証)を、テスト実行だけでなく、品質を作り、判断し、改善へ戻すための職能として整理した学習・参照用資料である。
+## Reading Guide
+
+- 資料の入口に戻る: [README.md](README.md)
+- 通読する場合: [full.ja.md](full.ja.md)
+- 章ごとに読む場合: [chapters/](chapters/)
+- 参考文献・参照情報を見る場合: [appendices/references.ja.md](appendices/references.ja.md)
 
 ## Chapters
 
