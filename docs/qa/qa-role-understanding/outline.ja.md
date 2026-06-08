@@ -30,7 +30,7 @@ QA、QC(Quality Control:品質管理)、Testing、Quality Engineering、Quality 
 
 ### [4. QAはいつ関与するのか](chapters/04-qa-in-development-lifecycle.ja.md)
 
-要求、仕様、設計、実装、レビュー、テスト、リリース、運用後フィードバックにおけるQA関与を整理する。
+要求、仕様、設計、実装、レビュー、テスト、リリース、運用後フィードバックにおけるQA関与を整理する。Shift Left TestingやAgile / DevOpsの文脈も踏まえ、品質観点を開発ライフサイクル全体に組み込む考え方を扱う。
 
 ### [5. 要求をテスト可能な形にする](chapters/05-testable-requirements.ja.md)
 
