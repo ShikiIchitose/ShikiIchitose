@@ -1,16 +1,4 @@
-## 5. 要求をテスト可能な形にする <!-- omit in toc -->
-
-- [5.1 なぜ要求をテスト可能にする必要があるのか](#51-なぜ要求をテスト可能にする必要があるのか)
-- [5.2 Acceptance Criteria(受け入れ条件)](#52-acceptance-criteria受け入れ条件)
-- [5.3 具体例で要求を確認する](#53-具体例で要求を確認する)
-- [5.4 Example Mapping(実例マッピング)](#54-example-mapping実例マッピング)
-- [5.5 Specification by Example(SBE:実例による仕様記述)](#55-specification-by-examplesbe実例による仕様記述)
-- [5.6 Three Amigos(スリーアミーゴス)](#56-three-amigosスリーアミーゴス)
-- [5.7 ATDD(Acceptance Test-Driven Development:受け入れテスト駆動開発)](#57-atddacceptance-test-driven-development受け入れテスト駆動開発)
-- [5.8 BDD(Behavior-Driven Development:振る舞い駆動開発)](#58-bddbehavior-driven-development振る舞い駆動開発)
-- [5.9 TDD(Test-Driven Development:テスト駆動開発)](#59-tddtest-driven-developmentテスト駆動開発)
-- [5.10 要求をテスト可能にするアプローチの比較](#510-要求をテスト可能にするアプローチの比較)
-- [5.11 Key Takeaways](#511-key-takeaways)
+## 5. 要求をテスト可能な形にする
 
 4章では、QA(Quality Assurance:品質保証)が開発ライフサイクルのどこで関与するのかを整理した。特に、要求・企画段階や仕様・設計段階でQAが関与することは、品質リスクを早く見える化し、後工程での大きな手戻りを減らすうえで重要である。
 

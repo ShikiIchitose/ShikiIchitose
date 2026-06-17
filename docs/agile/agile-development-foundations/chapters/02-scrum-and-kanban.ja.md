@@ -1,13 +1,4 @@
-## 2. ScrumとKanbanの基礎 <!-- omit in toc -->
-
-- [2.1 Agileには複数の実践形態がある](#21-agileには複数の実践形態がある)
-- [2.2 ScrumとKanbanを読むための基本用語](#22-scrumとkanbanを読むための基本用語)
-- [2.3 Scrumの基本: 検査と適応のためのフレームワーク](#23-scrumの基本-検査と適応のためのフレームワーク)
-- [2.4 Kanbanの基本: 作業の流れを見える化し、改善する](#24-kanbanの基本-作業の流れを見える化し改善する)
-- [2.5 ScrumとKanbanの違いをどう理解するか](#25-scrumとkanbanの違いをどう理解するか)
-- [2.6 ScrumbanやHybrid運用への軽い導入](#26-scrumbanやhybrid運用への軽い導入)
-- [2.7 2章のまとめ: 3章への導線](#27-2章のまとめ-3章への導線)
-  - [Key Takeaways](#key-takeaways)
+## 2. ScrumとKanbanの基礎
 
 この章では、Agileの代表的な実践として、ScrumとKanbanの基本を整理する。
 

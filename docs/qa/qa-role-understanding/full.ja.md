@@ -1,6 +1,6 @@
-# QA職能入門：品質を作り、判断し、改善へ戻す仕組み <!-- omit in toc -->
+# QA職能入門：品質を作り、判断し、改善へ戻す仕組み
 
-## — 要求・テスト設計・自動化・品質メトリクス・DQA・AI時代のQA — <!-- omit in toc -->
+## — 要求・テスト設計・自動化・品質メトリクス・DQA・AI時代のQA —
 
 > **注意**
 >
@@ -17,226 +17,6 @@
 > DQAは、データそのものを品質対象として扱う領域であり、ソフトウェアQAと関連しますが、本資料では区別して扱います。
 >
 > 本資料では、まずソフトウェアQAの基本概念を整理し、そのうえでDQAを、ソフトウェア品質、データ品質、分析、意思決定、AI評価を接続する観点として扱います。
-
----
-
-- [0. この資料の位置づけ](#0-この資料の位置づけ)
-  - [0.1 目的](#01-目的)
-  - [0.2 想定読者](#02-想定読者)
-  - [0.3 この資料で扱う範囲](#03-この資料で扱う範囲)
-  - [0.4 この資料で扱わない範囲](#04-この資料で扱わない範囲)
-  - [0.5 この資料の読み方](#05-この資料の読み方)
-- [1. QAを学ぶときに最初に押さえること](#1-qaを学ぶときに最初に押さえること)
-  - [1.1 QAはTestingだけではない](#11-qaはtestingだけではない)
-  - [1.2 QAの中心的な考え方](#12-qaの中心的な考え方)
-  - [1.3 QAは不具合検出と不具合予防の両方を扱う](#13-qaは不具合検出と不具合予防の両方を扱う)
-  - [1.4 QA初学者が持ちやすい誤解](#14-qa初学者が持ちやすい誤解)
-  - [1.5 QAはチームの品質活動を支える職能である](#15-qaはチームの品質活動を支える職能である)
-  - [1.6 Key Takeaways](#16-key-takeaways)
-- [2. QA / QC / Testing / Quality Engineeringの違い](#2-qa--qc--testing--quality-engineeringの違い)
-  - [2.1 QA(Quality Assurance:品質保証)](#21-qaquality-assurance品質保証)
-  - [2.2 QC(Quality Control:品質管理)](#22-qcquality-control品質管理)
-  - [2.3 Testing(テスト)](#23-testingテスト)
-  - [2.4 Quality Engineering(品質エンジニアリング)](#24-quality-engineering品質エンジニアリング)
-  - [2.5 Quality Assistance / Quality Enablement](#25-quality-assistance--quality-enablement)
-  - [2.6 現代的QAにおける役割領域の変化](#26-現代的qaにおける役割領域の変化)
-    - [2.6.1 後工程集中型QAの限界](#261-後工程集中型qaの限界)
-    - [2.6.2 Shift Leftによる早期関与](#262-shift-leftによる早期関与)
-    - [2.6.3 Shift Rightによるリリース後の品質確認](#263-shift-rightによるリリース後の品質確認)
-    - [2.6.4 DevOps / Continuous Deliveryによる継続的フィードバック](#264-devops--continuous-deliveryによる継続的フィードバック)
-    - [2.6.5 QA / Testing / Quality Engineeringの接近](#265-qa--testing--quality-engineeringの接近)
-  - [2.7 QA / QE / Testingを固定的な役割ではなくスペクトラムとして捉える](#27-qa--qe--testingを固定的な役割ではなくスペクトラムとして捉える)
-    - [2.7.1 固定的な職務名ではなく、品質活動の分布として見る](#271-固定的な職務名ではなく品質活動の分布として見る)
-    - [2.7.2 検出寄りの活動と予防寄りの活動](#272-検出寄りの活動と予防寄りの活動)
-    - [2.7.3 人間の判断寄りの活動と自動化・仕組み化寄りの活動](#273-人間の判断寄りの活動と自動化仕組み化寄りの活動)
-    - [2.7.4 後工程確認寄りの活動と開発プロセス組み込み寄りの活動](#274-後工程確認寄りの活動と開発プロセス組み込み寄りの活動)
-    - [2.7.5 実務ではプロダクト特性・組織体制・リスクによって形が変わる](#275-実務ではプロダクト特性組織体制リスクによって形が変わる)
-  - [2.8 Key Takeaways](#28-key-takeaways)
-- [3. ソフトウェア品質を分解して考える](#3-ソフトウェア品質を分解して考える)
-  - [3.1 なぜ品質を分解する必要があるのか](#31-なぜ品質を分解する必要があるのか)
-  - [3.2 機能品質](#32-機能品質)
-  - [3.3 ドメイン品質](#33-ドメイン品質)
-  - [3.4 データ品質](#34-データ品質)
-  - [3.5 セキュリティ・権限品質](#35-セキュリティ権限品質)
-  - [3.6 UX(User Experience:ユーザー体験)品質](#36-uxuser-experienceユーザー体験品質)
-  - [3.7 運用品質](#37-運用品質)
-  - [3.8 開発プロセス品質](#38-開発プロセス品質)
-  - [3.9 Key Takeaways](#39-key-takeaways)
-- [4. QAはいつ関与するのか](#4-qaはいつ関与するのか)
-  - [4.1 QA関与は後工程だけではない](#41-qa関与は後工程だけではない)
-  - [4.2 後工程テストの価値と限界](#42-後工程テストの価値と限界)
-  - [4.3 要求・企画段階でのQA関与：Shift Leftの出発点](#43-要求企画段階でのqa関与shift-leftの出発点)
-  - [4.4 仕様・設計段階でのQA関与：テスト可能性を設計に入れる](#44-仕様設計段階でのqa関与テスト可能性を設計に入れる)
-  - [4.5 実装・レビュー段階でのQA関与](#45-実装レビュー段階でのqa関与)
-  - [4.6 テスト・リリース段階でのQA関与](#46-テストリリース段階でのqa関与)
-  - [4.7 運用後のQA関与](#47-運用後のqa関与)
-  - [4.8 Agile / DevOpsにおける継続的なQA関与](#48-agile--devopsにおける継続的なqa関与)
-  - [4.9 Key Takeaways](#49-key-takeaways)
-- [5. 要求をテスト可能な形にする](#5-要求をテスト可能な形にする)
-  - [5.1 なぜ要求をテスト可能にする必要があるのか](#51-なぜ要求をテスト可能にする必要があるのか)
-  - [5.2 Acceptance Criteria(受け入れ条件)](#52-acceptance-criteria受け入れ条件)
-  - [5.3 具体例で要求を確認する](#53-具体例で要求を確認する)
-  - [5.4 Example Mapping(実例マッピング)](#54-example-mapping実例マッピング)
-  - [5.5 Specification by Example(SBE:実例による仕様記述)](#55-specification-by-examplesbe実例による仕様記述)
-  - [5.6 Three Amigos(スリーアミーゴス)](#56-three-amigosスリーアミーゴス)
-  - [5.7 ATDD(Acceptance Test-Driven Development:受け入れテスト駆動開発)](#57-atddacceptance-test-driven-development受け入れテスト駆動開発)
-  - [5.8 BDD(Behavior-Driven Development:振る舞い駆動開発)](#58-bddbehavior-driven-development振る舞い駆動開発)
-  - [5.9 TDD(Test-Driven Development:テスト駆動開発)](#59-tddtest-driven-developmentテスト駆動開発)
-  - [5.10 要求をテスト可能にするアプローチの比較](#510-要求をテスト可能にするアプローチの比較)
-  - [5.11 Key Takeaways](#511-key-takeaways)
-- [6. テスト設計の基本](#6-テスト設計の基本)
-  - [6.1 テスト設計とは何か](#61-テスト設計とは何か)
-  - [6.2 テスト設計の入力情報](#62-テスト設計の入力情報)
-  - [6.3 テスト対象・テストレベル・確認観点の整理](#63-テスト対象テストレベル確認観点の整理)
-  - [6.4 Risk-Based Testing(リスクベースドテスト)](#64-risk-based-testingリスクベースドテスト)
-  - [6.5 Equivalence Partitioning(同値分割)](#65-equivalence-partitioning同値分割)
-  - [6.6 Boundary Value Analysis(境界値分析)](#66-boundary-value-analysis境界値分析)
-  - [6.7 Decision Table Testing(デシジョンテーブルテスト)](#67-decision-table-testingデシジョンテーブルテスト)
-  - [6.8 State Transition Testing(状態遷移テスト)](#68-state-transition-testing状態遷移テスト)
-  - [6.9 Use Case Testing / Scenario Testing(ユースケーステスト / シナリオテスト)](#69-use-case-testing--scenario-testingユースケーステスト--シナリオテスト)
-  - [6.10 Exploratory Testing(探索的テスト)と異常系・権限・例外観点](#610-exploratory-testing探索的テストと異常系権限例外観点)
-  - [6.11 テスト設計技法の適用例](#611-テスト設計技法の適用例)
-  - [6.12 Key Takeaways](#612-key-takeaways)
-- [7. テスト設計から自動化・品質ゲートへ](#7-テスト設計から自動化品質ゲートへ)
-  - [7.1 テスト技法とテストレベルの関係](#71-テスト技法とテストレベルの関係)
-  - [7.2 テスト条件をどのレベルに割り当てるか](#72-テスト条件をどのレベルに割り当てるか)
-  - [7.3 テスト自動化の目的](#73-テスト自動化の目的)
-  - [7.4 自動化に向く確認](#74-自動化に向く確認)
-  - [7.5 自動化されたUnit Test / API Test / Integration Test / E2E Test](#75-自動化されたunit-test--api-test--integration-test--e2e-test)
-    - [Unit Test(単体テスト)](#unit-test単体テスト)
-    - [API Test](#api-test)
-    - [Integration Test(結合テスト)](#integration-test結合テスト)
-    - [E2E(End-to-End:エンドツーエンド) Test](#e2eend-to-endエンドツーエンド-test)
-    - [各テストレベルの使い分け](#各テストレベルの使い分け)
-  - [7.6 Regression Test(回帰テスト)と自動化](#76-regression-test回帰テストと自動化)
-  - [7.7 Test Pyramidとテスト配分の考え方](#77-test-pyramidとテスト配分の考え方)
-  - [7.8 CI/CD上の品質ゲート](#78-cicd上の品質ゲート)
-  - [7.9 flaky testとの向き合い方](#79-flaky-testとの向き合い方)
-  - [7.10 自動化と保守性](#710-自動化と保守性)
-  - [7.11 自動化すべき確認と、人間が探索・判断すべき確認](#711-自動化すべき確認と人間が探索判断すべき確認)
-  - [7.12 Key Takeaways](#712-key-takeaways)
-- [8. 品質メトリクスとデータ活用](#8-品質メトリクスとデータ活用)
-  - [8.1 品質メトリクスの目的と対象範囲](#81-品質メトリクスの目的と対象範囲)
-  - [8.2 品質活動の結果をデータとして扱う](#82-品質活動の結果をデータとして扱う)
-  - [8.3 テスト実行結果と品質ゲート結果](#83-テスト実行結果と品質ゲート結果)
-  - [8.4 欠陥メトリクス](#84-欠陥メトリクス)
-  - [8.5 リリース後流出欠陥](#85-リリース後流出欠陥)
-  - [8.6 インシデントデータ](#86-インシデントデータ)
-  - [8.7 問い合わせ・サポートデータ](#87-問い合わせサポートデータ)
-  - [8.8 PR・レビュー・リリースデータ](#88-prレビューリリースデータ)
-  - [8.9 指標の定義・単位・前提をそろえる](#89-指標の定義単位前提をそろえる)
-  - [8.10 ダッシュボードによる可視化](#810-ダッシュボードによる可視化)
-  - [8.11 指標を使うときの注意](#811-指標を使うときの注意)
-  - [8.12 Key Takeaways](#812-key-takeaways)
-- [9. DQA: データ品質をQAの観点から理解する](#9-dqa-データ品質をqaの観点から理解する)
-  - [9.1 品質活動データとデータ品質の違い](#91-品質活動データとデータ品質の違い)
-  - [9.2 DQAとは何か](#92-dqaとは何か)
-  - [9.3 なぜQAにとってデータ品質が重要なのか](#93-なぜqaにとってデータ品質が重要なのか)
-  - [9.4 データ品質の代表的な観点](#94-データ品質の代表的な観点)
-  - [9.5 データの意味・単位・前提をそろえる](#95-データの意味単位前提をそろえる)
-  - [9.6 業務アプリケーションで起きるデータ品質問題](#96-業務アプリケーションで起きるデータ品質問題)
-  - [9.7 データ品質とテスト観点](#97-データ品質とテスト観点)
-  - [9.8 分析・ダッシュボード・意思決定におけるデータ品質](#98-分析ダッシュボード意思決定におけるデータ品質)
-  - [9.9 データ品質問題をどう扱うか](#99-データ品質問題をどう扱うか)
-  - [9.10 DQAと継続的な改善](#910-dqaと継続的な改善)
-  - [9.11 AI時代におけるDQA](#911-ai時代におけるdqa)
-  - [9.12 Key Takeaways](#912-key-takeaways)
-- [10. 他職種連携と品質の言語化](#10-他職種連携と品質の言語化)
-  - [10.1 品質はQAだけで決まらない: 職種ごとの品質観点](#101-品質はqaだけで決まらない-職種ごとの品質観点)
-  - [10.2 品質観点を共通言語に変換する](#102-品質観点を共通言語に変換する)
-  - [10.3 顧客の困りごとを品質課題に変換する](#103-顧客の困りごとを品質課題に変換する)
-  - [10.4 暗黙知を明文化する](#104-暗黙知を明文化する)
-  - [10.5 組織横断のQuality EnablementとしてのQA](#105-組織横断のquality-enablementとしてのqa)
-  - [10.6 品質活動の価値をデータと具体例で共有する](#106-品質活動の価値をデータと具体例で共有する)
-    - [10.6.1 品質活動は追加作業として見えやすい](#1061-品質活動は追加作業として見えやすい)
-    - [10.6.2 日常業務の中にある品質改善の手がかり](#1062-日常業務の中にある品質改善の手がかり)
-    - [10.6.3 データと具体例を対話の材料にする](#1063-データと具体例を対話の材料にする)
-  - [10.7 品質情報が自然に流れる状態の価値](#107-品質情報が自然に流れる状態の価値)
-    - [10.7.1 品質情報が滞留しないことの価値](#1071-品質情報が滞留しないことの価値)
-    - [10.7.2 負荷を増やしすぎずに品質情報を流す工夫](#1072-負荷を増やしすぎずに品質情報を流す工夫)
-  - [10.8 避けられる業務を減らし、生産的な活動に時間を使う](#108-避けられる業務を減らし生産的な活動に時間を使う)
-    - [10.8.1 避けられる業務を見つける](#1081-避けられる業務を見つける)
-    - [10.8.2 生産的な活動に時間を使いやすくする](#1082-生産的な活動に時間を使いやすくする)
-    - [10.8.3 品質活動そのものを過剰にしない](#1083-品質活動そのものを過剰にしない)
-  - [10.9 QAのファシリテーション的役割](#109-qaのファシリテーション的役割)
-    - [10.9.1 関係者間の前提を揃える](#1091-関係者間の前提を揃える)
-    - [10.9.2 判断材料を整理する](#1092-判断材料を整理する)
-    - [10.9.3 不確実性やリスクを見える化する](#1093-不確実性やリスクを見える化する)
-    - [10.9.4 職種ごとの言葉を品質観点へ接続する](#1094-職種ごとの言葉を品質観点へ接続する)
-    - [10.9.5 品質をチームが扱える状態に広げる](#1095-品質をチームが扱える状態に広げる)
-    - [10.9.6 QAがすべてを代行しない](#1096-qaがすべてを代行しない)
-  - [10.10 Key Takeaways](#1010-key-takeaways)
-  - [Appendix 10-A: 「問い合わせが多い」を品質課題へ変換する実務シミュレーション](#appendix-10-a-問い合わせが多いを品質課題へ変換する実務シミュレーション)
-  - [Appendix 10-B 品質観点をチームで使うためのドキュメント例](#appendix-10-b-品質観点をチームで使うためのドキュメント例)
-    - [10-B.1 権限・状態遷移・データ整合性の共通参照ドキュメント例](#10-b1-権限状態遷移データ整合性の共通参照ドキュメント例)
-    - [10-B.2 個別機能仕様 / 受け入れ条件メモの例](#10-b2-個別機能仕様--受け入れ条件メモの例)
-    - [10-B.3 リリース判断・既知リスク共有メモの例](#10-b3-リリース判断既知リスク共有メモの例)
-    - [Appendix 10-B References](#appendix-10-b-references)
-- [11. AI時代のQA](#11-ai時代のqa)
-  - [11.1 AI時代の開発現場を俯瞰する](#111-ai時代の開発現場を俯瞰する)
-  - [11.2 AIでQA活動をスケールさせる](#112-aiでqa活動をスケールさせる)
-  - [11.3 AI-assisted QAで注意すべきこと](#113-ai-assisted-qaで注意すべきこと)
-  - [11.4 AIを組み込んだプロダクトの品質を考える](#114-aiを組み込んだプロダクトの品質を考える)
-  - [11.5 AI機能を評価可能な形にする](#115-ai機能を評価可能な形にする)
-  - [11.6 AI品質を制御する仕組み](#116-ai品質を制御する仕組み)
-  - [11.7 AI品質を運用後に継続的に見る](#117-ai品質を運用後に継続的に見る)
-  - [11.8 AI時代のQAとDQAの接続](#118-ai時代のqaとdqaの接続)
-    - [11.8.1 AIプロダクトの品質を支えるDQA](#1181-aiプロダクトの品質を支えるdqa)
-    - [11.8.2 AI-assisted QAを支えるDQA](#1182-ai-assisted-qaを支えるdqa)
-    - [11.8.3 AI時代のQAにおけるDQAの位置づけ](#1183-ai時代のqaにおけるdqaの位置づけ)
-  - [11.9 Key Takeaways](#119-key-takeaways)
-- [12. QAが新しいプロジェクトへ参加するときの着眼点と進め方](#12-qaが新しいプロジェクトへ参加するときの着眼点と進め方)
-  - [12.1 本章の位置づけ: 標準手順ではなく観察と接続の観点](#121-本章の位置づけ-標準手順ではなく観察と接続の観点)
-  - [12.2 何を守るための品質なのかを理解する](#122-何を守るための品質なのかを理解する)
-  - [12.3 品質がどこで作られ、どこで判断されるかを見る](#123-品質がどこで作られどこで判断されるかを見る)
-    - [12.3.1 品質はリリース前のテストだけで作られない](#1231-品質はリリース前のテストだけで作られない)
-    - [12.3.2 要求・仕様・受け入れ条件がどこで決まるかを見る](#1232-要求仕様受け入れ条件がどこで決まるかを見る)
-    - [12.3.3 設計・レビューで品質リスクが扱われているかを見る](#1233-設計レビューで品質リスクが扱われているかを見る)
-    - [12.3.4 テスト・品質ゲート・リリース判断のつながりを見る](#1234-テスト品質ゲートリリース判断のつながりを見る)
-    - [12.3.5 リリース後の情報が改善へ戻っているかを見る](#1235-リリース後の情報が改善へ戻っているかを見る)
-    - [12.3.6 既存プロダクトと新規プロジェクトで見る点の違い](#1236-既存プロダクトと新規プロジェクトで見る点の違い)
-  - [12.4 既存テストまたは初期テスト戦略を理解する](#124-既存テストまたは初期テスト戦略を理解する)
-    - [12.4.1 既存テストが何を守っているかを見る](#1241-既存テストが何を守っているかを見る)
-    - [12.4.2 CI/CD上の品質ゲートを見る](#1242-cicd上の品質ゲートを見る)
-    - [12.4.3 テストで守れていない領域を把握する](#1243-テストで守れていない領域を把握する)
-    - [12.4.4 新規プロジェクトでは重要リスクから初期テスト戦略を置く](#1244-新規プロジェクトでは重要リスクから初期テスト戦略を置く)
-    - [12.4.5 テストデータ・mock・fixture・環境依存を初期から意識する](#1245-テストデータmockfixture環境依存を初期から意識する)
-    - [12.4.6 テスト戦略は一度決めて終わりではない](#1246-テスト戦略は一度決めて終わりではない)
-  - [12.5 品質課題と品質シグナルを把握する](#125-品質課題と品質シグナルを把握する)
-    - [12.5.1 既存プロダクトでは、過去の問題から品質リスクを読む](#1251-既存プロダクトでは過去の問題から品質リスクを読む)
-    - [12.5.2 問い合わせやサポート情報を品質課題として読む](#1252-問い合わせやサポート情報を品質課題として読む)
-    - [12.5.3 テスト失敗・CI/CD失敗・flaky testを見る](#1253-テスト失敗cicd失敗flaky-testを見る)
-    - [12.5.4 属人化やドキュメント不足を品質リスクとして見る](#1254-属人化やドキュメント不足を品質リスクとして見る)
-    - [12.5.5 データ不整合や指標差分をDQAの観点から見る](#1255-データ不整合や指標差分をdqaの観点から見る)
-    - [12.5.6 新規プロジェクトでは、未決定事項と高リスク仮説を見る](#1256-新規プロジェクトでは未決定事項と高リスク仮説を見る)
-    - [12.5.7 品質シグナルを改善へ接続する](#1257-品質シグナルを改善へ接続する)
-  - [12.6 最初に手を入れる品質活動を見極める](#126-最初に手を入れる品質活動を見極める)
-    - [12.6.1 まず現場の背景と制約を理解する](#1261-まず現場の背景と制約を理解する)
-    - [12.6.2 最初の改善対象を選ぶ観点](#1262-最初の改善対象を選ぶ観点)
-    - [12.6.3 既存プロダクトで最初に取り組みやすいこと](#1263-既存プロダクトで最初に取り組みやすいこと)
-    - [12.6.4 新規プロジェクトで最初に取り組みやすいこと](#1264-新規プロジェクトで最初に取り組みやすいこと)
-    - [12.6.5 改善を小さな実験として扱う](#1265-改善を小さな実験として扱う)
-    - [12.6.6 最初の改善をチームの学習につなげる](#1266-最初の改善をチームの学習につなげる)
-  - [12.7 QAを個人の確認力で終わらせない](#127-qaを個人の確認力で終わらせない)
-    - [12.7.1 品質観点をチームで共有できる形にする](#1271-品質観点をチームで共有できる形にする)
-    - [12.7.2 属人的な確認を仕組みに移す](#1272-属人的な確認を仕組みに移す)
-    - [12.7.3 品質シグナルをフィードバックループに乗せる](#1273-品質シグナルをフィードバックループに乗せる)
-    - [12.7.4 品質活動を過剰な負荷にしない](#1274-品質活動を過剰な負荷にしない)
-    - [12.7.5 QAの役割をチームの品質活動へ広げる](#1275-qaの役割をチームの品質活動へ広げる)
-  - [12.8 Key Takeaways](#128-key-takeaways)
-- [13. まとめ：QAを「品質を扱える状態を作る活動」として捉える](#13-まとめqaを品質を扱える状態を作る活動として捉える)
-  - [13.1 QAはTestingを含むが、Testingそのものではない](#131-qaはtestingを含むがtestingそのものではない)
-  - [13.2 品質は複数の観点に分解して扱う](#132-品質は複数の観点に分解して扱う)
-  - [13.3 品質は開発ライフサイクル全体で作られる](#133-品質は開発ライフサイクル全体で作られる)
-  - [13.4 要求を確認可能にし、テスト設計へ接続する](#134-要求を確認可能にしテスト設計へ接続する)
-  - [13.5 自動化と品質ゲートは、品質確認を継続可能にする仕組みである](#135-自動化と品質ゲートは品質確認を継続可能にする仕組みである)
-  - [13.6 品質情報を改善へ戻す](#136-品質情報を改善へ戻す)
-  - [13.7 DQAは、データそのものを品質対象として扱う観点である](#137-dqaはデータそのものを品質対象として扱う観点である)
-  - [13.8 AI時代でもQAの基本構造は変わらない](#138-ai時代でもqaの基本構造は変わらない)
-  - [13.9 QAは品質をチームで扱える状態にする](#139-qaは品質をチームで扱える状態にする)
-  - [13.10 Key Takeaways](#1310-key-takeaways)
-- [おわりに](#おわりに)
-- [Appendix A. 参考文献・参照情報](#appendix-a-参考文献参照情報)
 
 ---
 
@@ -6667,7 +6447,7 @@ Appendix 10-Aでは、10.2で扱った「品質観点を共通言語に変換す
 
 単に「問い合わせが多い」だけでは、原因が仕様なのか、UX(User Experience:ユーザー体験)なのか、権限設計なのか、ドキュメント不足なのか、実装不具合なのかは分からない。そのため、QAはまず、問い合わせ内容を品質観点として扱える形に整理する。
 
-#### 1. 問い合わせ内容を一次整理する <!-- omit in toc -->
+#### 1. 問い合わせ内容を一次整理する
 
 最初に、QAは問い合わせをそのまま関係者へ転送するのではなく、何が起きているのかを整理する。
 
@@ -6687,7 +6467,7 @@ Appendix 10-Aでは、10.2で扱った「品質観点を共通言語に変換す
 > 権限設定フローにおいて、ユーザー招待と権限付与の関係が分かりにくい。  
 > その結果、管理者が必要な設定を完了できず、招待されたユーザーが対象機能を使えない。
 
-#### 2. 品質観点へ分解する <!-- omit in toc -->
+#### 2. 品質観点へ分解する
 
 次に、QAはこの問題を一つの観点に決めつけず、複数の品質観点に分解する。
 
@@ -6703,7 +6483,7 @@ Appendix 10-Aでは、10.2で扱った「品質観点を共通言語に変換す
 
 ここでの目的は、「これはUXの問題である」「これは仕様の問題である」と早く決めることではない。関係する職種が、自分たちの判断や改善に使える形で問題を見られるようにすることである。
 
-#### 3. 関係する職種へ確認する <!-- omit in toc -->
+#### 3. 関係する職種へ確認する
 
 一次整理の後、QAは関係する職種へ確認を行う。
 
@@ -6725,7 +6505,7 @@ Appendix 10-Aでは、10.2で扱った「品質観点を共通言語に変換す
 
 この表は、確認観点の整理である。実際には、相手の職種に応じて、次のように確認内容を言い換えて渡す。
 
-##### プロダクトマネージャー(PM)向け <!-- omit in toc -->
+##### プロダクトマネージャー(PM)向け
 
 プロダクトマネージャーには、顧客影響、導入体験、改善優先度、スコープ判断に使える形で共有する。
 
@@ -6741,7 +6521,7 @@ Appendix 10-Aでは、10.2で扱った「品質観点を共通言語に変換す
 - 次回リリースで画面改善、説明追加、権限付与フロー変更のどこまで扱うか
 ```
 
-##### 開発者向け <!-- omit in toc -->
+##### 開発者向け
 
 開発者には、実装、テスト、API(Application Programming Interface:アプリケーションプログラミングインターフェース)、ログ調査に落とし込める形で共有する。
 
@@ -6756,7 +6536,7 @@ Appendix 10-Aでは、10.2で扱った「品質観点を共通言語に変換す
 - 調査用ログに、招待状態と権限状態を追える情報が残っているか
 ```
 
-##### デザイナー向け <!-- omit in toc -->
+##### デザイナー向け
 
 デザイナーには、画面導線、表示、文言、ユーザーの誤解として共有する。
 
@@ -6770,7 +6550,7 @@ Appendix 10-Aでは、10.2で扱った「品質観点を共通言語に変換す
 - エラー表示や案内文は、次に取るべき行動を示しているか
 ```
 
-##### CS / サポート向け <!-- omit in toc -->
+##### CS / サポート向け
 
 CS / サポートには、問い合わせ分類、FAQ(Frequently Asked Questions:よくある質問)、顧客影響、再発傾向として共有する。
 
@@ -6791,7 +6571,7 @@ CS / サポートには、問い合わせ分類、FAQ(Frequently Asked Questions
 - FAQで解決できているか、サポート対応が必要になっているか
 ```
 
-##### 法務 / コンプライアンス向け <!-- omit in toc -->
+##### 法務 / コンプライアンス向け
 
 法務 / コンプライアンスには、特定の改善案がすでに決まっているように伝えるのではなく、権限設計上の制約や必要な証跡を確認する形で共有する。
 
@@ -6812,7 +6592,7 @@ CS / サポートには、問い合わせ分類、FAQ(Frequently Asked Questions
 - 利用規約、プライバシーポリシー、管理者向け説明、契約条件への影響があるか
 ```
 
-##### データ / 分析向け <!-- omit in toc -->
+##### データ / 分析向け
 
 データ / 分析には、問い合わせ件数だけでなく、実際の利用状態や発生傾向を確認するためのデータ観点として共有する。
 
@@ -6826,7 +6606,7 @@ CS / サポートには、問い合わせ分類、FAQ(Frequently Asked Questions
 - 導入初期の顧客でこの問題が多いか
 ```
 
-##### SRE / 運用向け <!-- omit in toc -->
+##### SRE / 運用向け
 
 SRE / 運用には、調査容易性、ログ、監視、運用負荷として共有する。
 
@@ -6846,7 +6626,7 @@ SRE / 運用には、調査容易性、ログ、監視、運用負荷として�
 
 これが、10.2でいう「品質観点を共通言語に変換する」活動である。
 
-#### 4. 回答・制約・データを集約する <!-- omit in toc -->
+#### 4. 回答・制約・データを集約する
 
 各職種から情報が集まったら、QAまたはプロダクトマネージャー(PM)は、論点を整理する。
 
@@ -6863,7 +6643,7 @@ SRE / 運用には、調査容易性、ログ、監視、運用負荷として�
 
 この整理により、「問い合わせが多い」という曖昧な情報は、改善方針を検討できる論点へ変わる。
 
-#### 5. 必要に応じて関係者MTGで調整する <!-- omit in toc -->
+#### 5. 必要に応じて関係者MTGで調整する
 
 回答や制約が集まったら、必要に応じて関係者の代表者を集めて調整する。
 
@@ -6889,7 +6669,7 @@ SRE / 運用には、調査容易性、ログ、監視、運用負荷として�
 | 運用改善 | サポート担当者が権限状態を確認しやすい画面や手順を整えるか |
 | データ確認 | 改善後に問い合わせ率、権限未付与ユーザーの割合、アクセス拒否回数、権限付与完了までの時間の推移を見るか |
 
-#### 6. 決定事項を改善へ戻す <!-- omit in toc -->
+#### 6. 決定事項を改善へ戻す
 
 調整の結果、たとえば次のような改善方針が決まる。
 
@@ -6905,7 +6685,7 @@ SRE / 運用には、調査容易性、ログ、監視、運用負荷として�
 
 ここまで進むと、最初の「問い合わせが多い」という情報は、要求、仕様、画面、テスト、ドキュメント、運用、データ確認へ戻っている。
 
-#### 7. 10.4「暗黙知の明文化」へ接続する <!-- omit in toc -->
+#### 7. 10.4「暗黙知の明文化」へ接続する
 
 最後に、決定事項を一時的な会話で終わらせず、誰が読んでも同じ意味に解釈できる形で残すことが重要である。
 
@@ -6960,7 +6740,7 @@ Appendix 10-Bでは、その改善方針をチーム内で再利用できるよ�
 
 ---
 
-##### 目的 <!-- omit in toc -->
+##### 目的
 
 このドキュメントの目的は、権限、状態遷移、データ整合性に関する前提を、チーム内で共有可能な形にすることである。
 
@@ -6972,7 +6752,7 @@ Appendix 10-Bでは、その改善方針をチーム内で再利用できるよ�
 - 権限変更や重要操作の監査ログが必要かどうか、職種ごとに認識がずれる
 - データの重複禁止、必須条件、削除可否、履歴保持条件が明文化されていない
 
-##### 共通ルール <!-- omit in toc -->
+##### 共通ルール
 
 | 観点 | 共通ルール |
 |---|---|
@@ -6985,7 +6765,7 @@ Appendix 10-Bでは、その改善方針をチーム内で再利用できるよ�
 | エラー表示 | 権限不足、状態不一致、データ不整合などは、ユーザーが次に何をすべきか分かる形で表示する |
 | テスト観点 | 正常系だけでなく、権限不足、禁止状態、重複、削除後、API直接呼び出しを確認する |
 
-##### 権限ルールの例 <!-- omit in toc -->
+##### 権限ルールの例
 
 | ロール / 状態 | できること | できないこと |
 |---|---|---|
@@ -6994,7 +6774,7 @@ Appendix 10-Bでは、その改善方針をチーム内で再利用できるよ�
 | 一般ユーザー | 自分に付与された機能の利用、自分の申請状況の確認 | 他ユーザーの権限変更、未付与機能の利用 |
 | 権限未付与ユーザー | 基本画面の閲覧、必要に応じた権限申請 | 対象機能の実行、管理操作 |
 
-##### 状態遷移ルールの例 <!-- omit in toc -->
+##### 状態遷移ルールの例
 
 | 現在状態 | 操作 | 次状態 | 実行可能ロール | アクセス制御 / 備考 |
 |---|---|---|---|---|
@@ -7004,7 +6784,7 @@ Appendix 10-Bでは、その改善方針をチーム内で再利用できるよ�
 | 権限付与済み | 権限を削除する | 権限未付与 | 組織管理者 | 権限削除操作を監査ログに記録する |
 | 権限未付与 | 対象機能へアクセスする | 状態変化なし | 権限未付与ユーザー | 管理者による権限付与が必要であることを表示する |
 
-##### データ整合性ルールの例 <!-- omit in toc -->
+##### データ整合性ルールの例
 
 | 対象 | ルール |
 |---|---|
@@ -7017,7 +6797,7 @@ Appendix 10-Bでは、その改善方針をチーム内で再利用できるよ�
 | revoked_at | 権限削除時に記録する |
 | audit_log | 権限付与、変更、削除の操作履歴を保持する |
 
-##### PRレビュー時に確認する観点 <!-- omit in toc -->
+##### PRレビュー時に確認する観点
 
 PRレビューでは、次の観点を確認する。
 
@@ -7031,7 +6811,7 @@ PRレビューでは、次の観点を確認する。
 - エラー時に、ユーザーや管理者が次に何をすべきか分かるか
 - テスト観点または自動テストに反映すべき内容があるか
 
-##### 更新が必要になるタイミング <!-- omit in toc -->
+##### 更新が必要になるタイミング
 
 このドキュメントは、一度作って終わりではない。次のような変更がある場合は、更新を検討する。
 
@@ -7044,7 +6824,7 @@ PRレビューでは、次の観点を確認する。
 - 問い合わせや障害対応から、既存ルールの分かりにくさが見つかった
 - 法務 / コンプライアンス上の要件が変更された
 
-##### このドキュメントの使い方 <!-- omit in toc -->
+##### このドキュメントの使い方
 
 このドキュメントは、次のような場面で参照する。
 
@@ -7070,11 +6850,11 @@ PRレビューでは、次の観点を確認する。
 
 ---
 
-##### 対象機能 <!-- omit in toc -->
+##### 対象機能
 
 管理者向けのユーザー招待・権限付与機能。
 
-##### 背景 <!-- omit in toc -->
+##### 背景
 
 CS / サポートから、次の問い合わせが継続的に発生していると共有された。
 
@@ -7086,13 +6866,13 @@ CS / サポートから、次の問い合わせが継続的に発生している
 
 そのため、招待完了後に管理者が次に行うべき権限付与操作を分かりやすくする必要がある。
 
-##### 目的 <!-- omit in toc -->
+##### 目的
 
 この改善の目的は、管理者がユーザー招待後に必要な権限付与操作を理解し、対象ユーザーが必要な機能を利用できる状態まで設定を完了しやすくすることである。
 
 また、権限未付与状態のユーザーが対象機能へアクセスした場合に、なぜ利用できないのか、次に何が必要なのかを分かりやすくする。
 
-##### 対象外 <!-- omit in toc -->
+##### 対象外
 
 この改善では、次の内容は対象外とする。
 
@@ -7101,7 +6881,7 @@ CS / サポートから、次の問い合わせが継続的に発生している
 - すべての契約プランで対象機能を利用可能にすること
 - 監査ログの保存期間を変更すること
 
-##### 業務ルール <!-- omit in toc -->
+##### 業務ルール
 
 | ルール | 内容 |
 |---|---|
@@ -7113,7 +6893,7 @@ CS / サポートから、次の問い合わせが継続的に発生している
 | 監査ログ | 権限付与、変更、削除は監査ログに記録する |
 | 顧客説明 | 招待と権限付与が別操作であることを、FAQと管理者向け説明に反映する |
 
-##### 状態と操作 <!-- omit in toc -->
+##### 状態と操作
 
 | 状態 | 説明 | 可能な操作 | アクセス制御 |
 |---|---|---|---|
@@ -7122,7 +6902,7 @@ CS / サポートから、次の問い合わせが継続的に発生している
 | 権限付与済み | 対象機能の利用権限が付与されている | ユーザーが対象機能を利用する。管理者が権限を変更・削除する | 対象機能へのアクセスを許可する |
 | 権限削除済み | 以前は権限があったが、現在は削除されている | 管理者が必要に応じて権限を再付与する | 対象機能へのアクセスはUI / APIの両方で拒否する |
 
-##### 受け入れ条件 <!-- omit in toc -->
+##### 受け入れ条件
 
 | ID | 受け入れ条件 |
 |---|---|
@@ -7137,7 +6917,7 @@ CS / サポートから、次の問い合わせが継続的に発生している
 
 ここでは、画面やAPIの挙動だけでなく、顧客説明やサポートに必要なドキュメント反映も、受け入れ判断に含める例として示す。
 
-##### テスト観点 <!-- omit in toc -->
+##### テスト観点
 
 | 観点 | 確認内容 |
 |---|---|
@@ -7150,7 +6930,7 @@ CS / サポートから、次の問い合わせが継続的に発生している
 | 監査ログ | 権限付与、変更、削除がログに記録されるか |
 | FAQ / ヘルプ | 招待と権限付与が別操作であることが説明されているか |
 
-##### 追加で確認すべき観点 <!-- omit in toc -->
+##### 追加で確認すべき観点
 
 - 招待完了後に権限付与を行わず画面を閉じた場合、管理者が後から権限未付与ユーザーを見つけられるか
 - 一括招待時に、権限付与導線をどのように表示するか
@@ -7160,7 +6940,7 @@ CS / サポートから、次の問い合わせが継続的に発生している
 - 監査ログをCS / サポートが問い合わせ対応時に参照できるか
 - 招待済み・権限未付与ユーザー数をダッシュボードで確認できるか
 
-##### CS / サポート向け確認項目 <!-- omit in toc -->
+##### CS / サポート向け確認項目
 
 問い合わせがあった場合、CS / サポートは次の内容を確認する。
 
@@ -7172,7 +6952,7 @@ CS / サポートから、次の問い合わせが継続的に発生している
 - エラーメッセージは何と表示されているか
 - 同じ問い合わせが同一顧客または複数顧客で繰り返されているか
 
-##### FAQ / 管理者向け説明に反映する内容 <!-- omit in toc -->
+##### FAQ / 管理者向け説明に反映する内容
 
 FAQや管理者向けヘルプには、次の内容を反映する。
 
@@ -7182,7 +6962,7 @@ FAQや管理者向けヘルプには、次の内容を反映する。
 - 権限未付与ユーザーが対象機能へアクセスした場合、管理者による権限付与が必要である
 - 権限付与後も利用できない場合は、契約プラン、ロール、監査ログ、エラー表示を確認する
 
-##### リリース後に確認する指標 <!-- omit in toc -->
+##### リリース後に確認する指標
 
 | 指標 | 目的 |
 |---|---|
@@ -7192,7 +6972,7 @@ FAQや管理者向けヘルプには、次の内容を反映する。
 | 招待完了画面から権限付与画面への遷移率 | 管理者が次の操作へ進んでいるかを確認する |
 | 権限付与操作の完了率 | 招待後に権限付与まで完了しているかを確認する |
 
-##### このメモの使い方 <!-- omit in toc -->
+##### このメモの使い方
 
 このメモは、次の場面で参照する。
 
@@ -7227,11 +7007,11 @@ QA(Quality Assurance:品質保証)がリリース可否を一人で決めるた�
 
 ---
 
-##### 対象リリース <!-- omit in toc -->
+##### 対象リリース
 
 管理者向け利用状況ダッシュボードの集計条件変更。
 
-##### 背景 <!-- omit in toc -->
+##### 背景
 
 CS / サポートから、次のような問い合わせが共有された。
 
@@ -7241,13 +7021,13 @@ CS / サポートから、次のような問い合わせが共有された。
 
 今回のリリースでは、顧客向けダッシュボード側の集計条件を、合意済みの指標定義に合わせる。これは社内確認用レポートに機械的に合わせるという意味ではなく、同じ「月間アクティブユーザー数」という指標名で異なる定義が使われていた状態を解消するためである。
 
-##### リリースの目的 <!-- omit in toc -->
+##### リリースの目的
 
 このリリースの目的は、顧客向けダッシュボードの月間アクティブユーザー数を、合意済みの正式な指標定義に揃え、顧客や社内関係者が同じ意味で数値を解釈できるようにすることである。
 
 また、集計条件を明文化し、問い合わせ対応時にCS / サポートが説明できる状態にする。
 
-##### 対象範囲 <!-- omit in toc -->
+##### 対象範囲
 
 | 項目 | 内容 |
 |---|---|
@@ -7260,7 +7040,7 @@ CS / サポートから、次のような問い合わせが共有された。
 
 ここでいう「利用状況レポート」とは、サービス提供会社側が顧客支援や定例報告のために、過去の時点の利用状況をまとめて顧客へ共有した資料を指す。すべてのSaaSで必ず提供されるものではなく、契約形態やCSの運用によって提供有無や頻度は異なる。
 
-##### 関係者 <!-- omit in toc -->
+##### 関係者
 
 | 職種 / 役割 | 確認観点 |
 |---|---|
@@ -7271,7 +7051,7 @@ CS / サポートから、次のような問い合わせが共有された。
 | データ / 分析 | 指標定義、除外条件、社内確認用レポートとの整合性 |
 | SRE(Site Reliability Engineering:サイト信頼性エンジニアリング) / 運用 | リリース後の監視、エラー発生時の確認、切り戻し手順 |
 
-##### テスト済み範囲 <!-- omit in toc -->
+##### テスト済み範囲
 
 | 観点 | 確認内容 | 結果 |
 |---|---|---|
@@ -7284,7 +7064,7 @@ CS / サポートから、次のような問い合わせが共有された。
 | 回帰確認 | 関連する主要指標に意図しない差分が出ていない | 確認済み |
 | ヘルプ | 管理者向けヘルプに集計条件が記載されている | 確認済み |
 
-##### 未確認範囲 <!-- omit in toc -->
+##### 未確認範囲
 
 | 未確認事項 | 理由 | 対応方針 |
 |---|---|---|
@@ -7295,7 +7075,7 @@ CS / サポートから、次のような問い合わせが共有された。
 
 リリース直後に関連問い合わせが増えた場合、それが仕様どおりの変更に対する説明不足なのか、集計定義の不一致なのか、実装不具合なのかを切り分ける必要がある。そのため、問い合わせ件数は単なるサポート負荷の指標ではなく、リリース後の品質影響を確認するためのシグナルとして扱う。
 
-##### 既知リスク <!-- omit in toc -->
+##### 既知リスク
 
 | リスク | 影響 | 対応 |
 |---|---|---|
@@ -7304,7 +7084,7 @@ CS / サポートから、次のような問い合わせが共有された。
 | CSVを使った顧客側レポートに差分が出る | 顧客側の社内報告値が変わる可能性がある | CSV出力の集計条件変更をリリースノートに記載する |
 | 社内確認用レポートと一時的に差分が残る | 集計条件を揃えても、更新タイミング、対象期間、タイムゾーン、データ反映遅延によって差分が残る可能性がある | 差分が残る条件をデータ / 分析と確認し、FAQに反映する |
 
-##### 顧客影響 <!-- omit in toc -->
+##### 顧客影響
 
 この変更により、対象顧客の管理画面で表示される月間アクティブユーザー数が、リリース前より小さくなる可能性がある。
 
@@ -7318,7 +7098,7 @@ CS / サポートから、次のような問い合わせが共有された。
 - 請求金額や契約プラン判定には影響しないこと
 - 詳細な集計条件は管理者向けヘルプで確認できること
 
-##### 回避策 / 問い合わせ対応 <!-- omit in toc -->
+##### 回避策 / 問い合わせ対応
 
 問い合わせが発生した場合、CS / サポートは次の順に確認する。
 
@@ -7335,7 +7115,7 @@ CS / サポートから、次のような問い合わせが共有された。
 > そのため、リリース前後で表示される数値に差分が出る場合があります。  
 > この変更は、ダッシュボード表示とCSVエクスポートの集計条件に関するものであり、請求金額や契約プラン判定には影響しません。
 
-##### リリース後に確認する項目 <!-- omit in toc -->
+##### リリース後に確認する項目
 
 | 確認項目 | 確認目的 | 確認期間 |
 |---|---|---|
@@ -7347,7 +7127,7 @@ CS / サポートから、次のような問い合わせが共有された。
 
 確認期間は固定値ではなく、リスクが表面化しやすいタイミング、データ更新サイクル、顧客が対象機能やレポートを確認する頻度に応じて設定する。ここでは、技術的な表示・出力エラーはリリース直後、問い合わせや月次指標の違和感は数日遅れて表面化する可能性があるため、確認期間を分けている。
 
-##### 切り戻し条件 <!-- omit in toc -->
+##### 切り戻し条件
 
 次のいずれかに該当する場合、切り戻しまたは一時的な表示停止を検討する。
 
@@ -7357,7 +7137,7 @@ CS / サポートから、次のような問い合わせが共有された。
 - 複数顧客で業務上重大な混乱が発生している
 - CS / サポートで説明不能な差分が多数発生している
 
-##### リリース判断に必要な確認 <!-- omit in toc -->
+##### リリース判断に必要な確認
 
 | 確認事項 | 担当 | 状態 |
 |---|---|---|
@@ -7369,7 +7149,7 @@ CS / サポートから、次のような問い合わせが共有された。
 | 問い合わせ時の説明方針を共有した | CS / サポート | 確認済み |
 | 既知リスクを関係者で確認した | PM / QA / 開発者 / CS / データ | 確認済み |
 
-##### リリース判断 <!-- omit in toc -->
+##### リリース判断
 
 現時点では、主要な集計条件、画面表示、CSVエクスポート、ヘルプ更新、問い合わせ対応方針は確認済みである。
 
@@ -9050,7 +8830,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 
 なお、標準規格や書籍の一部は公式概要ページや公開情報を参照しており、本文を購入・閲覧していないものについては各項目に注記している。ツール、サービス、AI関連情報は更新される可能性があるため、実務で利用する場合は各リンク先の最新版や所属組織の方針を確認する必要がある。
 
-### A.1 Software Testing / QA Fundamentals <!-- omit in toc -->
+### A.1 Software Testing / QA Fundamentals
 
 - ISTQB Glossary  
   https://glossary.istqb.org/
@@ -9064,7 +8844,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - JSTQB 公式サイト  
   https://jstqb.jp/
 
-### A.2 Shift Left / Shift Right / DevOps / Continuous Delivery <!-- omit in toc -->
+### A.2 Shift Left / Shift Right / DevOps / Continuous Delivery
 
 - IBM Think. "What is Shift-left Testing?"  
   https://www.ibm.com/think/topics/shift-left-testing
@@ -9084,9 +8864,9 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - DORA. "Capability Catalog."  
   https://dora.dev/capabilities/
 
-### A.3 BDD / Specification by Example / Example Mapping / ATDD / TDD <!-- omit in toc -->
+### A.3 BDD / Specification by Example / Example Mapping / ATDD / TDD
 
-#### Example Mapping / Specification by Example <!-- omit in toc -->
+#### Example Mapping / Specification by Example
 
 - Cucumber Documentation. "Example Mapping."  
   https://cucumber.io/docs/bdd/example-mapping/
@@ -9103,7 +8883,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - O'Reilly. "Specification by Example."  
   https://www.oreilly.com/library/view/specification-by-example/9781617290084/
 
-#### BDD / Three Amigos <!-- omit in toc -->
+#### BDD / Three Amigos
 
 - Cucumber Documentation. "Behaviour-Driven Development."  
   https://cucumber.io/docs/bdd/
@@ -9117,7 +8897,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Atlassian. "Making the shift to behavior driven development."  
   https://www.atlassian.com/blog/development/making-the-shift-to-behavior-driven-development
 
-#### ATDD / TDD <!-- omit in toc -->
+#### ATDD / TDD
 
 - Agile Alliance. "Acceptance Test Driven Development (ATDD)."  
   https://agilealliance.org/glossary/atdd/
@@ -9125,9 +8905,9 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Agile Alliance. "Test Driven Development (TDD)."  
   https://agilealliance.org/glossary/tdd/
 
-### A.4 Quality Engineering / Quality Assistance / Quality Enablement / Quality Advocacy <!-- omit in toc -->
+### A.4 Quality Engineering / Quality Assistance / Quality Enablement / Quality Advocacy
 
-#### Quality Engineering / Modern Testing <!-- omit in toc -->
+#### Quality Engineering / Modern Testing
 
 - Google Testing Blog. "How Google Tests Software - Part Two."  
   https://testing.googleblog.com/2011/02/how-google-tests-software-part-two.html
@@ -9135,7 +8915,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Kaner, Cem. "The Ongoing Revolution in Software Testing."  
   https://kaner.com/pdfs/TheOngoingRevolution.pdf
 
-#### Quality Assistance / Quality Enablement <!-- omit in toc -->
+#### Quality Assistance / Quality Enablement
 
 - Atlassian. "6 essential skills every quality assistance engineer should have."  
   https://www.atlassian.com/blog/development/6-essential-skills-quality-assistance-engineer
@@ -9158,7 +8938,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - TSIA. "Moving from Quality Assurance to Quality Enablement."  
   https://www.tsia.com/blog/moving-from-quality-assurance-to-quality-enablement
 
-#### Quality Advocacy <!-- omit in toc -->
+#### Quality Advocacy
 
 - Philip, Matt. "Quality advocacy."  
   https://mattphilip.wordpress.com/2013/09/03/quality-advocacy/
@@ -9166,7 +8946,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Scott, Alister. "Quality Advocate."  
   https://alisterscott.github.io/QualityAdvocate.html
 
-### A.5 Software Product Quality / Data Quality Models <!-- omit in toc -->
+### A.5 Software Product Quality / Data Quality Models
 
 - ISO. "ISO/IEC 25010:2023 Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model."  
   https://www.iso.org/standard/78176.html  
@@ -9182,7 +8962,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - ISO/IEC 25000. "ISO/IEC 25012."  
   https://iso25000.com/index.php/en/iso-25000-standards/iso-25012
 
-### A.6 Security / Authorization / Accessibility <!-- omit in toc -->
+### A.6 Security / Authorization / Accessibility
 
 - OWASP. "Application Security Verification Standard (ASVS)."  
   https://owasp.org/www-project-application-security-verification-standard/
@@ -9193,7 +8973,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - W3C Web Accessibility Initiative. "WCAG 2 Overview."  
   https://www.w3.org/WAI/standards-guidelines/wcag/
 
-### A.7 Operations / Observability / Site Reliability <!-- omit in toc -->
+### A.7 Operations / Observability / Site Reliability
 
 - Google SRE Book. "Monitoring Distributed Systems."  
   https://sre.google/sre-book/monitoring-distributed-systems/
@@ -9204,7 +8984,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Google SRE Books.  
   https://sre.google/books/
 
-### A.8 Feature Flags / Progressive Delivery <!-- omit in toc -->
+### A.8 Feature Flags / Progressive Delivery
 
 - OpenFeature. "OpenFeature."
   https://openfeature.dev/
@@ -9212,7 +8992,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Martin Fowler. "Feature Toggles (aka Feature Flags)."
   https://martinfowler.com/articles/feature-toggles.html
 
-### A.9 Agile / Scrum Fundamentals <!-- omit in toc -->
+### A.9 Agile / Scrum Fundamentals
 
 - Agile Manifesto. "Manifesto for Agile Software Development."
   https://agilemanifesto.org/
@@ -9223,7 +9003,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Scrum Guides. "The Scrum Guide."
   https://scrumguides.org/scrum-guide.html
 
-### A.10 Acceptance Criteria / Definition of Done <!-- omit in toc -->
+### A.10 Acceptance Criteria / Definition of Done
 
 - Atlassian. "What is Acceptance Criteria? Definition, Examples, & Tips."  
   https://www.atlassian.com/work-management/project-management/acceptance-criteria
@@ -9234,7 +9014,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Scrum Alliance. "Everything You Need to Know About Acceptance Criteria."  
   https://resources.scrumalliance.org/Article/need-know-acceptance-criteria
 
-### A.11 Software Testing / Test Design Techniques <!-- omit in toc -->
+### A.11 Software Testing / Test Design Techniques
 
 - ISO. "ISO/IEC/IEEE 29119-4:2021 Software and systems engineering — Software testing — Part 4: Test techniques."  
   https://www.iso.org/standard/79430.html  
@@ -9249,9 +9029,9 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - ISTQB. "Boundary Value Analysis According to the ISTQB® Foundation Level Syllabus v4.0."  
   https://istqb.org/wp-content/uploads/2025/10/Boundary-Value-Analysis-white-paper.pdf
 
-### A.12 Test Automation / Test Pyramid / Test Strategy <!-- omit in toc -->
+### A.12 Test Automation / Test Pyramid / Test Strategy
 
-#### Test Pyramid / Test Shapes / Test Strategy <!-- omit in toc -->
+#### Test Pyramid / Test Shapes / Test Strategy
 
 - Vocke, Ham. "The Practical Test Pyramid." MartinFowler.com, 2018.  
   https://martinfowler.com/articles/practical-test-pyramid.html
@@ -9265,7 +9045,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Google Testing Blog. "Just Say No to More End-to-End Tests." 2015.  
   https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html
 
-#### Contract Testing <!-- omit in toc -->
+#### Contract Testing
 
 - Fowler, Martin. "Contract Test." MartinFowler.com, 2011.  
   https://martinfowler.com/bliki/ContractTest.html
@@ -9274,7 +9054,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
   https://martinfowler.com/articles/consumerDrivenContracts.html  
   ※Contract Test / Consumer-Driven Contractの背景理解のための発展的参考文献。
 
-#### Flaky Tests / Test Determinism <!-- omit in toc -->
+#### Flaky Tests / Test Determinism
 
 - Fowler, Martin. "Eradicating Non-Determinism in Tests." MartinFowler.com, 2011.  
   https://martinfowler.com/articles/nonDeterminism.html
@@ -9282,7 +9062,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Google Testing Blog. "Flaky Tests at Google and How We Mitigate Them." 2016.  
   https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html
 
-#### Unit Testing / Test Maintainability <!-- omit in toc -->
+#### Unit Testing / Test Maintainability
 
 - Google Testing Blog. "Testing on the Toilet: Tests Too DRY? Make Them DAMP!" 2019.  
   https://testing.googleblog.com/2019/12/testing-on-toilet-tests-too-dry-make.html
@@ -9290,9 +9070,9 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Winters, Titus; Manshreck, Tom; Wright, Hyrum. "Software Engineering at Google: Unit Testing." Google / O'Reilly, 2020.  
   https://abseil.io/resources/swe-book/html/ch12.html
 
-### A.13 AI-assisted Development / AI-assisted Testing / AI-era Test Strategy <!-- omit in toc -->
+### A.13 AI-assisted Development / AI-assisted Testing / AI-era Test Strategy
 
-#### AI-assisted Development and Software Delivery <!-- omit in toc -->
+#### AI-assisted Development and Software Delivery
 
 - Peng, Sida; Kalliamvakou, Eirini; Cihon, Peter; Demirer, Mert. "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot." arXiv, 2023.  
   https://arxiv.org/abs/2302.06590
@@ -9309,7 +9089,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - DORA. "Balancing AI tensions: Moving from AI adoption to effective AI adoption."  
   https://dora.dev/insights/balancing-ai-tensions/
 
-#### AI-assisted QA / Testing Tool Documentation <!-- omit in toc -->
+#### AI-assisted QA / Testing Tool Documentation
 
 - GitHub Docs. "Writing tests with GitHub Copilot."  
   https://docs.github.com/en/copilot/tutorials/write-tests
@@ -9326,7 +9106,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Visual Studio Code Docs. "Test with GitHub Copilot."  
   https://code.visualstudio.com/docs/copilot/guides/test-with-copilot
 
-#### AI-assisted Testing / Quality Engineering Industry Reports <!-- omit in toc -->
+#### AI-assisted Testing / Quality Engineering Industry Reports
 
 - SmartBear. "Closing the AI Software Quality Gap."  
   https://smartbear.com/ai-software-quality-gap-report/  
@@ -9339,9 +9119,9 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Sogeti. "World Quality Report 2025-2026."  
   https://www.sogeti.com/research-and-insight/world-quality-report-2025-2026/
 
-#### AI Product Quality / Risk / Evaluation / Data Quality <!-- omit in toc -->
+#### AI Product Quality / Risk / Evaluation / Data Quality
 
-##### AI Risk Management / Responsible AI <!-- omit in toc -->
+##### AI Risk Management / Responsible AI
 
 - NIST. "AI Risk Management Framework."  
   https://www.nist.gov/itl/ai-risk-management-framework
@@ -9358,12 +9138,12 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Google AI for Developers. "Responsible Generative AI Toolkit."  
   https://ai.google.dev/responsible
 
-##### AI Security / LLM Application Risks <!-- omit in toc -->
+##### AI Security / LLM Application Risks
 
 - OWASP GenAI Security Project. "OWASP Top 10 for LLM and Generative AI Applications 2025."  
   https://genai.owasp.org/llm-top-10/
 
-##### AI Guardrails / Safeguards / Safety Controls <!-- omit in toc -->
+##### AI Guardrails / Safeguards / Safety Controls
 
 - Google AI for Developers. "Responsible Generative AI Toolkit: Safeguards."  
   https://ai.google.dev/responsible/docs/safeguards
@@ -9379,7 +9159,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
   https://docs.langchain.com/oss/python/langchain/guardrails  
   ※実装フレームワークのドキュメント。本文では、agent executionにおけるcontent validation、filtering、sensitive information detectionなどの具体例として補助的に参照。
 
-##### AI Evaluation / Measurement <!-- omit in toc -->
+##### AI Evaluation / Measurement
 
 - NIST AI Resource Center. "Measure."  
   https://airc.nist.gov/airmf-resources/playbook/measure/
@@ -9393,7 +9173,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Stanford CRFM. "Holistic Evaluation of Language Models (HELM)."  
   https://crfm.stanford.edu/helm/
 
-##### AI Data Quality / ML Production Readiness <!-- omit in toc -->
+##### AI Data Quality / ML Production Readiness
 
 - Google for Developers. "Data quality and interpretation."  
   https://developers.google.com/machine-learning/guides/data-traps/quality
@@ -9407,19 +9187,19 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Sculley, D.; Holt, G.; Golovin, D.; et al. "Hidden Technical Debt in Machine Learning Systems." NeurIPS, 2015.  
   https://papers.neurips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems
 
-#### AI-era Test Strategy <!-- omit in toc -->
+#### AI-era Test Strategy
 
 - de Pauw, Thierry. "Don't Let AI Invert The Testing Pyramid." ThinkingLabs, 2026.  
   https://thinkinglabs.io/articles/2026/04/12/dont-let-ai-invert-the-testing-pyramid.html
 
-### A.14 Quality Metrics / QA Activity Data / Engineering Analytics <!-- omit in toc -->
+### A.14 Quality Metrics / QA Activity Data / Engineering Analytics
 
-#### Issue / Defect Tracking <!-- omit in toc -->
+#### Issue / Defect Tracking
 
 - Atlassian Support. "Generate a report | Jira Cloud."  
   https://support.atlassian.com/jira-software-cloud/docs/generate-a-report/
 
-#### Test Management <!-- omit in toc -->
+#### Test Management
 
 - TestRail. "Reports overview."  
   https://support.testrail.com/hc/en-us/articles/9285210470420-Reports-overview
@@ -9427,7 +9207,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - TestRail. "Runs (Summary) report."  
   https://support.testrail.com/hc/en-us/articles/9444425638292-Runs-Summary-report
 
-#### CI/CD and Engineering Flow Metrics <!-- omit in toc -->
+#### CI/CD and Engineering Flow Metrics
 
 - DORA. "DORA's software delivery performance metrics."  
   https://dora.dev/guides/dora-metrics/
@@ -9441,7 +9221,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - GitLab Docs. "DevOps Research and Assessment (DORA) metrics."  
   https://docs.gitlab.com/user/analytics/dora_metrics/
 
-#### Code Quality / Static Analysis / Quality Gates <!-- omit in toc -->
+#### Code Quality / Static Analysis / Quality Gates
 
 - SonarQube Server Docs. "Quality gates."  
   https://docs.sonarsource.com/sonarqube-server/10.8/instance-administration/analysis-functions/quality-gates
@@ -9449,7 +9229,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - SonarQube Server Docs. "Understanding measures and metrics."  
   https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition
 
-#### Error Monitoring / Release Health <!-- omit in toc -->
+#### Error Monitoring / Release Health
 
 - Sentry Docs. "Dashboards."  
   https://docs.sentry.io/product/dashboards/
@@ -9457,7 +9237,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Sentry Docs. "Release Health."  
   https://docs.sentry.io/product/releases/health/
 
-#### Incident Management <!-- omit in toc -->
+#### Incident Management
 
 - PagerDuty Support. "Analytics Dashboard."  
   https://support.pagerduty.com/main/docs/analytics-dashboard
@@ -9465,7 +9245,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - PagerDuty Support. "Insights."  
   https://support.pagerduty.com/main/docs/insights
 
-#### Support / Inquiry Data <!-- omit in toc -->
+#### Support / Inquiry Data
 
 - Zendesk Support. "Metrics and attributes for Zendesk Support."  
   https://support.zendesk.com/hc/en-us/articles/4408827693594-Metrics-and-attributes-for-Zendesk-Support
@@ -9473,9 +9253,9 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Zendesk Support. "Analyzing the metrics that matter to improve customer support."  
   https://support.zendesk.com/hc/en-us/articles/4408832234394-Analyzing-the-metrics-that-matter-to-improve-customer-support
 
-### A.15 Data Quality / Data Governance / DQA <!-- omit in toc -->
+### A.15 Data Quality / Data Governance / DQA
 
-#### Data Management / Data Governance <!-- omit in toc -->
+#### Data Management / Data Governance
 
 - DAMA International. "DAMA-DMBOK: Data Management Body of Knowledge."  
   https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/  
@@ -9484,7 +9264,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Data Governance Institute. "The DGI Data Governance Framework."  
   https://datagovernance.com/the-dgi-data-governance-framework/
 
-#### Data Quality Frameworks / Dimensions <!-- omit in toc -->
+#### Data Quality Frameworks / Dimensions
 
 - GOV.UK. "The Government Data Quality Framework."  
   https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework
@@ -9495,7 +9275,7 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - Office for National Statistics. "Data Quality Management Policy."  
   https://www.ons.gov.uk/aboutus/transparencyandgovernance/datastrategy/datapolicies/dataqualitymanagementpolicy
 
-#### Data Quality Operations / Action Plans <!-- omit in toc -->
+#### Data Quality Operations / Action Plans
 
 - GOV.UK. "Data quality issues framework."  
   https://www.gov.uk/government/publications/implement-a-data-quality-action-plan/data-quality-issues-framework
@@ -9503,12 +9283,12 @@ QAを学び始めると、Testing(テスト)、テスト設計、自動化、品
 - GOV.UK. "Data quality action plan implementation guide."  
   https://www.gov.uk/government/publications/implement-a-data-quality-action-plan/data-quality-action-plan-implementation-guide
 
-#### Data Modeling / Grain <!-- omit in toc -->
+#### Data Modeling / Grain
 
 - Kimball Group. "Grain."  
   https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/grain/
 
-### A.16 Cross-functional Quality / Quality Culture / Incident Learning <!-- omit in toc -->
+### A.16 Cross-functional Quality / Quality Culture / Incident Learning
 
 - Atlassian. "How to run a blameless postmortem."
   https://www.atlassian.com/incident-management/postmortem/blameless

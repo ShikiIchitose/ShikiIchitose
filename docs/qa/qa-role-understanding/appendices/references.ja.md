@@ -6,7 +6,7 @@
 
 なお、標準規格や書籍の一部は公式概要ページや公開情報を参照しており、本文を購入・閲覧していないものについては各項目に注記している。ツール、サービス、AI関連情報は更新される可能性があるため、実務で利用する場合は各リンク先の最新版や所属組織の方針を確認する必要がある。
 
-### A.1 Software Testing / QA Fundamentals <!-- omit in toc -->
+### A.1 Software Testing / QA Fundamentals
 
 - ISTQB Glossary  
   https://glossary.istqb.org/
@@ -20,7 +20,7 @@
 - JSTQB 公式サイト  
   https://jstqb.jp/
 
-### A.2 Shift Left / Shift Right / DevOps / Continuous Delivery <!-- omit in toc -->
+### A.2 Shift Left / Shift Right / DevOps / Continuous Delivery
 
 - IBM Think. "What is Shift-left Testing?"  
   https://www.ibm.com/think/topics/shift-left-testing
@@ -40,9 +40,9 @@
 - DORA. "Capability Catalog."  
   https://dora.dev/capabilities/
 
-### A.3 BDD / Specification by Example / Example Mapping / ATDD / TDD <!-- omit in toc -->
+### A.3 BDD / Specification by Example / Example Mapping / ATDD / TDD
 
-#### Example Mapping / Specification by Example <!-- omit in toc -->
+#### Example Mapping / Specification by Example
 
 - Cucumber Documentation. "Example Mapping."  
   https://cucumber.io/docs/bdd/example-mapping/
@@ -59,7 +59,7 @@
 - O'Reilly. "Specification by Example."  
   https://www.oreilly.com/library/view/specification-by-example/9781617290084/
 
-#### BDD / Three Amigos <!-- omit in toc -->
+#### BDD / Three Amigos
 
 - Cucumber Documentation. "Behaviour-Driven Development."  
   https://cucumber.io/docs/bdd/
@@ -73,7 +73,7 @@
 - Atlassian. "Making the shift to behavior driven development."  
   https://www.atlassian.com/blog/development/making-the-shift-to-behavior-driven-development
 
-#### ATDD / TDD <!-- omit in toc -->
+#### ATDD / TDD
 
 - Agile Alliance. "Acceptance Test Driven Development (ATDD)."  
   https://agilealliance.org/glossary/atdd/
@@ -81,9 +81,9 @@
 - Agile Alliance. "Test Driven Development (TDD)."  
   https://agilealliance.org/glossary/tdd/
 
-### A.4 Quality Engineering / Quality Assistance / Quality Enablement / Quality Advocacy <!-- omit in toc -->
+### A.4 Quality Engineering / Quality Assistance / Quality Enablement / Quality Advocacy
 
-#### Quality Engineering / Modern Testing <!-- omit in toc -->
+#### Quality Engineering / Modern Testing
 
 - Google Testing Blog. "How Google Tests Software - Part Two."  
   https://testing.googleblog.com/2011/02/how-google-tests-software-part-two.html
@@ -91,7 +91,7 @@
 - Kaner, Cem. "The Ongoing Revolution in Software Testing."  
   https://kaner.com/pdfs/TheOngoingRevolution.pdf
 
-#### Quality Assistance / Quality Enablement <!-- omit in toc -->
+#### Quality Assistance / Quality Enablement
 
 - Atlassian. "6 essential skills every quality assistance engineer should have."  
   https://www.atlassian.com/blog/development/6-essential-skills-quality-assistance-engineer
@@ -114,7 +114,7 @@
 - TSIA. "Moving from Quality Assurance to Quality Enablement."  
   https://www.tsia.com/blog/moving-from-quality-assurance-to-quality-enablement
 
-#### Quality Advocacy <!-- omit in toc -->
+#### Quality Advocacy
 
 - Philip, Matt. "Quality advocacy."  
   https://mattphilip.wordpress.com/2013/09/03/quality-advocacy/
@@ -122,7 +122,7 @@
 - Scott, Alister. "Quality Advocate."  
   https://alisterscott.github.io/QualityAdvocate.html
 
-### A.5 Software Product Quality / Data Quality Models <!-- omit in toc -->
+### A.5 Software Product Quality / Data Quality Models
 
 - ISO. "ISO/IEC 25010:2023 Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model."  
   https://www.iso.org/standard/78176.html  
@@ -138,7 +138,7 @@
 - ISO/IEC 25000. "ISO/IEC 25012."  
   https://iso25000.com/index.php/en/iso-25000-standards/iso-25012
 
-### A.6 Security / Authorization / Accessibility <!-- omit in toc -->
+### A.6 Security / Authorization / Accessibility
 
 - OWASP. "Application Security Verification Standard (ASVS)."  
   https://owasp.org/www-project-application-security-verification-standard/
@@ -149,7 +149,7 @@
 - W3C Web Accessibility Initiative. "WCAG 2 Overview."  
   https://www.w3.org/WAI/standards-guidelines/wcag/
 
-### A.7 Operations / Observability / Site Reliability <!-- omit in toc -->
+### A.7 Operations / Observability / Site Reliability
 
 - Google SRE Book. "Monitoring Distributed Systems."  
   https://sre.google/sre-book/monitoring-distributed-systems/
@@ -160,7 +160,7 @@
 - Google SRE Books.  
   https://sre.google/books/
 
-### A.8 Feature Flags / Progressive Delivery <!-- omit in toc -->
+### A.8 Feature Flags / Progressive Delivery
 
 - OpenFeature. "OpenFeature."
   https://openfeature.dev/
@@ -168,7 +168,7 @@
 - Martin Fowler. "Feature Toggles (aka Feature Flags)."
   https://martinfowler.com/articles/feature-toggles.html
 
-### A.9 Agile / Scrum Fundamentals <!-- omit in toc -->
+### A.9 Agile / Scrum Fundamentals
 
 - Agile Manifesto. "Manifesto for Agile Software Development."
   https://agilemanifesto.org/
@@ -179,7 +179,7 @@
 - Scrum Guides. "The Scrum Guide."
   https://scrumguides.org/scrum-guide.html
 
-### A.10 Acceptance Criteria / Definition of Done <!-- omit in toc -->
+### A.10 Acceptance Criteria / Definition of Done
 
 - Atlassian. "What is Acceptance Criteria? Definition, Examples, & Tips."  
   https://www.atlassian.com/work-management/project-management/acceptance-criteria
@@ -190,7 +190,7 @@
 - Scrum Alliance. "Everything You Need to Know About Acceptance Criteria."  
   https://resources.scrumalliance.org/Article/need-know-acceptance-criteria
 
-### A.11 Software Testing / Test Design Techniques <!-- omit in toc -->
+### A.11 Software Testing / Test Design Techniques
 
 - ISO. "ISO/IEC/IEEE 29119-4:2021 Software and systems engineering — Software testing — Part 4: Test techniques."  
   https://www.iso.org/standard/79430.html  
@@ -205,9 +205,9 @@
 - ISTQB. "Boundary Value Analysis According to the ISTQB® Foundation Level Syllabus v4.0."  
   https://istqb.org/wp-content/uploads/2025/10/Boundary-Value-Analysis-white-paper.pdf
 
-### A.12 Test Automation / Test Pyramid / Test Strategy <!-- omit in toc -->
+### A.12 Test Automation / Test Pyramid / Test Strategy
 
-#### Test Pyramid / Test Shapes / Test Strategy <!-- omit in toc -->
+#### Test Pyramid / Test Shapes / Test Strategy
 
 - Vocke, Ham. "The Practical Test Pyramid." MartinFowler.com, 2018.  
   https://martinfowler.com/articles/practical-test-pyramid.html
@@ -221,7 +221,7 @@
 - Google Testing Blog. "Just Say No to More End-to-End Tests." 2015.  
   https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html
 
-#### Contract Testing <!-- omit in toc -->
+#### Contract Testing
 
 - Fowler, Martin. "Contract Test." MartinFowler.com, 2011.  
   https://martinfowler.com/bliki/ContractTest.html
@@ -230,7 +230,7 @@
   https://martinfowler.com/articles/consumerDrivenContracts.html  
   ※Contract Test / Consumer-Driven Contractの背景理解のための発展的参考文献。
 
-#### Flaky Tests / Test Determinism <!-- omit in toc -->
+#### Flaky Tests / Test Determinism
 
 - Fowler, Martin. "Eradicating Non-Determinism in Tests." MartinFowler.com, 2011.  
   https://martinfowler.com/articles/nonDeterminism.html
@@ -238,7 +238,7 @@
 - Google Testing Blog. "Flaky Tests at Google and How We Mitigate Them." 2016.  
   https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html
 
-#### Unit Testing / Test Maintainability <!-- omit in toc -->
+#### Unit Testing / Test Maintainability
 
 - Google Testing Blog. "Testing on the Toilet: Tests Too DRY? Make Them DAMP!" 2019.  
   https://testing.googleblog.com/2019/12/testing-on-toilet-tests-too-dry-make.html
@@ -246,9 +246,9 @@
 - Winters, Titus; Manshreck, Tom; Wright, Hyrum. "Software Engineering at Google: Unit Testing." Google / O'Reilly, 2020.  
   https://abseil.io/resources/swe-book/html/ch12.html
 
-### A.13 AI-assisted Development / AI-assisted Testing / AI-era Test Strategy <!-- omit in toc -->
+### A.13 AI-assisted Development / AI-assisted Testing / AI-era Test Strategy
 
-#### AI-assisted Development and Software Delivery <!-- omit in toc -->
+#### AI-assisted Development and Software Delivery
 
 - Peng, Sida; Kalliamvakou, Eirini; Cihon, Peter; Demirer, Mert. "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot." arXiv, 2023.  
   https://arxiv.org/abs/2302.06590
@@ -265,7 +265,7 @@
 - DORA. "Balancing AI tensions: Moving from AI adoption to effective AI adoption."  
   https://dora.dev/insights/balancing-ai-tensions/
 
-#### AI-assisted QA / Testing Tool Documentation <!-- omit in toc -->
+#### AI-assisted QA / Testing Tool Documentation
 
 - GitHub Docs. "Writing tests with GitHub Copilot."  
   https://docs.github.com/en/copilot/tutorials/write-tests
@@ -282,7 +282,7 @@
 - Visual Studio Code Docs. "Test with GitHub Copilot."  
   https://code.visualstudio.com/docs/copilot/guides/test-with-copilot
 
-#### AI-assisted Testing / Quality Engineering Industry Reports <!-- omit in toc -->
+#### AI-assisted Testing / Quality Engineering Industry Reports
 
 - SmartBear. "Closing the AI Software Quality Gap."  
   https://smartbear.com/ai-software-quality-gap-report/  
@@ -295,9 +295,9 @@
 - Sogeti. "World Quality Report 2025-2026."  
   https://www.sogeti.com/research-and-insight/world-quality-report-2025-2026/
 
-#### AI Product Quality / Risk / Evaluation / Data Quality <!-- omit in toc -->
+#### AI Product Quality / Risk / Evaluation / Data Quality
 
-##### AI Risk Management / Responsible AI <!-- omit in toc -->
+##### AI Risk Management / Responsible AI
 
 - NIST. "AI Risk Management Framework."  
   https://www.nist.gov/itl/ai-risk-management-framework
@@ -314,12 +314,12 @@
 - Google AI for Developers. "Responsible Generative AI Toolkit."  
   https://ai.google.dev/responsible
 
-##### AI Security / LLM Application Risks <!-- omit in toc -->
+##### AI Security / LLM Application Risks
 
 - OWASP GenAI Security Project. "OWASP Top 10 for LLM and Generative AI Applications 2025."  
   https://genai.owasp.org/llm-top-10/
 
-##### AI Guardrails / Safeguards / Safety Controls <!-- omit in toc -->
+##### AI Guardrails / Safeguards / Safety Controls
 
 - Google AI for Developers. "Responsible Generative AI Toolkit: Safeguards."  
   https://ai.google.dev/responsible/docs/safeguards
@@ -335,7 +335,7 @@
   https://docs.langchain.com/oss/python/langchain/guardrails  
   ※実装フレームワークのドキュメント。本文では、agent executionにおけるcontent validation、filtering、sensitive information detectionなどの具体例として補助的に参照。
 
-##### AI Evaluation / Measurement <!-- omit in toc -->
+##### AI Evaluation / Measurement
 
 - NIST AI Resource Center. "Measure."  
   https://airc.nist.gov/airmf-resources/playbook/measure/
@@ -349,7 +349,7 @@
 - Stanford CRFM. "Holistic Evaluation of Language Models (HELM)."  
   https://crfm.stanford.edu/helm/
 
-##### AI Data Quality / ML Production Readiness <!-- omit in toc -->
+##### AI Data Quality / ML Production Readiness
 
 - Google for Developers. "Data quality and interpretation."  
   https://developers.google.com/machine-learning/guides/data-traps/quality
@@ -363,19 +363,19 @@
 - Sculley, D.; Holt, G.; Golovin, D.; et al. "Hidden Technical Debt in Machine Learning Systems." NeurIPS, 2015.  
   https://papers.neurips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems
 
-#### AI-era Test Strategy <!-- omit in toc -->
+#### AI-era Test Strategy
 
 - de Pauw, Thierry. "Don't Let AI Invert The Testing Pyramid." ThinkingLabs, 2026.  
   https://thinkinglabs.io/articles/2026/04/12/dont-let-ai-invert-the-testing-pyramid.html
 
-### A.14 Quality Metrics / QA Activity Data / Engineering Analytics <!-- omit in toc -->
+### A.14 Quality Metrics / QA Activity Data / Engineering Analytics
 
-#### Issue / Defect Tracking <!-- omit in toc -->
+#### Issue / Defect Tracking
 
 - Atlassian Support. "Generate a report | Jira Cloud."  
   https://support.atlassian.com/jira-software-cloud/docs/generate-a-report/
 
-#### Test Management <!-- omit in toc -->
+#### Test Management
 
 - TestRail. "Reports overview."  
   https://support.testrail.com/hc/en-us/articles/9285210470420-Reports-overview
@@ -383,7 +383,7 @@
 - TestRail. "Runs (Summary) report."  
   https://support.testrail.com/hc/en-us/articles/9444425638292-Runs-Summary-report
 
-#### CI/CD and Engineering Flow Metrics <!-- omit in toc -->
+#### CI/CD and Engineering Flow Metrics
 
 - DORA. "DORA's software delivery performance metrics."  
   https://dora.dev/guides/dora-metrics/
@@ -397,7 +397,7 @@
 - GitLab Docs. "DevOps Research and Assessment (DORA) metrics."  
   https://docs.gitlab.com/user/analytics/dora_metrics/
 
-#### Code Quality / Static Analysis / Quality Gates <!-- omit in toc -->
+#### Code Quality / Static Analysis / Quality Gates
 
 - SonarQube Server Docs. "Quality gates."  
   https://docs.sonarsource.com/sonarqube-server/10.8/instance-administration/analysis-functions/quality-gates
@@ -405,7 +405,7 @@
 - SonarQube Server Docs. "Understanding measures and metrics."  
   https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition
 
-#### Error Monitoring / Release Health <!-- omit in toc -->
+#### Error Monitoring / Release Health
 
 - Sentry Docs. "Dashboards."  
   https://docs.sentry.io/product/dashboards/
@@ -413,7 +413,7 @@
 - Sentry Docs. "Release Health."  
   https://docs.sentry.io/product/releases/health/
 
-#### Incident Management <!-- omit in toc -->
+#### Incident Management
 
 - PagerDuty Support. "Analytics Dashboard."  
   https://support.pagerduty.com/main/docs/analytics-dashboard
@@ -421,7 +421,7 @@
 - PagerDuty Support. "Insights."  
   https://support.pagerduty.com/main/docs/insights
 
-#### Support / Inquiry Data <!-- omit in toc -->
+#### Support / Inquiry Data
 
 - Zendesk Support. "Metrics and attributes for Zendesk Support."  
   https://support.zendesk.com/hc/en-us/articles/4408827693594-Metrics-and-attributes-for-Zendesk-Support
@@ -429,9 +429,9 @@
 - Zendesk Support. "Analyzing the metrics that matter to improve customer support."  
   https://support.zendesk.com/hc/en-us/articles/4408832234394-Analyzing-the-metrics-that-matter-to-improve-customer-support
 
-### A.15 Data Quality / Data Governance / DQA <!-- omit in toc -->
+### A.15 Data Quality / Data Governance / DQA
 
-#### Data Management / Data Governance <!-- omit in toc -->
+#### Data Management / Data Governance
 
 - DAMA International. "DAMA-DMBOK: Data Management Body of Knowledge."  
   https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/  
@@ -440,7 +440,7 @@
 - Data Governance Institute. "The DGI Data Governance Framework."  
   https://datagovernance.com/the-dgi-data-governance-framework/
 
-#### Data Quality Frameworks / Dimensions <!-- omit in toc -->
+#### Data Quality Frameworks / Dimensions
 
 - GOV.UK. "The Government Data Quality Framework."  
   https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework
@@ -451,7 +451,7 @@
 - Office for National Statistics. "Data Quality Management Policy."  
   https://www.ons.gov.uk/aboutus/transparencyandgovernance/datastrategy/datapolicies/dataqualitymanagementpolicy
 
-#### Data Quality Operations / Action Plans <!-- omit in toc -->
+#### Data Quality Operations / Action Plans
 
 - GOV.UK. "Data quality issues framework."  
   https://www.gov.uk/government/publications/implement-a-data-quality-action-plan/data-quality-issues-framework
@@ -459,12 +459,12 @@
 - GOV.UK. "Data quality action plan implementation guide."  
   https://www.gov.uk/government/publications/implement-a-data-quality-action-plan/data-quality-action-plan-implementation-guide
 
-#### Data Modeling / Grain <!-- omit in toc -->
+#### Data Modeling / Grain
 
 - Kimball Group. "Grain."  
   https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/grain/
 
-### A.16 Cross-functional Quality / Quality Culture / Incident Learning <!-- omit in toc -->
+### A.16 Cross-functional Quality / Quality Culture / Incident Learning
 
 - Atlassian. "How to run a blameless postmortem."
   https://www.atlassian.com/incident-management/postmortem/blameless

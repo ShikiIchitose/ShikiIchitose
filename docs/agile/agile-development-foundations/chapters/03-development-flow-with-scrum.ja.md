@@ -1,16 +1,4 @@
-## 3. アジャイル開発の流れを具体例で見る <!-- omit in toc -->
-
-- [3.1 Sprintを中心に開発の流れを見る](#31-sprintを中心に開発の流れを見る)
-- [3.2 Product BacklogとRefinement: 変化を受け止め、次に取り組む候補を明確にする](#32-product-backlogとrefinement-変化を受け止め次に取り組む候補を明確にする)
-- [3.3 Sprint Planning: Sprint Goalと最初の計画を作る](#33-sprint-planning-sprint-goalと最初の計画を作る)
-- [3.4 Sprint中の開発とDaily Scrum: Incrementへ向けて計画を適応する](#34-sprint中の開発とdaily-scrum-incrementへ向けて計画を適応する)
-- [3.5 Sprint中の変化や割り込みをどう扱うか](#35-sprint中の変化や割り込みをどう扱うか)
-- [3.6 Sprint Review: 成果と環境の変化から次の判断を行う](#36-sprint-review-成果と環境の変化から次の判断を行う)
-- [3.7 Sprint Retrospective: 品質と効果性を高めるために働き方を改善する](#37-sprint-retrospective-品質と効果性を高めるために働き方を改善する)
-- [3.8 リリースと運用後フィードバック](#38-リリースと運用後フィードバック)
-- [3.9 3章のまとめ: 品質を継続的に扱う流れへ](#39-3章のまとめ-品質を継続的に扱う流れへ)
-  - [Key Takeaways](#key-takeaways)
-  - [補足: 単一のフレームワークだけでは捉えにくい実務](#補足-単一のフレームワークだけでは捉えにくい実務)
+## 3. アジャイル開発の流れを具体例で見る
 
 この章では、アジャイル開発において、要求やフィードバックがどのように作業へつながり、得られた成果や学びが次の判断へ戻されるのかを、Scrumを主な例として整理する。
 
@@ -69,7 +57,7 @@ Scrumでは、Product OwnerがProduct Backlogの効果的な管理に責任を�
 
 新しい要求やフィードバックがProduct Backlogへ追加されても、それが直ちに現在のSprintへ入るとは限らない。まず、既存の項目との関係、Product Goalへの貢献、価値、リスク、依存関係などを踏まえて順序を判断し、今後取り組む候補として扱う。
 
-#### Product Backlog Refinement <!-- omit in toc -->
+#### Product Backlog Refinement
 
 Product Backlog Refinementは、Product Backlog itemを分割し、より具体的で正確な項目へ近づけていく活動である。
 
@@ -105,7 +93,7 @@ Sprint Planningは、Sprintを開始するにあたり、Scrum Team全体の協�
 
 Scrum Guideでは、Sprint Planningで扱う内容を、次の三つの問いによって整理している。
 
-#### なぜこのSprintに価値があるのか <!-- omit in toc -->
+#### なぜこのSprintに価値があるのか
 
 Product Ownerは、現在のSprintでプロダクトの価値や有用性をどのように高められるかを提案する。
 
@@ -113,7 +101,7 @@ Scrum Teamは、この提案やProduct Goalを踏まえて、このSprintで達�
 
 Sprint Goalがあることで、Sprint中に新しい事実が判明した場合でも、個々の作業を当初の計画どおりに進めることだけにこだわらず、何を守り、何を調整するかを判断しやすくなる。
 
-#### このSprintで何を達成できるか <!-- omit in toc -->
+#### このSprintで何を達成できるか
 
 Developersは、Product Ownerとの話し合いを通じて、現在のSprintで取り組むProduct Backlog itemを選択する。
 
@@ -123,7 +111,7 @@ Product Ownerが一方的に作業量を決めたり、管理者がDevelopersへ
 
 必要に応じて、Product OwnerとDevelopersはProduct Backlog itemの内容やスコープについて話し合う。Sprint Planningは、事前に用意された項目をそのまま受け入れるだけの場ではなく、Sprint Goalへ向けて実現可能な範囲を明確にする場でもある。
 
-#### 選択した作業をどのように行うか <!-- omit in toc -->
+#### 選択した作業をどのように行うか
 
 Developersは、選択したProduct Backlog itemごとに、Definition of Doneを満たしたIncrementを作るための最初の計画を立てる。
 
@@ -133,7 +121,7 @@ Developersは、選択したProduct Backlog itemごとに、Definition of Done�
 
 どのようにProduct Backlog itemをIncrementへ変えるかは、Developersが判断する。Sprint Planningを、外部の管理者が作業方法や個人別の担当を指示する場として扱わないことが重要である。
 
-#### Sprint Backlog <!-- omit in toc -->
+#### Sprint Backlog
 
 Sprint Planningによって作られるSprint Backlogは、次の要素から構成される。
 
@@ -163,7 +151,7 @@ Developersは、Sprint Goalの達成に向けて協働し、作業から得ら�
 
 選択したProduct Backlog itemの内容や必要な作業が当初の想定と異なる場合には、必要に応じてProduct Ownerとスコープを明確化・再交渉する。ただし、Sprint Goalを脅かす変更を加えたり、作業を完了させるために品質基準を引き下げたりするものではない。
 
-#### Sprint Goalの達成が難しくなった場合 <!-- omit in toc -->
+#### Sprint Goalの達成が難しくなった場合
 
 作業が当初の想定より複雑で、機能の一部を後へ送ったり実装方法を見直したりしても、Sprint Goalの達成が難しい場合がある。
 
@@ -185,7 +173,7 @@ Sprint Goalを達成できない可能性が判明した場合、Developersは�
 
 経験を積んだチームでも、新しい技術、未知のドメイン、外部依存、予期しない技術的問題によって予測が外れることはある。経験によって高まるのは、すべてを正確に予測する能力ではなく、不確実性を早く発見し、影響を小さくし、次の計画へ反映する能力である。
 
-#### Daily Scrum <!-- omit in toc -->
+#### Daily Scrum
 
 Daily Scrumは、DevelopersがSprint Goalに向けた進捗を検査し、必要に応じてSprint Backlogを適応するための、15分を上限とするイベントである。
 
@@ -207,7 +195,7 @@ Developersは、Sprint Goalへの進捗に焦点を当てる限り、Daily Scrum
 
 また、計画の調整や問題解決をDaily Scrumまで待つ必要はない。詳細な仕様確認、技術的な相談、作業の再計画などは、必要になった時点で随時行う。
 
-#### Sprint内のflowを見る <!-- omit in toc -->
+#### Sprint内のflowを見る
 
 Daily ScrumでSprint Goalへの進捗を検査するときは、個々の作業だけでなく、Sprint全体の作業の流れを見ることも重要になる。
 
@@ -279,7 +267,7 @@ Agileでは、開発の後半であっても要求の変化を歓迎する。た
 - 現在のSprintへ追加した場合、着手済みの作業、WIP、品質へどのような影響があるか
 - 現在対応しない場合、どのようなリスクが残るか
 
-#### 現在のSprintで扱う必要が低い場合 <!-- omit in toc -->
+#### 現在のSprintで扱う必要が低い場合
 
 新しい要求に価値があっても、現在のSprintで直ちに対応する必要があるとは限らない。
 
@@ -289,7 +277,7 @@ Agileでは、開発の後半であっても要求の変化を歓迎する。た
 
 「Agileだから変更にはすぐ対応しなければならない」という理由だけで、現在のSprintへ作業を追加しないことが重要である。
 
-#### Sprint Goalを守る範囲で対応できる場合 <!-- omit in toc -->
+#### Sprint Goalを守る範囲で対応できる場合
 
 新しい要求がSprint Goalの達成に必要な場合や、Sprint Goalを脅かさずに対応できる場合は、現在のSprintで扱うこともできる。
 
@@ -307,7 +295,7 @@ Agileでは、開発の後半であっても要求の変化を歓迎する。た
 
 一方、追加するだけで着手済みの作業が増え、Doneへ到達する項目が減るのであれば、Sprint Goalと作業能力を基準にスコープや計画を見直す必要がある。重要なのは、変更の件数を形式的に合わせることではなく、Sprint Goalへ向けて利用可能なIncrementを作れる状態を保つことである。
 
-#### 緊急の障害や運用作業が発生した場合 <!-- omit in toc -->
+#### 緊急の障害や運用作業が発生した場合
 
 本番環境の停止、重大なセキュリティ問題、データの破損、顧客業務を妨げる不具合など、次のSprintまで待てない問題が発生する場合もある。
 
@@ -330,7 +318,7 @@ boardを使う場合は、緊急作業と通常作業をレーンや識別表示
 
 ただし、影響を止めるための一時的な回避策と、原因を取り除く恒久的な修正を分けることはありうる。その場合も、一時的な対応によって残る制約やリスクを透明化し、恒久対応をProduct Backlogへ追加して今後の扱いを判断する。
 
-#### 割り込みが繰り返される場合 <!-- omit in toc -->
+#### 割り込みが繰り返される場合
 
 緊急作業が繰り返し発生する場合、それを毎回予測不能な例外として扱うだけでは不十分である。
 
@@ -351,7 +339,7 @@ Scrum Masterは、こうした割り込みがScrum Teamの効果性を妨げて�
 
 ただし、Scrum Masterが要求の優先順位、Sprint Backlog上の具体的な計画、緊急対応の技術的な進め方を一方的に決めるわけではない。Product Owner、Developers、Scrum Masterが、それぞれのaccountabilityに基づいて協働する。
 
-#### ScrumとKanbanを組み合わせる場合 <!-- omit in toc -->
+#### ScrumとKanbanを組み合わせる場合
 
 保守・運用作業が多く、作業の到着時期を事前に予測しにくいチームでは、ScrumによるSprintのリズムを維持しながら、Kanbanのworkflow、WIP、flowの管理を組み合わせる場合もある。
 
@@ -367,7 +355,7 @@ Scrumを使うチームがKanbanのboard、WIP制御、flowの計測などを取
 
 重要なのは名称ではなく、チームの業務特性に合わせて、通常作業と割り込みの双方を透明にし、価値を継続的に届けられる作業方法を作ることである。
 
-#### Sprint Goal自体が意味を失った場合 <!-- omit in toc -->
+#### Sprint Goal自体が意味を失った場合
 
 市場、法規制、事業方針、顧客環境などに重大な変化があり、Sprint Goalそのものが不要または無意味になる場合がある。
 
@@ -395,7 +383,7 @@ Scrum Teamと主要なステークホルダーが、Sprintで作られたIncreme
 
 ここで重要なのは、Sprint Reviewを、Scrum Teamが完成した機能を一方向に報告するだけの場として扱わないことである。
 
-#### Sprint Reviewで確認する内容 <!-- omit in toc -->
+#### Sprint Reviewで確認する内容
 
 Sprint Reviewでは、たとえば次のような内容を確認する。
 
@@ -415,7 +403,7 @@ Sprint Reviewでは、Incrementの動作を実際に確認する場合もある�
 
 Incrementを見せて終了するのではなく、それによって何が実現されたのか、期待していた価値へ近づいたのか、どのような課題や可能性が見つかったのかを検討する。
 
-#### ステークホルダーと次の判断を行う <!-- omit in toc -->
+#### ステークホルダーと次の判断を行う
 
 ステークホルダーは、Scrum Teamから結果を報告されるだけの受け手ではない。
 
@@ -438,7 +426,7 @@ Product Ownerは、Sprint Reviewで得られた情報を踏まえ、プロダク
 
 Scrum Masterは、Sprint Reviewが一方向の報告会に終わらず、Scrum Teamとステークホルダーの有意義な協働の機会として機能するよう支援する。ただし、Scrum Masterが成果を承認したり、Product Backlogの順序を決めたりするわけではない。
 
-#### 得られた情報をProduct Backlogへ反映する <!-- omit in toc -->
+#### 得られた情報をProduct Backlogへ反映する
 
 Sprint Reviewで得られたフィードバックや環境変化は、必要に応じてProduct Backlogへ反映される。
 
@@ -458,7 +446,7 @@ Sprint Reviewで得られたフィードバックや環境変化は、必要に�
 
 Sprint Reviewは、現在の情報をもとに、Product Goalへ向けて次にどの方向へ進むべきかを協働して判断する場である。
 
-#### Sprint Reviewは承認会議やリリース判定の場ではない <!-- omit in toc -->
+#### Sprint Reviewは承認会議やリリース判定の場ではない
 
 Sprint Reviewを、承認者が完成した成果を確認し、合格または不合格を判定する会議として扱うと、Scrum Teamとステークホルダーの対話が弱くなる。
 
@@ -492,7 +480,7 @@ Scrum Teamは、直前のSprintについて、人、対話、プロセス、ツ�
 
 ここで重要なのは、Sprint Retrospectiveを、失敗した人を特定するための反省会として扱わないことである。個人の責任を追及するのではなく、Scrum Teamがより良く協働し、価値あるIncrementを継続的に作れるように、仕事の進め方を改善する。
 
-#### 何を振り返るのか <!-- omit in toc -->
+#### 何を振り返るのか
 
 Sprint Retrospectiveでは、たとえば次のような内容を振り返る。
 
@@ -512,7 +500,7 @@ Sprint Retrospectiveでは、たとえば次のような内容を振り返る。
 
 効果があった行動を明確にすれば、それを偶然の成功で終わらせず、次のSprintでも再現しやすくなる。
 
-#### 印象だけでなく事実を確認する <!-- omit in toc -->
+#### 印象だけでなく事実を確認する
 
 Sprint Retrospectiveでは、参加者の感覚や経験を共有することが重要である。ただし、印象だけで判断すると、特定の意見や直近の出来事に議論が偏る可能性がある。
 
@@ -532,7 +520,7 @@ Sprint Retrospectiveでは、参加者の感覚や経験を共有することが
 
 数値だけでは、なぜ問題が起きたのかまでは分からない。データで見えた変化と、実際に作業した人たちの経験や対話を組み合わせて原因を探る必要がある。
 
-#### 問題を個人だけでなく仕事の仕組みから見る <!-- omit in toc -->
+#### 問題を個人だけでなく仕事の仕組みから見る
 
 たとえば、コードレビューが遅れた場合に、単に「レビュー担当者の対応が遅かった」と結論づけるだけでは、同じ問題が再発する可能性がある。
 
@@ -551,7 +539,7 @@ Sprint Retrospectiveでは、参加者の感覚や経験を共有することが
 
 ただし、仕組みを見ることは、個人の行動や責任を一切扱わないという意味ではない。重要なのは、個人への非難で終わらせず、同じ状況で同じ問題が繰り返されにくい仕事の進め方へ改善することである。
 
-#### 改善を具体的な行動へ変える <!-- omit in toc -->
+#### 改善を具体的な行動へ変える
 
 Sprint Retrospectiveは、問題や感想を共有して終了する場ではない。Scrum Teamは、品質と効果性を高めるために、最も有用な改善を選ぶ。
 
@@ -588,7 +576,7 @@ Sprint Retrospectiveは、問題や感想を共有して終了する場ではな
 
 ただし、改善活動はSprint Retrospectiveでしか行えないわけではない。Sprint中に問題を発見した場合は、その場で改善できることを次のSprint Retrospectiveまで待つ必要はない。Sprint Retrospectiveは、Sprint全体を振り返り、継続的な改善へ集中するための明示的な機会である。
 
-#### Scrum MasterとScrum Teamの役割 <!-- omit in toc -->
+#### Scrum MasterとScrum Teamの役割
 
 Sprint RetrospectiveはScrum Team全体のイベントであり、Product Owner、Developers、Scrum Masterが、それぞれの立場から参加する。
 
@@ -622,7 +610,7 @@ Scrumによる検査と適応は、Sprint ReviewやSprint Retrospectiveで完結
 
 こうした運用後の情報をProduct Backlogや品質活動へ戻すことで、次の開発判断につながるフィードバックループが形成される。
 
-#### Incrementの完成とリリースを区別する <!-- omit in toc -->
+#### Incrementの完成とリリースを区別する
 
 Incrementは、Definition of Doneを満たし、利用可能な状態になった具体的な成果である。
 
@@ -644,7 +632,7 @@ Sprintは検査と適応のための周期であり、リリースは価値を�
 
 重要なのは、リリース時期にかかわらず、各SprintでDefinition of Doneを満たした利用可能なIncrementを作ることである。複数のSprintにわたって未完成の作業を積み上げ、最後にまとめて完成させるのであれば、早期に成果を検査できるというIncrementalな開発の利点が弱くなる。
 
-#### Definition of Doneとリリース時の判断 <!-- omit in toc -->
+#### Definition of Doneとリリース時の判断
 
 Definition of Doneは、Product Backlog itemがIncrementの一部として扱われるために満たす品質状態を明確にする。
 
@@ -664,7 +652,7 @@ Definition of Doneは、Product Backlog itemがIncrementの一部として扱わ
 
 同じ確認や準備が継続的に必要なのであれば、それをDefinition of Doneへ含めることや、自動化して日常的な開発フローへ組み込むことを検討する。
 
-#### 安全にリリースする <!-- omit in toc -->
+#### 安全にリリースする
 
 Definition of Doneを満たしていても、実際の利用環境では、開発・テスト環境では確認できなかった条件が存在する。
 
@@ -683,7 +671,7 @@ Definition of Doneを満たしていても、実際の利用環境では、開�
 
 具体的なリリース自動化、CI/CD、feature flag、rollback、監視などについては、後の章でDevOpsとの関係として詳しく扱う。
 
-#### リリース後に確認する情報 <!-- omit in toc -->
+#### リリース後に確認する情報
 
 リリースできたことだけでは、その変更が期待した価値を生んだことまでは分からない。
 
@@ -709,7 +697,7 @@ Definition of Doneを満たしていても、実際の利用環境では、開�
 
 定量的なデータ、問い合わせ、ユーザーインタビュー、障害情報、事業上の成果などを組み合わせて状況を理解する。
 
-#### 運用後の情報を次の判断へ戻す <!-- omit in toc -->
+#### 運用後の情報を次の判断へ戻す
 
 リリース後に得られた情報は、単に報告書へ記録して終了するのではなく、今後の開発と品質活動へ戻す。
 
@@ -730,7 +718,7 @@ Definition of Doneを満たしていても、実際の利用環境では、開�
 
 ただし、重大な障害やセキュリティ問題など、即時対応が必要な場合は、3.5で確認した割り込みとして扱うこともある。
 
-#### 作った量だけでなく、得られた結果を見る <!-- omit in toc -->
+#### 作った量だけでなく、得られた結果を見る
 
 Sprintで完了したProduct Backlog itemの数やリリース回数は、開発活動の一部を示す情報ではある。しかし、それだけでは、ユーザーや顧客へ価値を届けられたかは判断できない。
 

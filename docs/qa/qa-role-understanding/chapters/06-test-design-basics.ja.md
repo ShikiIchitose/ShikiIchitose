@@ -1,17 +1,4 @@
-## 6. テスト設計の基本 <!-- omit in toc -->
-
-- [6.1 テスト設計とは何か](#61-テスト設計とは何か)
-- [6.2 テスト設計の入力情報](#62-テスト設計の入力情報)
-- [6.3 テスト対象・テストレベル・確認観点の整理](#63-テスト対象テストレベル確認観点の整理)
-- [6.4 Risk-Based Testing(リスクベースドテスト)](#64-risk-based-testingリスクベースドテスト)
-- [6.5 Equivalence Partitioning(同値分割)](#65-equivalence-partitioning同値分割)
-- [6.6 Boundary Value Analysis(境界値分析)](#66-boundary-value-analysis境界値分析)
-- [6.7 Decision Table Testing(デシジョンテーブルテスト)](#67-decision-table-testingデシジョンテーブルテスト)
-- [6.8 State Transition Testing(状態遷移テスト)](#68-state-transition-testing状態遷移テスト)
-- [6.9 Use Case Testing / Scenario Testing(ユースケーステスト / シナリオテスト)](#69-use-case-testing--scenario-testingユースケーステスト--シナリオテスト)
-- [6.10 Exploratory Testing(探索的テスト)と異常系・権限・例外観点](#610-exploratory-testing探索的テストと異常系権限例外観点)
-- [6.11 テスト設計技法の適用例](#611-テスト設計技法の適用例)
-- [6.12 Key Takeaways](#612-key-takeaways)
+## 6. テスト設計の基本
 
 5章では、要求をテスト可能な形にする考え方を整理した。具体的には、Acceptance Criteria(受け入れ条件)、具体例、Example Mapping(実例マッピング)、Specification by Example(SBE:実例による仕様記述)、Three Amigos(スリーアミーゴス)、ATDD(Acceptance Test-Driven Development:受け入れテスト駆動開発)、BDD(Behavior-Driven Development:振る舞い駆動開発)、TDD(Test-Driven Development:テスト駆動開発)を通じて、要求を確認可能な形に近づける方法を扱った。
 

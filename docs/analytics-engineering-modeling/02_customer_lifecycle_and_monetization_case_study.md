@@ -516,7 +516,6 @@ The model should document how each status is derived. For example, it should spe
 
 This makes the mart useful for decision support while keeping business ownership clear.
 
-
 ---
 
 ## 11. BI / Semantic Layer Exposure
@@ -627,7 +626,6 @@ Analytics engineering can own or strongly contribute to this documentation becau
 Even when a capable BI or semantic layer exists, some logic may still be better materialized in dbt reporting marts. This is especially true for repeated aggregations, stock-and-flow logic, review candidate classification, dashboard performance optimization, or cross-tool reuse.
 
 The next section discusses where dbt reporting marts add value.
-
 
 ---
 

@@ -1,7 +1,7 @@
 # アナリティクスエンジニアリングにおけるモデリングと運用方針について
 
 > [English version](analytics_engineering_modeling_operating_approach_overview.md)
-
+>
 > この資料は、アナリティクスエンジニアリングに関するモデリング資料を短くまとめた概要版です。  
 > 資料全体を確認したい方向けに、詳細版も用意しています。  
 > [Analytics Engineering Modeling Perspectives](00_analytics_engineering_modeling_index.ja.md)

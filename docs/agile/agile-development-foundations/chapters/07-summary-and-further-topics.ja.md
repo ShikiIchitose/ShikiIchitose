@@ -1,13 +1,4 @@
-## 7. まとめと発展領域 <!-- omit in toc -->
-
-- [7.1 短いサイクルで価値を届け、学びを次の改善へ戻す](#71-短いサイクルで価値を届け学びを次の改善へ戻す)
-- [7.2 本資料の先にある発展的な領域](#72-本資料の先にある発展的な領域)
-  - [Engineering Practices and Sustainable Design](#engineering-practices-and-sustainable-design)
-  - [Product Discovery and Value Exploration](#product-discovery-and-value-exploration)
-  - [Flow and Lean Thinking](#flow-and-lean-thinking)
-  - [Team and Organizational Conditions](#team-and-organizational-conditions)
-  - [Multi-team and Large-scale Agile(複数チーム・大規模環境におけるアジャイル)](#multi-team-and-large-scale-agile複数チーム大規模環境におけるアジャイル)
-- [7.3 Key Takeaways](#73-key-takeaways)
+## 7. まとめと発展領域
 
 本資料では、Agile Manifestoの価値観と原則を起点として、ScrumとKanban、Sprintを中心とした開発の流れ、品質活動、DevOps、AI支援との接続を整理してきた。
 

@@ -1,23 +1,4 @@
-## 2. QA / QC / Testing / Quality Engineeringの違い <!-- omit in toc -->
-
-- [2.1 QA(Quality Assurance:品質保証)](#21-qaquality-assurance品質保証)
-- [2.2 QC(Quality Control:品質管理)](#22-qcquality-control品質管理)
-- [2.3 Testing(テスト)](#23-testingテスト)
-- [2.4 Quality Engineering(品質エンジニアリング)](#24-quality-engineering品質エンジニアリング)
-- [2.5 Quality Assistance / Quality Enablement](#25-quality-assistance--quality-enablement)
-- [2.6 現代的QAにおける役割領域の変化](#26-現代的qaにおける役割領域の変化)
-  - [2.6.1 後工程集中型QAの限界](#261-後工程集中型qaの限界)
-  - [2.6.2 Shift Leftによる早期関与](#262-shift-leftによる早期関与)
-  - [2.6.3 Shift Rightによるリリース後の品質確認](#263-shift-rightによるリリース後の品質確認)
-  - [2.6.4 DevOps / Continuous Deliveryによる継続的フィードバック](#264-devops--continuous-deliveryによる継続的フィードバック)
-  - [2.6.5 QA / Testing / Quality Engineeringの接近](#265-qa--testing--quality-engineeringの接近)
-- [2.7 QA / QE / Testingを固定的な役割ではなくスペクトラムとして捉える](#27-qa--qe--testingを固定的な役割ではなくスペクトラムとして捉える)
-  - [2.7.1 固定的な職務名ではなく、品質活動の分布として見る](#271-固定的な職務名ではなく品質活動の分布として見る)
-  - [2.7.2 検出寄りの活動と予防寄りの活動](#272-検出寄りの活動と予防寄りの活動)
-  - [2.7.3 人間の判断寄りの活動と自動化・仕組み化寄りの活動](#273-人間の判断寄りの活動と自動化仕組み化寄りの活動)
-  - [2.7.4 後工程確認寄りの活動と開発プロセス組み込み寄りの活動](#274-後工程確認寄りの活動と開発プロセス組み込み寄りの活動)
-  - [2.7.5 実務ではプロダクト特性・組織体制・リスクによって形が変わる](#275-実務ではプロダクト特性組織体制リスクによって形が変わる)
-- [2.8 Key Takeaways](#28-key-takeaways)
+## 2. QA / QC / Testing / Quality Engineeringの違い
 
 1章では、QA(Quality Assurance:品質保証)はTesting(テスト)を含むが、Testingそのものではないことを整理した。
 
