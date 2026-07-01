@@ -15,6 +15,7 @@ CQFAでは、問いと検証方法を共同で形成した後、成果が実際�
 - 詳細版の特定の章だけ読む場合: [章別資料](detailed/chapters/)
 - 参考文献・参照情報を見る場合: [参考文献](appendices/references.ja.md)
 - Analytics関連資料の一覧へ戻る場合: [Analytics資料一覧](../README.md)
+- CQFAに関連する補助ツール構想を見る場合: [DWHで答えられるかを見立てる補助ツール構想](assets/cqfa-dwh-answerability-support-tool-concept.ja.pdf)
 
 最初に [Concept Proposal](concept-proposal.ja.md) を読み、必要に応じて各章末のリンクから詳細版の該当箇所を参照することを想定しています。
 
@@ -48,6 +49,14 @@ CQFAでは、問いと検証方法を共同で形成した後、成果が実際�
 - [小さな試行と適応](detailed/chapters/03-small-trial-and-adaptation.ja.md)
 - [まとめ](detailed/chapters/04-summary.ja.md)
 - [おわりに](detailed/chapters/99-closing.ja.md)
+
+### 関連する補助ツール構想
+
+CQFAにおける共同検討を補助する着想として、既存DWHで問いに答えられそうか、DWH内の変更やSource側の確認が必要かを見立て、次の調査方向を提示する補助ツール構想を整理しています。
+
+このツールはCQFAを成立させるための必須要素ではありません。dbt環境に接続されたMCP Server、LLM、Pythonによる固定的な処理制御を組み合わせる技術構成を想定していますが、現時点では未実装・未検証です。
+
+- [DWHで答えられるかを見立てる補助ツール構想（PDF）](assets/cqfa-dwh-answerability-support-tool-concept.ja.pdf)
 
 ## 想定する読み手
 
