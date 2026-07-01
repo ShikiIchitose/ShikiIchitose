@@ -13,6 +13,7 @@ A short rationale document explaining how the projects connect as a simulated AE
 - Backend-oriented data applications: **application programming interface (API) design, ingestion boundaries, Django applications, FastAPI services, Go HTTP services**
 - Analytical systems: **dbt, DuckDB, BigQuery, Parquet, Structured Query Language (SQL), Looker Studio dashboard artifacts**
 - Production-minded implementation: **testing, CI, Docker, documentation, reproducible runs, reviewable artifacts**
+- Collaborative analytics problem framing: **connecting business questions, metrics, data requirements, intended use, and validation through early cross-functional dialogue**
 - Supporting quality and delivery perspective: **testability, data quality, quality gates, reproducibility, and Agile / DevOps feedback loops**
 
 ## Supporting materials
@@ -24,6 +25,16 @@ A short rationale document explaining how the projects connect as a simulated AE
 
 - **[Full material set: Analytics Engineering Modeling Perspectives](docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)**  
   A detailed material set covering common dbt modeling principles and a reusable customer lifecycle / monetization analytics case study.
+
+### Collaborative question framing for analytics
+
+- **[Collaborative Question Framing for Analytics (CQFA)](docs/analytics/collaborative-question-framing-for-analytics/README.md)**  
+  A concept proposal for collaboratively turning uncertain business ideas into analyzable questions by connecting intended decisions, metrics, required data, analytical outputs, and validation methods.
+
+  CQFA draws on ideas from Analytics Engineering, Quality Assistance / Quality Enablement, and iterative Agile feedback. It proposes starting with a limited case, producing a small usable data outcome, and evaluating both its practical value and the additional coordination burden before considering broader adoption.
+
+  The current proposal materials are available in Japanese.  
+  Links: [Concept Proposal](docs/analytics/collaborative-question-framing-for-analytics/concept-proposal.ja.md) · [Detailed version](docs/analytics/collaborative-question-framing-for-analytics/detailed/full.ja.md)
 
 ### Quality engineering and Agile development
 
@@ -147,6 +158,10 @@ Analytics Engineering を主軸に、Data Engineering とデータプロダク�
 
 あわせて、こうした品質活動が実際の開発プロセスの中でどのように位置づけられるかを理解するため、現在多くのソフトウェア開発現場で用いられているアジャイル開発についても、Agile Manifesto、Scrum、Kanban、短いサイクルにおける品質活動、DevOps、AI支援との接続まで、基礎から調査・整理しています。
 
+これらの学習とポートフォリオ開発をもとに、業務上の着想や不確実な問題を、分析可能な問い、指標、必要なデータ、利用場面、検証方法へ関係者と共同で具体化する進め方を、Collaborative Question Framing for Analytics（CQFA：仮称）として整理しました。
+
+CQFAは完成した標準手法や実務で有効性を検証済みの運用モデルではなく、限定した一件で小さなデータ成果を実利用し、得られる価値と参加者の負担の両方を確認するためのConcept Proposalです。
+
 ## 関連資料
 
 **[ポートフォリオ設計の考え方](docs/ae-de-portfolio-design-summary.md)**  
@@ -159,6 +174,15 @@ Analytics Engineering を主軸に、Data Engineering とデータプロダク�
 
 - **[詳細版: Analytics Engineering Modeling Perspectives](docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)**  
   共通の dbt modeling principles と、customer lifecycle / monetization analytics のケーススタディを含む詳細版です。
+
+### Collaborative Question Framing for Analytics（CQFA）
+
+- **[Collaborative Question Framing for Analytics（CQFA）](docs/analytics/collaborative-question-framing-for-analytics/README.md)**  
+  業務上の着想や不確実な問題を、分析可能な問い、指標、必要なデータ、利用場面、検証方法へ関係者と共同で具体化する進め方を整理したConcept Proposalです。
+
+  Analytics Engineering、Quality Assistance / Quality Enablement、アジャイルにおける小さな成果と短いフィードバックループから得た示唆を接続しています。限定した一件で小さなデータ成果を実利用し、成果の有用性だけでなく、対話、調整、参加、記録などの追加負担も評価したうえで、適用継続を判断する構成としています。
+
+  [Concept Proposal](docs/analytics/collaborative-question-framing-for-analytics/concept-proposal.ja.md) · [詳細版](docs/analytics/collaborative-question-framing-for-analytics/detailed/full.ja.md)
 
 ### QA / Quality Engineering / Agile関連資料
 
