@@ -12,6 +12,7 @@ A short rationale document explaining how the projects connect as a simulated AE
 - Data and analytics engineering workflows: **generate → validate → model → test → report → visualize**
 - Backend-oriented data applications: **application programming interface (API) design, ingestion boundaries, Django applications, FastAPI services, Go HTTP services**
 - Analytical systems: **dbt, DuckDB, BigQuery, Parquet, Structured Query Language (SQL), Looker Studio dashboard artifacts**
+- Data pipeline design: **comparing processing paths, storage and compute platforms, recovery, and operations from requirements and constraints rather than data volume or product choice alone**
 - Production-minded implementation: **testing, CI, Docker, documentation, reproducible runs, reviewable artifacts**
 - Collaborative analytics problem framing: **connecting business questions, metrics, data requirements, intended use, and validation through early cross-functional dialogue**
 - Supporting quality and delivery perspective: **testability, data quality, quality gates, reproducibility, and Agile / DevOps feedback loops**
@@ -25,6 +26,15 @@ A short rationale document explaining how the projects connect as a simulated AE
 
 - **[Full material set: Analytics Engineering Modeling Perspectives](docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)**  
   A detailed material set covering common dbt modeling principles and a reusable customer lifecycle / monetization analytics case study.
+
+### Data pipeline design
+
+- **[Data Pipeline Design Through Requirements and Constraints](docs/data-engineering/data-pipeline-design-requirements-constraints/README.md)**  
+  A Japanese learning and reference material that begins with an observed execution-time difference between DuckDB and BigQuery in the same dbt project, then broadens the question from data volume to intended use, freshness, data characteristics, reliability and reprocessing, operating capability, governance, and cost.
+
+  It compares four hypothetical cases to examine how requirements and constraints change processing paths, storage and compute platforms, recovery, and operations. The cases are reference examples rather than an exhaustive taxonomy or maturity model.
+
+  Links: [Outline](docs/data-engineering/data-pipeline-design-requirements-constraints/outline.ja.md)
 
 ### Collaborative question framing for analytics
 
@@ -42,14 +52,14 @@ The following materials are **currently available in Japanese**.
 
 - **[QA Role Foundations: Building, Evaluating, and Improving Quality](docs/qa/qa-role-understanding/README.md)**  
   A learning and reference material that examines QA beyond test execution, covering testable requirements, test design, automation, quality gates, quality metrics, Data Quality Assurance, cross-functional quality practices, and QA in the AI era.  
-  Links: [Entry](docs/qa/qa-role-understanding/README.md) · [Outline](docs/qa/qa-role-understanding/outline.ja.md)
+  Links: [Outline](docs/qa/qa-role-understanding/outline.ja.md)
 
 - **[Reinterpreting the AE / DE Portfolio from a Quality Perspective — Overview](docs/qa/qa-perspective-portfolio-overview.ja.md)** · **[Detailed version](docs/qa/qa-perspective-portfolio-detailed.ja.md)**  
   A supplementary material that reinterprets the AE / DE portfolio through QA, Data Quality Assurance, Quality Engineering, and operational-quality perspectives. It connects implementation evidence such as validation, authorization boundaries, data contracts, automated tests, reproducibility, monitoring, and reviewable documentation to broader quality activities.
 
 - **[Agile Development Foundations: Delivering Value in Short Cycles and Treating Quality Continuously](docs/agile/agile-development-foundations/README.md)**  
   A learning and reference material covering the Agile Manifesto, Scrum, Kanban, development flow, quality activities within short cycles, DevOps feedback loops, and AI-assisted software development.  
-  Links: [Entry](docs/agile/agile-development-foundations/README.md) · [Outline](docs/agile/agile-development-foundations/outline.ja.md)
+  Links: [Outline](docs/agile/agile-development-foundations/outline.ja.md)
 
 ## Featured projects
 
@@ -111,7 +121,9 @@ The following materials are **currently available in Japanese**.
 
 In the near term, I’m focusing primarily on **analytics engineering**, with strong interest in **data engineering** and supporting backend-oriented data applications.
 
-My current priority is to strengthen practical fundamentals in data modeling, schema design, data quality management, dbt-based analytics engineering, tested data transformations, reproducible data pipelines, batch processing, and decision-ready reporting.
+My current priority is to strengthen practical fundamentals in data modeling, schema design, data quality management, dbt-based analytics engineering, tested data transformations, reproducible data pipelines, and decision-ready reporting.
+
+I am also developing a requirements- and constraints-driven view of data pipeline design, including processing modes, storage and compute choices, reprocessing, recovery, operational capability, governance, and cost.
 
 Technologies I’m currently focusing on include **Python, Structured Query Language (SQL), dbt, DuckDB, BigQuery, Parquet, PostgreSQL, Looker Studio dashboard artifacts, Go, FastAPI, and Django**.
 
@@ -148,13 +160,17 @@ This profile emphasizes engineering practices and reproducible deliverables over
 
 ## 概要
 
-Analytics Engineering を主軸に、Data Engineering とデータプロダクトを支えるバックエンド実装にも関心があります。
+Analytics Engineeringを主軸に、Data Engineeringとデータプロダクトを支えるバックエンド実装にも関心があります。
 
-現在は、AIツール利用ガバナンスを題材にしたポートフォリオを中心に、申請・承認アプリ、利用イベント取り込みAPI、dbtによる分析基盤、BigQuery実行、Looker Studio dashboard artifacts までを小規模に実装しています。
+現在は、AIツール利用ガバナンスを題材にしたポートフォリオを中心に、申請・承認アプリ、利用イベント取り込みAPI、dbtによる分析基盤、BigQuery実行、Looker Studio dashboard artifactsまでを小規模に実装しています。
 
 重視している点は、再現性、検証可能性、テスト、CI、ドキュメント、レビューしやすい成果物です。
 
-直近では、QA(Quality Assurance / Quality Assistance: 品質保証 / 品質支援) / Quality Engineeringの視点から、自身のAE / DEポートフォリオ群を再解釈し、品質・検証・再現性・テスト容易性に加え、チームで品質を作り込む仕組みへどう接続できるかを整理しています。Quality Assistance / Quality Enablementの考え方にも関心があり、品質活動をチーム全体で支えられる状態にすることを重視しています。
+また、同一のdbtプロジェクトをDuckDBとBigQueryで実行した際に観察した実行時間差を出発点として、データパイプライン設計を、データ量だけでなく、利用目的、鮮度、データ特性、再処理要件、運用体制、ガバナンス、コストなどの要件と制約から比較する調査資料を作成・公開しています。
+
+4つの仮想的なCaseを通じて、必要な処理経路、保存・処理基盤、復旧方法、運用能力、トレードオフがどのように変わるかを整理しています。4つのCaseは、網羅的な分類や成熟度モデルではなく、設計判断を比較するための参照例です。
+
+これと並行して、QA（Quality Assurance / Quality Assistance: 品質保証 / 品質支援）/ Quality Engineeringの視点から、自身のAE / DEポートフォリオ群を再解釈し、品質、検証、再現性、テスト容易性に加え、チームで品質を作り込む仕組みへどう接続できるかを整理しています。Quality Assistance / Quality Enablementの考え方にも関心があり、品質活動をチーム全体で支えられる状態にすることを重視しています。
 
 あわせて、こうした品質活動が実際の開発プロセスの中でどのように位置づけられるかを理解するため、現在多くのソフトウェア開発現場で用いられているアジャイル開発についても、Agile Manifesto、Scrum、Kanban、短いサイクルにおける品質活動、DevOps、AI支援との接続まで、基礎から調査・整理しています。
 
@@ -175,6 +191,17 @@ CQFAは完成した標準手法や実務で有効性を検証済みの運用モ�
 - **[詳細版: Analytics Engineering Modeling Perspectives](docs/analytics-engineering-modeling/00_analytics_engineering_modeling_index.md)**  
   共通の dbt modeling principles と、customer lifecycle / monetization analytics のケーススタディを含む詳細版です。
 
+### データパイプライン設計
+
+- **[要件と制約から考えるデータパイプライン設計](docs/data-engineering/data-pipeline-design-requirements-constraints/README.md)**  
+  データパイプラインの構成を、データ量や製品名だけではなく、利用目的、データ特性、鮮度、信頼性・再処理要件、運用体制、ガバナンス、コストなどの要件と制約から比較した学習・参照用資料です。
+
+  同一のdbtプロジェクトをDuckDBとBigQueryで実行した際に観察した実行時間差を出発点として、問いをデータ規模だけによる構成選定から、処理経路、保存・処理基盤、復旧方法、運用能力、トレードオフの比較へ広げています。
+
+  4つの仮想的なCaseは、網羅的な分類や成熟度モデルではなく、異なる条件で設計判断がどう変わるかを考えるための参照例です。
+
+  [まず全体像を見る（目次）](docs/data-engineering/data-pipeline-design-requirements-constraints/outline.ja.md)
+
 ### Collaborative Question Framing for Analytics（CQFA）
 
 - **[Collaborative Question Framing for Analytics（CQFA）](docs/analytics/collaborative-question-framing-for-analytics/README.md)**  
@@ -188,14 +215,14 @@ CQFAは完成した標準手法や実務で有効性を検証済みの運用モ�
 
 - **[QA職能入門：品質を作り、判断し、改善へ戻す仕組み](docs/qa/qa-role-understanding/README.md)**  
   QAについての基礎を学ぶために、公開情報をもとに調査・分析・整理した学習・参照用資料です。テスト実行だけでなく、要求整理、テスト設計、自動化、品質ゲート、品質メトリクス、DQA、他職種連携、AI時代のQAまでを扱っています。  
-  [資料入口](docs/qa/qa-role-understanding/README.md) · [まず全体像を見る（目次）](docs/qa/qa-role-understanding/outline.ja.md)
+  [まず全体像を見る（目次）](docs/qa/qa-role-understanding/outline.ja.md)
 
 - **[AE / DEポートフォリオを品質の観点から読み直す — 概要版](docs/qa/qa-perspective-portfolio-overview.ja.md)** · **[詳細版](docs/qa/qa-perspective-portfolio-detailed.ja.md)**  
   AE / DEポートフォリオ群を、QA / DQA / Quality Engineering / 運用品質の観点から再解釈した補助資料です。バリデーション、権限境界、データ契約、自動テスト、再現性、モニタリング、ドキュメントなどの実装を、品質活動としてどのように捉えられるか整理しています。
 
 - **[アジャイル開発の基礎理解：短いサイクルで価値を届け、品質を継続的に扱う仕組み](docs/agile/agile-development-foundations/README.md)**  
   Agile Manifesto、Scrum、Kanban、開発の流れ、短いサイクルにおける品質活動、DevOps、AI支援を取り入れた開発までを整理した学習・参照用資料です。  
-  [資料入口](docs/agile/agile-development-foundations/README.md) · [まず全体像を見る（目次）](docs/agile/agile-development-foundations/outline.ja.md)
+  [まず全体像を見る（目次）](docs/agile/agile-development-foundations/outline.ja.md)
 
 ## 主要ポートフォリオ
 
@@ -213,7 +240,7 @@ CQFAは完成した標準手法や実務で有効性を検証済みの運用モ�
 
 ## 今後の方向性
 
-直近ではAnalytics Engineeringを主軸に、dbt、SQL、DuckDB、BigQuery、Pythonを用いたデータモデリング、data quality、mart設計、BI-facing reportingを強化したいと考えています。
+直近ではAnalytics Engineeringを主軸に、dbt、SQL、DuckDB、BigQuery、Pythonを用いたデータモデリング、data quality、mart設計、BI-facing reportingに加え、要件と制約に基づくデータパイプライン設計、再処理、復旧、運用設計への理解を強化したいと考えています。
 
 中期的には、指標設計、ビジネスロジックの明文化、統計的推定、意思決定につながる分析へ広げ、長期的にはMachine Learning / AI systemsにも接続していきたいです。
 
